@@ -13,9 +13,585 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2019-04-11T01:00:21.617+02:00
-  initializedAtString: 2019-04-11T00:55:46.905+02:00
+  lastUpdatedAtString: 2019-04-11T01:04:33.448+02:00
+  initializedAtString: 2019-04-11T01:04:33.448+02:00
   log:
+  - commitID: 1fde6688c017cea6f0e5959ccb32a9f67b402b1d
+    mergeA: 43fc283550fea3fb966565cb967b2c5c44cdc664
+    mergeB: 9a9161d02c2a0697c29236d6f2e37a84bd1bc68d
+    authorName: Jan W
+    authorEmail: JanWittke97@web.de
+    commitEmail: JanWittke97@web.de
+    commitName: Jan W
+    summary: Merge branch 'master' of https://github.com/EmKaCe/DoctorWhy
+    description: 
+    timeString: 2019-04-11T01:03:12.000+02:00
+    commitTimeString: 2019-04-11T01:03:12.000+02:00
+    changes: []
+  - commitID: 43fc283550fea3fb966565cb967b2c5c44cdc664
+    mergeA: 
+    mergeB: 
+    authorName: Jan W
+    authorEmail: JanWittke97@web.de
+    commitEmail: JanWittke97@web.de
+    commitName: Jan W
+    summary: Base Project
+    description: 
+    timeString: 2019-04-11T01:01:10.000+02:00
+    commitTimeString: 2019-04-11T01:01:10.000+02:00
+    changes:
+    - path: PastMinutes\Library\gfu\cache\branches.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\branches.yaml
+      projectPath: Library\gfu\cache\branches.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+  - commitID: f2e190c73ef61167b46ca3e91085be3f1d594cc0
+    mergeA: 
+    mergeB: 
+    authorName: Jan W
+    authorEmail: JanWittke97@web.de
+    commitEmail: JanWittke97@web.de
+    commitName: Jan W
+    summary: Base Project
+    description: 
+    timeString: 2019-04-11T01:00:52.000+02:00
+    commitTimeString: 2019-04-11T01:00:52.000+02:00
+    changes:
+    - path: PastMinutes\Library\gfu\cache\branches.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\branches.yaml
+      projectPath: Library\gfu\cache\branches.yaml
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\gitlocks.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\gitlog.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\gitlog.yaml
+      projectPath: Library\gfu\cache\gitlog.yaml
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\gituser.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\gituser.yaml
+      projectPath: Library\gfu\cache\gituser.yaml
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\repoinfo.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\00\00ab99f3cb87e0949b0ca62450b0ca25
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\00\00ab99f3cb87e0949b0ca62450b0ca25
+      projectPath: Library\metadata\00\00ab99f3cb87e0949b0ca62450b0ca25
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\00\00ab99f3cb87e0949b0ca62450b0ca25.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\00\00ab99f3cb87e0949b0ca62450b0ca25.info
+      projectPath: Library\metadata\00\00ab99f3cb87e0949b0ca62450b0ca25.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\01\0188ec438976e5849b40a2c1ce5f20f9
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\01\0188ec438976e5849b40a2c1ce5f20f9
+      projectPath: Library\metadata\01\0188ec438976e5849b40a2c1ce5f20f9
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\01\0188ec438976e5849b40a2c1ce5f20f9.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\01\0188ec438976e5849b40a2c1ce5f20f9.info
+      projectPath: Library\metadata\01\0188ec438976e5849b40a2c1ce5f20f9.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\11\1186e0491049e40ba8e7e19e418d9e8e
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\11\1186e0491049e40ba8e7e19e418d9e8e
+      projectPath: Library\metadata\11\1186e0491049e40ba8e7e19e418d9e8e
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\11\1186e0491049e40ba8e7e19e418d9e8e.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\11\1186e0491049e40ba8e7e19e418d9e8e.info
+      projectPath: Library\metadata\11\1186e0491049e40ba8e7e19e418d9e8e.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\13\136dc24f151211d438acee17aff4e934
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\13\136dc24f151211d438acee17aff4e934
+      projectPath: Library\metadata\13\136dc24f151211d438acee17aff4e934
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\13\136dc24f151211d438acee17aff4e934.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\13\136dc24f151211d438acee17aff4e934.info
+      projectPath: Library\metadata\13\136dc24f151211d438acee17aff4e934.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\15\151a1d946b98deb4b98445400983ba92
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\15\151a1d946b98deb4b98445400983ba92
+      projectPath: Library\metadata\15\151a1d946b98deb4b98445400983ba92
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\15\151a1d946b98deb4b98445400983ba92.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\15\151a1d946b98deb4b98445400983ba92.info
+      projectPath: Library\metadata\15\151a1d946b98deb4b98445400983ba92.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\15\15ca2bebf173f2d4484686a03a45b56d
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\15\15ca2bebf173f2d4484686a03a45b56d
+      projectPath: Library\metadata\15\15ca2bebf173f2d4484686a03a45b56d
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\15\15ca2bebf173f2d4484686a03a45b56d.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\15\15ca2bebf173f2d4484686a03a45b56d.info
+      projectPath: Library\metadata\15\15ca2bebf173f2d4484686a03a45b56d.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\18\181f65fb096cedd4493bc9971257d8b1
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\18\181f65fb096cedd4493bc9971257d8b1
+      projectPath: Library\metadata\18\181f65fb096cedd4493bc9971257d8b1
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\18\181f65fb096cedd4493bc9971257d8b1.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\18\181f65fb096cedd4493bc9971257d8b1.info
+      projectPath: Library\metadata\18\181f65fb096cedd4493bc9971257d8b1.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\1c\1c3771e768439e94e9c3aa67c9c6b253
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\1c\1c3771e768439e94e9c3aa67c9c6b253
+      projectPath: Library\metadata\1c\1c3771e768439e94e9c3aa67c9c6b253
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: PastMinutes\Library\metadata\21\21206c65839f84d0e9ae14bc1fdc68db
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\21\21206c65839f84d0e9ae14bc1fdc68db
+      projectPath: Library\metadata\21\21206c65839f84d0e9ae14bc1fdc68db
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\21\21206c65839f84d0e9ae14bc1fdc68db.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\21\21206c65839f84d0e9ae14bc1fdc68db.info
+      projectPath: Library\metadata\21\21206c65839f84d0e9ae14bc1fdc68db.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\23\23c8bee69b591054094d32918f98facd
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\23\23c8bee69b591054094d32918f98facd
+      projectPath: Library\metadata\23\23c8bee69b591054094d32918f98facd
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\23\23c8bee69b591054094d32918f98facd.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\23\23c8bee69b591054094d32918f98facd.info
+      projectPath: Library\metadata\23\23c8bee69b591054094d32918f98facd.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\25\2590b98e5cafc4e32b61170d7b917ee6
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\25\2590b98e5cafc4e32b61170d7b917ee6
+      projectPath: Library\metadata\25\2590b98e5cafc4e32b61170d7b917ee6
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\25\2590b98e5cafc4e32b61170d7b917ee6.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\25\2590b98e5cafc4e32b61170d7b917ee6.info
+      projectPath: Library\metadata\25\2590b98e5cafc4e32b61170d7b917ee6.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\48\48c22d5d7479fcb49ab3be0cdd2ccec0
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\48\48c22d5d7479fcb49ab3be0cdd2ccec0
+      projectPath: Library\metadata\48\48c22d5d7479fcb49ab3be0cdd2ccec0
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\48\48c22d5d7479fcb49ab3be0cdd2ccec0.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\48\48c22d5d7479fcb49ab3be0cdd2ccec0.info
+      projectPath: Library\metadata\48\48c22d5d7479fcb49ab3be0cdd2ccec0.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\55\555cd6f54c03341b1970d950df1a5ee5
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\55\555cd6f54c03341b1970d950df1a5ee5
+      projectPath: Library\metadata\55\555cd6f54c03341b1970d950df1a5ee5
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\55\555cd6f54c03341b1970d950df1a5ee5.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\55\555cd6f54c03341b1970d950df1a5ee5.info
+      projectPath: Library\metadata\55\555cd6f54c03341b1970d950df1a5ee5.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\5c\5c7dad5eed27a794796515a7fdfc961d
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\5c\5c7dad5eed27a794796515a7fdfc961d
+      projectPath: Library\metadata\5c\5c7dad5eed27a794796515a7fdfc961d
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\5c\5c7dad5eed27a794796515a7fdfc961d.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\5c\5c7dad5eed27a794796515a7fdfc961d.info
+      projectPath: Library\metadata\5c\5c7dad5eed27a794796515a7fdfc961d.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\63\636d33ae594884e7d80b569f429d245d
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\63\636d33ae594884e7d80b569f429d245d
+      projectPath: Library\metadata\63\636d33ae594884e7d80b569f429d245d
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\63\636d33ae594884e7d80b569f429d245d.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\63\636d33ae594884e7d80b569f429d245d.info
+      projectPath: Library\metadata\63\636d33ae594884e7d80b569f429d245d.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\68\68c7e4565cde54155bb78d8e935f1dd4
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\68\68c7e4565cde54155bb78d8e935f1dd4
+      projectPath: Library\metadata\68\68c7e4565cde54155bb78d8e935f1dd4
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\68\68c7e4565cde54155bb78d8e935f1dd4.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\68\68c7e4565cde54155bb78d8e935f1dd4.info
+      projectPath: Library\metadata\68\68c7e4565cde54155bb78d8e935f1dd4.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb
+      projectPath: Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb.info
+      projectPath: Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\79\790749ba7e4b18141953e39cb13f1b79
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\79\790749ba7e4b18141953e39cb13f1b79
+      projectPath: Library\metadata\79\790749ba7e4b18141953e39cb13f1b79
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\79\790749ba7e4b18141953e39cb13f1b79.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\79\790749ba7e4b18141953e39cb13f1b79.info
+      projectPath: Library\metadata\79\790749ba7e4b18141953e39cb13f1b79.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\7a\7a79d06d21877f44386e55bd3418d16b
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\7a\7a79d06d21877f44386e55bd3418d16b
+      projectPath: Library\metadata\7a\7a79d06d21877f44386e55bd3418d16b
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\7a\7a79d06d21877f44386e55bd3418d16b.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\7a\7a79d06d21877f44386e55bd3418d16b.info
+      projectPath: Library\metadata\7a\7a79d06d21877f44386e55bd3418d16b.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\86\863e1b9976c4e46d29bf83928b3a8ab2
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\86\863e1b9976c4e46d29bf83928b3a8ab2
+      projectPath: Library\metadata\86\863e1b9976c4e46d29bf83928b3a8ab2
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\86\863e1b9976c4e46d29bf83928b3a8ab2.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\86\863e1b9976c4e46d29bf83928b3a8ab2.info
+      projectPath: Library\metadata\86\863e1b9976c4e46d29bf83928b3a8ab2.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\86\868fbb4c41814baebc00f96e24ede2f8
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\86\868fbb4c41814baebc00f96e24ede2f8
+      projectPath: Library\metadata\86\868fbb4c41814baebc00f96e24ede2f8
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\86\868fbb4c41814baebc00f96e24ede2f8.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\86\868fbb4c41814baebc00f96e24ede2f8.info
+      projectPath: Library\metadata\86\868fbb4c41814baebc00f96e24ede2f8.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\87\877ef3585573ce44eab899298be23158
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\87\877ef3585573ce44eab899298be23158
+      projectPath: Library\metadata\87\877ef3585573ce44eab899298be23158
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\87\877ef3585573ce44eab899298be23158.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\87\877ef3585573ce44eab899298be23158.info
+      projectPath: Library\metadata\87\877ef3585573ce44eab899298be23158.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\99\99b48d4d4f6a66340ab06bd487d70a45
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\99\99b48d4d4f6a66340ab06bd487d70a45
+      projectPath: Library\metadata\99\99b48d4d4f6a66340ab06bd487d70a45
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\99\99b48d4d4f6a66340ab06bd487d70a45.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\99\99b48d4d4f6a66340ab06bd487d70a45.info
+      projectPath: Library\metadata\99\99b48d4d4f6a66340ab06bd487d70a45.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\a0\a0ded7adcc817ce489fec07977f16d13
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\a0\a0ded7adcc817ce489fec07977f16d13
+      projectPath: Library\metadata\a0\a0ded7adcc817ce489fec07977f16d13
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\a0\a0ded7adcc817ce489fec07977f16d13.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\a0\a0ded7adcc817ce489fec07977f16d13.info
+      projectPath: Library\metadata\a0\a0ded7adcc817ce489fec07977f16d13.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\a8\a83159a46d87d2a4f8cec651049b9231
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\a8\a83159a46d87d2a4f8cec651049b9231
+      projectPath: Library\metadata\a8\a83159a46d87d2a4f8cec651049b9231
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\a8\a83159a46d87d2a4f8cec651049b9231.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\a8\a83159a46d87d2a4f8cec651049b9231.info
+      projectPath: Library\metadata\a8\a83159a46d87d2a4f8cec651049b9231.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\b6\b63eb9479b2e6734585dfa5208623b6f
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\b6\b63eb9479b2e6734585dfa5208623b6f
+      projectPath: Library\metadata\b6\b63eb9479b2e6734585dfa5208623b6f
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\b6\b63eb9479b2e6734585dfa5208623b6f.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\b6\b63eb9479b2e6734585dfa5208623b6f.info
+      projectPath: Library\metadata\b6\b63eb9479b2e6734585dfa5208623b6f.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\c5\c5c83d14802e712408f23409f3c59e26
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\c5\c5c83d14802e712408f23409f3c59e26
+      projectPath: Library\metadata\c5\c5c83d14802e712408f23409f3c59e26
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\c5\c5c83d14802e712408f23409f3c59e26.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\c5\c5c83d14802e712408f23409f3c59e26.info
+      projectPath: Library\metadata\c5\c5c83d14802e712408f23409f3c59e26.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab
+      projectPath: Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab.info
+      projectPath: Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ae
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ae
+      projectPath: Library\metadata\c7\c743ae24ee231884887054d20ccdd0ae
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ae.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ae.info
+      projectPath: Library\metadata\c7\c743ae24ee231884887054d20ccdd0ae.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\ca\cad92998c5182496e8b989b406d9f156
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\ca\cad92998c5182496e8b989b406d9f156
+      projectPath: Library\metadata\ca\cad92998c5182496e8b989b406d9f156
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\ca\cad92998c5182496e8b989b406d9f156.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\ca\cad92998c5182496e8b989b406d9f156.info
+      projectPath: Library\metadata\ca\cad92998c5182496e8b989b406d9f156.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\d5\d516f2a1bec6a9645a084ef8c9237132
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\d5\d516f2a1bec6a9645a084ef8c9237132
+      projectPath: Library\metadata\d5\d516f2a1bec6a9645a084ef8c9237132
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\d5\d516f2a1bec6a9645a084ef8c9237132.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\d5\d516f2a1bec6a9645a084ef8c9237132.info
+      projectPath: Library\metadata\d5\d516f2a1bec6a9645a084ef8c9237132.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\d6\d601ecb6855bb432bae2aa49d8fd82e8
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\d6\d601ecb6855bb432bae2aa49d8fd82e8
+      projectPath: Library\metadata\d6\d601ecb6855bb432bae2aa49d8fd82e8
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\d6\d601ecb6855bb432bae2aa49d8fd82e8.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\d6\d601ecb6855bb432bae2aa49d8fd82e8.info
+      projectPath: Library\metadata\d6\d601ecb6855bb432bae2aa49d8fd82e8.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\da\dae2ecee8a704dd59797e26554ff8606
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\da\dae2ecee8a704dd59797e26554ff8606
+      projectPath: Library\metadata\da\dae2ecee8a704dd59797e26554ff8606
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\da\dae2ecee8a704dd59797e26554ff8606.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\da\dae2ecee8a704dd59797e26554ff8606.info
+      projectPath: Library\metadata\da\dae2ecee8a704dd59797e26554ff8606.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\dd\ddb8611e748af425a82a497ac5a98c0c
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\dd\ddb8611e748af425a82a497ac5a98c0c
+      projectPath: Library\metadata\dd\ddb8611e748af425a82a497ac5a98c0c
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\dd\ddb8611e748af425a82a497ac5a98c0c.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\dd\ddb8611e748af425a82a497ac5a98c0c.info
+      projectPath: Library\metadata\dd\ddb8611e748af425a82a497ac5a98c0c.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\e8\e83b048a0b42ecb46b8f2a3835645f48
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\e8\e83b048a0b42ecb46b8f2a3835645f48
+      projectPath: Library\metadata\e8\e83b048a0b42ecb46b8f2a3835645f48
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\e8\e83b048a0b42ecb46b8f2a3835645f48.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\e8\e83b048a0b42ecb46b8f2a3835645f48.info
+      projectPath: Library\metadata\e8\e83b048a0b42ecb46b8f2a3835645f48.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\f8\f81094832d834c64d93b198cb16b6a3e
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\f8\f81094832d834c64d93b198cb16b6a3e
+      projectPath: Library\metadata\f8\f81094832d834c64d93b198cb16b6a3e
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\f8\f81094832d834c64d93b198cb16b6a3e.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\f8\f81094832d834c64d93b198cb16b6a3e.info
+      projectPath: Library\metadata\f8\f81094832d834c64d93b198cb16b6a3e.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\f9\f9fc9b08ecd899944adf9860b4abd6b6
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\f9\f9fc9b08ecd899944adf9860b4abd6b6
+      projectPath: Library\metadata\f9\f9fc9b08ecd899944adf9860b4abd6b6
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\f9\f9fc9b08ecd899944adf9860b4abd6b6.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\f9\f9fc9b08ecd899944adf9860b4abd6b6.info
+      projectPath: Library\metadata\f9\f9fc9b08ecd899944adf9860b4abd6b6.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\fe\fe5abeadcbe591e4fa9107fbc02f3998
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\fe\fe5abeadcbe591e4fa9107fbc02f3998
+      projectPath: Library\metadata\fe\fe5abeadcbe591e4fa9107fbc02f3998
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\Library\metadata\fe\fe5abeadcbe591e4fa9107fbc02f3998.info
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\metadata\fe\fe5abeadcbe591e4fa9107fbc02f3998.info
+      projectPath: Library\metadata\fe\fe5abeadcbe591e4fa9107fbc02f3998.info
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\obj\Debug\Assembly-CSharp-Editor-firstpass.csproj.CoreCompileInputs.cache
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\obj\Debug\Assembly-CSharp-Editor-firstpass.csproj.CoreCompileInputs.cache
+      projectPath: obj\Debug\Assembly-CSharp-Editor-firstpass.csproj.CoreCompileInputs.cache
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+      projectPath: obj\Debug\Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+      projectPath: obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+      projectPath: obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+      projectPath: obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+      projectPath: obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: PastMinutes\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+      projectPath: obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+      originalPath: 
+      status: 4
+      staged: 0
   - commitID: 1c1dc06db1d812958ab2de8ed33e22ca5f54f1d8
     mergeA: 
     mergeB: 
@@ -565,6 +1141,60 @@ MonoBehaviour:
     - path: PastMinutes\Assets\Sprites\PLACEHOLDER.txt.meta
       fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Assets\Sprites\PLACEHOLDER.txt.meta
       projectPath: Assets\Sprites\PLACEHOLDER.txt.meta
+      originalPath: 
+      status: 4
+      staged: 0
+  - commitID: 9a9161d02c2a0697c29236d6f2e37a84bd1bc68d
+    mergeA: 
+    mergeB: 
+    authorName: CodeIsJustLikeMagic
+    authorEmail: janelle.pfeifer@freenet.de
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: added seamless wall and gras textures
+    description: 
+    timeString: 2019-04-10T18:57:17.000+02:00
+    commitTimeString: 2019-04-10T18:57:17.000+02:00
+    changes:
+    - path: assets\brickWall.png
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\assets\brickWall.png
+      projectPath: ..\assets\brickWall.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: assets\brickWallLight.png
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\assets\brickWallLight.png
+      projectPath: ..\assets\brickWallLight.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: assets\domeWall.png
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\assets\domeWall.png
+      projectPath: ..\assets\domeWall.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: assets\fencepng.png
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\assets\fencepng.png
+      projectPath: ..\assets\fencepng.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: assets\gras.kra
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\assets\gras.kra
+      projectPath: ..\assets\gras.kra
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: assets\grasGreen.png
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\assets\grasGreen.png
+      projectPath: ..\assets\grasGreen.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: assets\woodWall.png
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\assets\woodWall.png
+      projectPath: ..\assets\woodWall.png
       originalPath: 
       status: 4
       staged: 0
