@@ -4,7 +4,6 @@ public class EntityComponent : MonoBehaviour {
 
 
     public int entityID;
-    private int test;
 
     // Use this for initialization
     void Start () {
