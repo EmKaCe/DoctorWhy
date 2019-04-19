@@ -13,9 +13,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2019-04-19T18:00:38.875+02:00
+  lastUpdatedAtString: 2019-04-19T18:05:56.058+02:00
   initializedAtString: 2019-04-19T18:00:38.769+02:00
   log:
+  - commitID: 2f3e081d9a31ad14d6eee963b207148be588e82d
+    mergeA: 
+    mergeB: 
+    authorName: Jan W
+    authorEmail: JanWittke97@web.de
+    commitEmail: JanWittke97@web.de
+    commitName: Jan W
+    summary: Unity/Github ficken mich gerade hart
+    description: 
+    timeString: 2019-04-19T18:05:44.000+02:00
+    commitTimeString: 2019-04-19T18:05:44.000+02:00
+    changes:
+    - path: .gitignore
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\.gitignore
+      projectPath: ..\.gitignore
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\branches.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\branches.yaml
+      projectPath: Library\gfu\cache\branches.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\gitlocks.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\gitlog.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\gitlog.yaml
+      projectPath: Library\gfu\cache\gitlog.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: PastMinutes\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: D:\Meine Dateien\Studium\4. Semester\Game Development\DoctorWhy\DoctorWhy\PastMinutes\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      status: 3
+      staged: 0
   - commitID: 2447641f195d97b716db23f816c3ffb21197470c
     mergeA: 
     mergeB: 
