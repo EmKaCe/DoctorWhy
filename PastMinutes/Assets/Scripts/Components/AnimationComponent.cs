@@ -1,105 +1,113 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Attach to sprites of characters
+/// </summary>
 public class AnimationComponent : MonoBehaviour
 {
 
-    public Sprite spritesheetHead;
-    public Sprite spritesheetArms;
-    public Sprite spritesheetTorso;
-    public Sprite spritesheetLegs;
-    private int offset;
-    public SpriteRenderer head;
-    public SpriteRenderer arms;
-    public SpriteRenderer torso;
-    public SpriteRenderer legs;
+
+    public string spritesheet;
+    public bool sheetChanged;
+    private int startingIndex;
+    private SpriteRenderer spriteRenderer;
+    Sprite[] sprites;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        TurnBack();
+        if (spritesheet.Equals(""))
+        {
+            spritesheet = (gameObject.GetComponentInParent<PlayerComponent>() as PlayerComponent).standardSpriteSheet;
+        }
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        if(Enum.TryParse(name, out PartFindingSystem.BodyParts part))
+        {
+            startingIndex = (int) part;
+        }
+        sprites = Resources.LoadAll<Sprite>("Characters/" + spritesheet);
+        sheetChanged = false;
+
+        //TurnLeft();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LateUpdate()
     {
-        
+        if (sheetChanged)
+        {
+            sheetChanged = false;
+            sprites = Resources.LoadAll<Sprite>("Characters/" + spritesheet);
+        }
     }
+
+    public void SetSheetChanged(bool changed)
+    {
+        this.sheetChanged = changed;
+    }
+
+    public void SheetChanged()
+    {
+        sheetChanged = true;
+    }
+
 
     public void TurnFront()
     {
-        head.sprite = Resources.LoadAll<Sprite>(spritesheetHead.name)[9];
-        arms.sprite = Resources.LoadAll<Sprite>(spritesheetHead.name)[19];
-        torso.sprite = Resources.LoadAll<Sprite>(spritesheetHead.name)[14];
-        legs.sprite = Resources.LoadAll<Sprite>(spritesheetHead.name)[29];
+        spriteRenderer.flipX = false;
+        spriteRenderer.sprite = sprites[startingIndex + 4];
     }
 
     public void TurnBack()
     {
-        head.sprite = Resources.LoadAll<Sprite>(spritesheetHead.name)[8];
-        arms.sprite = Resources.LoadAll<Sprite>(spritesheetHead.name)[18];
-        torso.sprite = Resources.LoadAll<Sprite>(spritesheetHead.name)[13];
-        legs.sprite = Resources.LoadAll<Sprite>(spritesheetHead.name)[28];
+        spriteRenderer.flipX = false;
+        spriteRenderer.sprite = sprites[startingIndex + 3];
+        
     }
 
     public void TurnLeft()
     {
-        Sprite head = Resources.LoadAll<Sprite>(spritesheetHead.name)[7];
-        Sprite arms = Resources.LoadAll<Sprite>(spritesheetHead.name)[17];
-        Sprite torso = Resources.LoadAll<Sprite>(spritesheetHead.name)[12];
-        Sprite legs = Resources.LoadAll<Sprite>(spritesheetHead.name)[27];
+        spriteRenderer.flipX = true;
+        spriteRenderer.sprite = sprites[startingIndex + 2];
     }
 
     public void TurnRight()
     {
-        Sprite head = Resources.LoadAll<Sprite>(spritesheetHead.name)[7];
-        Sprite arms = Resources.LoadAll<Sprite>(spritesheetHead.name)[17];
-        Sprite torso = Resources.LoadAll<Sprite>(spritesheetHead.name)[12];
-        Sprite legs = Resources.LoadAll<Sprite>(spritesheetHead.name)[27];
+        spriteRenderer.flipX = false;
+        spriteRenderer.sprite = sprites[startingIndex + 2];
     }
 
     public void TurnDiagonalUpRight()
     {
-        Sprite head = Resources.LoadAll<Sprite>(spritesheetHead.name)[9];
-        Sprite arms = Resources.LoadAll<Sprite>(spritesheetHead.name)[19];
-        Sprite torso = Resources.LoadAll<Sprite>(spritesheetHead.name)[14];
-        Sprite legs = Resources.LoadAll<Sprite>(spritesheetHead.name)[29];
+        spriteRenderer.flipX = false;
+        spriteRenderer.sprite = sprites[startingIndex];
     }
     public void TurnDiagonalDownRight()
     {
-        Sprite head = Resources.LoadAll<Sprite>(spritesheetHead.name)[9];
-        Sprite arms = Resources.LoadAll<Sprite>(spritesheetHead.name)[19];
-        Sprite torso = Resources.LoadAll<Sprite>(spritesheetHead.name)[14];
-        Sprite legs = Resources.LoadAll<Sprite>(spritesheetHead.name)[29];
+        spriteRenderer.flipX = false;
+        spriteRenderer.sprite = sprites[startingIndex + 1];
     }
 
     public void TurnDiagonalUpLeft()
     {
-        Sprite head = Resources.LoadAll<Sprite>(spritesheetHead.name)[9];
-        Sprite arms = Resources.LoadAll<Sprite>(spritesheetHead.name)[19];
-        Sprite torso = Resources.LoadAll<Sprite>(spritesheetHead.name)[14];
-        Sprite legs = Resources.LoadAll<Sprite>(spritesheetHead.name)[29];
+        spriteRenderer.flipX = true;
+        spriteRenderer.sprite = sprites[startingIndex];
     }
     public void TurnDiagonalDownLeft()
     {
-        Sprite head = Resources.LoadAll<Sprite>(spritesheetHead.name)[9];
-        Sprite arms = Resources.LoadAll<Sprite>(spritesheetHead.name)[19];
-        Sprite torso = Resources.LoadAll<Sprite>(spritesheetHead.name)[14];
-        Sprite legs = Resources.LoadAll<Sprite>(spritesheetHead.name)[29];
+        spriteRenderer.flipX = true;
+        spriteRenderer.sprite = sprites[startingIndex + 1];
     }
 
-    public void DrawGunHands()
-    {
-        Sprite head = Resources.LoadAll<Sprite>(spritesheetHead.name)[9];
-        Sprite arms = Resources.LoadAll<Sprite>(spritesheetHead.name)[19];
-        Sprite torso = Resources.LoadAll<Sprite>(spritesheetHead.name)[14];
-        Sprite legs = Resources.LoadAll<Sprite>(spritesheetHead.name)[29];
-    }
-    public void DrawDefaultHands()
-    {
-        Sprite head = Resources.LoadAll<Sprite>(spritesheetHead.name)[9];
-        Sprite arms = Resources.LoadAll<Sprite>(spritesheetHead.name)[19];
-        Sprite torso = Resources.LoadAll<Sprite>(spritesheetHead.name)[14];
-        Sprite legs = Resources.LoadAll<Sprite>(spritesheetHead.name)[29];
-    }
+    //public void DrawGunHands()
+    //{
+    //    spriteRenderer.sprite = sprites[startingIndex + 4];
+    //}
+    //public void DrawDefaultHands()
+    //{
+    //    spriteRenderer.sprite = sprites[startingIndex + 4];
+    //}
 }
