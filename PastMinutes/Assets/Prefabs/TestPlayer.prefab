@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1736977022079963223}
   - component: {fileID: 3219915857033237564}
   - component: {fileID: 9213745710047445045}
-  - component: {fileID: 1736977022079963222}
   - component: {fileID: 4649152010326296606}
   m_Layer: 0
   m_Name: TestPlayer
@@ -67,25 +66,6 @@ MonoBehaviour:
   Player: 0
   Enemy: 0
   Item: 0
---- !u!95 &1736977022079963222
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736977022079963220}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 062e3943680779240ae177c197c2aec0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4649152010326296606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritesheet: 
+  sheetChanged: 0
+  startingIndex: 0
+  test: 
 --- !u!1 &1736977022662263835
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +270,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritesheet: 
+  sheetChanged: 0
+  startingIndex: 0
+  test: 
 --- !u!1 &1736977023381260780
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +367,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritesheet: 
+  sheetChanged: 0
+  startingIndex: 0
+  test: 
 --- !u!1 &1736977023412818029
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,3 +464,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritesheet: 
+  sheetChanged: 0
+  startingIndex: 0
+  test: 

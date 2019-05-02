@@ -12,11 +12,11 @@ public static class PartFindingSystem
     /// </summary>
    public enum BodyParts
     {
-        Head = 5,
-        Torso = 10,
-        Arms = 15,
-        Legs = 25,
-        ArmsWithGun = 35
+        Head = 0,
+        Torso = 5,
+        Arms = 10,
+        Legs = 20,
+        ArmsWithGun = 30
         
     }
 }

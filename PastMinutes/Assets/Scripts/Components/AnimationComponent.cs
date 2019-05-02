@@ -13,8 +13,6 @@ public class AnimationComponent : MonoBehaviour
     public string spritesheet;
     public bool sheetChanged;
     private int startingIndex;
-    private int offset;
-    private bool turn;
     private SpriteRenderer spriteRenderer;
     Sprite[] sprites;
 
@@ -31,8 +29,6 @@ public class AnimationComponent : MonoBehaviour
         {
             startingIndex = (int) part;
         }
-        offset = 4;
-        turn = false;
         sprites = Resources.LoadAll<Sprite>("Characters/" + spritesheet);
         sheetChanged = false;
 
@@ -45,9 +41,8 @@ public class AnimationComponent : MonoBehaviour
         {
             sheetChanged = false;
             sprites = Resources.LoadAll<Sprite>("Characters/" + spritesheet);
-            spriteRenderer.sprite = sprites[startingIndex + offset];
-            spriteRenderer.flipX = turn;
         }
+        spriteRenderer.sprite = sprites[int.Parse(spriteRenderer.sprite.name.Split('_')[1])];
     }
 
     public void SetSheetChanged(bool changed)
@@ -65,63 +60,48 @@ public class AnimationComponent : MonoBehaviour
     {
         spriteRenderer.flipX = false;
         spriteRenderer.sprite = sprites[startingIndex + 4];
-        offset = 4;
-        turn = false;
     }
 
     public void TurnBack()
     {
         spriteRenderer.flipX = false;
         spriteRenderer.sprite = sprites[startingIndex + 3];
-        offset = 3;
-        turn = false;
-
     }
 
     public void TurnLeft()
     {
         spriteRenderer.flipX = true;
         spriteRenderer.sprite = sprites[startingIndex + 2];
-        offset = 2;
-        turn = true;
     }
 
     public void TurnRight()
     {
         spriteRenderer.flipX = false;
         spriteRenderer.sprite = sprites[startingIndex + 2];
-        offset = 2;
-        turn = false;
     }
 
     public void TurnDiagonalUpRight()
     {
         spriteRenderer.flipX = false;
         spriteRenderer.sprite = sprites[startingIndex];
-        offset = 0;
-        turn = false;
     }
+
     public void TurnDiagonalDownRight()
     {
         spriteRenderer.flipX = false;
         spriteRenderer.sprite = sprites[startingIndex + 1];
-        offset = 1;
-        turn = false;
     }
 
     public void TurnDiagonalUpLeft()
     {
         spriteRenderer.flipX = true;
         spriteRenderer.sprite = sprites[startingIndex];
-        offset = 0;
-        turn = true;
     }
+
     public void TurnDiagonalDownLeft()
     {
         spriteRenderer.flipX = true;
         spriteRenderer.sprite = sprites[startingIndex + 1];
-        offset = 1;
-        turn = true;
     }
 
     //public void DrawGunHands()
