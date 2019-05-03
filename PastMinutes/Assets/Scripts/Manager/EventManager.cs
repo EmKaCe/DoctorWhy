@@ -15,7 +15,7 @@ public class EventManager : MonoBehaviour {
     private static EventManager eventManager;
 
 
-    public static EventManager instance
+    public static EventManager Instance
     {
         get
         {
@@ -52,7 +52,7 @@ public class EventManager : MonoBehaviour {
     public static void StartListening(string eventName, UnityAction<int, string> listener)
     {
         ThisEvent thisEvent = null;
-        if(instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        if(Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
         {
             thisEvent.AddListener(listener);
         }
@@ -60,7 +60,7 @@ public class EventManager : MonoBehaviour {
         {
             thisEvent = new ThisEvent();
             thisEvent.AddListener(listener);
-            instance.eventDictionary.Add(eventName, thisEvent);
+            Instance.eventDictionary.Add(eventName, thisEvent);
         }
     }
 
@@ -68,7 +68,7 @@ public class EventManager : MonoBehaviour {
     {
         if (eventManager == null) return;
         ThisEvent thisEvent = null;
-        if(instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        if(Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
         {
             //Debug.Log(eventName);
             thisEvent.RemoveListener(listener);
@@ -78,7 +78,7 @@ public class EventManager : MonoBehaviour {
     public static void TriggerEvent (string eventName, int entityID, string value)
     {
         ThisEvent thisEvent = null;
-        if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        if (Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
         {
             thisEvent.Invoke(entityID, value);
         }
