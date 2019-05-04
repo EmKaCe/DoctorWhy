@@ -34,5 +34,23 @@ public class EventSystem : MonoBehaviour {
         EventManager.TriggerEvent("TakeDamage", entityID, damage);
     }
 
+    /// <summary>
+    /// Entity with entityID died
+    /// </summary>
+    /// <param name="entityID">entity id of entity that died</param>
+    /// <param name="damageCauseID">entity id of entity that caused the damage</param>
+    public static void PersonDied(int entityID, string damageCauseID)
+    {
+        EventManager.TriggerEvent("PersonDied", entityID, damageCauseID);
+    }
 
+    /// <summary>
+    /// Entity with entityID was healed
+    /// </summary>
+    /// <param name="entityID">entity id of entity that was healed</param>
+    /// <param name="healerID">entity id of entity that caused the heal</param>
+    public static void PersonWasHealed(int entityID, string healerID)
+    {
+        EventManager.TriggerEvent("PersonWasHealed", entityID, healerID);
+    }
 }
