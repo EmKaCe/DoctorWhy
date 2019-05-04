@@ -21,8 +21,7 @@ public class OxygenComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        oxygenLevel -= oxygenUsage * Time.deltaTime;
-        displayValue = (int) oxygenLevel;
+
     }
 
     public int GetOxygenDisplayValue()
@@ -33,5 +32,45 @@ public class OxygenComponent : MonoBehaviour
     public float GetOxygenLevel()
     {
         return oxygenLevel;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="decrease"></param>
+    /// <returns>returns missing oxygen if decrease is greater than oxygenLevel</returns>
+    public float RemoveOxygen(float decrease)
+    {
+        if(oxygenLevel < decrease)
+        {
+            decrease = decrease - oxygenLevel;
+            oxygenLevel = 0;
+            return decrease;
+        }
+        else
+        {
+            oxygenLevel -= decrease;
+            return 0;
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="refill"></param>
+    /// <returns>returns surplus oxygen,if existing</returns>
+    public float RefillOxygen(float refill)
+    {
+        float rest = oxygenLevel + refill - startingOxLevel;
+        if (rest > 0)
+        {
+            oxygenLevel = startingOxLevel;
+            return rest;
+        }
+        else
+        {
+            oxygenLevel += refill;
+            return 0;
+        }
     }
 }

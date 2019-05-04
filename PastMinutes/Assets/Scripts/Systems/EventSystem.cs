@@ -53,4 +53,9 @@ public class EventSystem : MonoBehaviour {
     {
         EventManager.TriggerEvent("PersonWasHealed", entityID, healerID);
     }
+
+    public static void RanOutOfOxygen(int entityID, string missingOxygen)
+    {
+        EventManager.TriggerEvent("RanOutOfOxygen", entityID, missingOxygen);
+    }
 }
