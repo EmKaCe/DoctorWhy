@@ -36,7 +36,10 @@ public class EntityManager : MonoBehaviour {
         }
     }
 
-
+    private void Start()
+    {
+        Debug.Log("Hallo");
+    }
 
 
     public static void AddEntity(GameObject pEntity)
