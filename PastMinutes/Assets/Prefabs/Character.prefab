@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9213745710047445045}
   - component: {fileID: 4649152010326296606}
   m_Layer: 0
-  m_Name: TestPlayer
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,8 +174,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spritesheet: 
   sheetChanged: 0
-  startingIndex: 0
-  test: 
 --- !u!1 &1736977022662263835
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,8 +269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spritesheet: 
   sheetChanged: 0
-  startingIndex: 0
-  test: 
 --- !u!1 &1736977023381260780
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,8 +364,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spritesheet: 
   sheetChanged: 0
-  startingIndex: 0
-  test: 
 --- !u!1 &1736977023412818029
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,5 +459,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spritesheet: 
   sheetChanged: 0
-  startingIndex: 0
-  test: 

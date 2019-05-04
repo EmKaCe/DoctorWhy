@@ -7,7 +7,7 @@ public class EntityManager : MonoBehaviour {
 
     private static EntityManager entityManager;
 
-    public static EntityManager instance
+    public static EntityManager Instance
     {
         get
         {
@@ -36,28 +36,28 @@ public class EntityManager : MonoBehaviour {
         }
     }
 
-    
-	
-	
+
+
 
     public static void AddEntity(GameObject pEntity)
     {
+        
         int id = pEntity.GetInstanceID();
-        instance.entityDictionary.Add(id, pEntity);
+        Instance.entityDictionary.Add(id, pEntity);
     }
 
     public static void RemoveEntity(int entityID)
     {
-        instance.entityDictionary.Remove(entityID);
+        Instance.entityDictionary.Remove(entityID);
     }
 
-    public static Component GetComponent(int entityID, string componentName)
+    public static Component GetEntityComponent(int entityID, string componentName)
     {
         string test = componentName;
         Component c = new Component();
-        if (instance.entityDictionary.ContainsKey(entityID))
+        if (Instance.entityDictionary.ContainsKey(entityID))
         {
-            GameObject g = instance.entityDictionary[entityID];
+            GameObject g = Instance.entityDictionary[entityID];
             c = g.GetComponent(test) as MonoBehaviour;
         }
         return c;
@@ -67,7 +67,7 @@ public class EntityManager : MonoBehaviour {
     public static bool ContainsGameObject(int entityID)
     {
         bool containsObj;
-        if (instance.entityDictionary.ContainsKey(entityID)){
+        if (Instance.entityDictionary.ContainsKey(entityID)){
             containsObj = true;
         }
         else
