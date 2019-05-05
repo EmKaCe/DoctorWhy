@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Component for items that store oxygen
+/// </summary>
 public class OxygenComponent : MonoBehaviour
 {
-    /// <summary>
-    /// Usage of oxygen per second
-    /// </summary>
-    public float oxygenUsage;
+
     public float startingOxLevel;
     private float oxygenLevel;
     private int displayValue;
@@ -39,18 +39,18 @@ public class OxygenComponent : MonoBehaviour
     /// </summary>
     /// <param name="decrease"></param>
     /// <returns>returns missing oxygen if decrease is greater than oxygenLevel</returns>
-    public float RemoveOxygen(float decrease)
+    public void RemoveOxygen(float decrease, out float remains)
     {
         if(oxygenLevel < decrease)
         {
             decrease = decrease - oxygenLevel;
             oxygenLevel = 0;
-            return decrease;
+            remains = decrease;
         }
         else
         {
             oxygenLevel -= decrease;
-            return 0;
+            remains = 0;
         }
     }
 
@@ -59,18 +59,23 @@ public class OxygenComponent : MonoBehaviour
     /// </summary>
     /// <param name="refill"></param>
     /// <returns>returns surplus oxygen,if existing</returns>
-    public float RefillOxygen(float refill)
+    public void RefillOxygen(float refill, out float remains)
     {
         float rest = oxygenLevel + refill - startingOxLevel;
         if (rest > 0)
         {
             oxygenLevel = startingOxLevel;
-            return rest;
+            remains = rest;
         }
         else
         {
             oxygenLevel += refill;
-            return 0;
+            remains = 0;
         }
+    }
+
+    public void Refill(float test, out float test2)
+    {
+        test2 = test;
     }
 }

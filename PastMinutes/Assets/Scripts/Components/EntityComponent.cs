@@ -32,9 +32,5 @@ public class EntityComponent : MonoBehaviour {
         EntityManager.RemoveEntity(gameObject.GetInstanceID());
     }
 
-    public void OnDestroy()
-    {
-        EntityManager.RemoveEntity(gameObject.GetInstanceID());
-    }
 
 }

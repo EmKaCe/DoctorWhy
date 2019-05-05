@@ -18,7 +18,7 @@ public class HealthComponent : MonoBehaviour
         currentHealth -= damage;
         if(currentHealth <= 0)
         {
-            EventSystem.PersonDied(gameObject.GetInstanceID(), damageCauseID.ToString());
+            EventSystem.PersonDied(gameObject.GetInstanceID(), new string[] { damageCauseID.ToString() });
         }
     }
 
@@ -29,7 +29,7 @@ public class HealthComponent : MonoBehaviour
         {
             currentHealth = health;
         }
-        EventSystem.PersonWasHealed(gameObject.GetInstanceID(), healerID.ToString());
+        EventSystem.PersonWasHealed(gameObject.GetInstanceID(), new string[] { healerID.ToString() });
     }
 
     public float GetCurrentHealth()

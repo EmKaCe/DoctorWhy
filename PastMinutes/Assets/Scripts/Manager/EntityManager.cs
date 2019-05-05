@@ -40,7 +40,6 @@ public class EntityManager : MonoBehaviour {
 
     public static void AddEntity(GameObject pEntity)
     {
-        
         int id = pEntity.GetInstanceID();
         Instance.entityDictionary.Add(id, pEntity);
     }

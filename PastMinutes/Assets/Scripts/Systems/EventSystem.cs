@@ -16,7 +16,7 @@ public class EventSystem : MonoBehaviour {
     ///// </summary>
     ///// <param name="value"></param>
     ///// <param name="value2"></param>
-    //public static void EventName(int value, string value2)
+    //public static void EventName(int value, string[] value2)
     //{
     //    EventManager.TriggerEvent("EventName", value, value2);
     //}
@@ -29,7 +29,7 @@ public class EventSystem : MonoBehaviour {
     /// </summary>
     /// <param name="entityID">entity id of object that takes damage</param>
     /// <param name="damage">damage as float</param>
-    public static void TakeDamage(int entityID, string damage)
+    public static void TakeDamage(int entityID, string[] damage)
     {
         EventManager.TriggerEvent("TakeDamage", entityID, damage);
     }
@@ -39,7 +39,7 @@ public class EventSystem : MonoBehaviour {
     /// </summary>
     /// <param name="entityID">entity id of entity that died</param>
     /// <param name="damageCauseID">entity id of entity that caused the damage</param>
-    public static void PersonDied(int entityID, string damageCauseID)
+    public static void PersonDied(int entityID, string[] damageCauseID)
     {
         EventManager.TriggerEvent("PersonDied", entityID, damageCauseID);
     }
@@ -49,12 +49,12 @@ public class EventSystem : MonoBehaviour {
     /// </summary>
     /// <param name="entityID">entity id of entity that was healed</param>
     /// <param name="healerID">entity id of entity that caused the heal</param>
-    public static void PersonWasHealed(int entityID, string healerID)
+    public static void PersonWasHealed(int entityID, string[] healerID)
     {
         EventManager.TriggerEvent("PersonWasHealed", entityID, healerID);
     }
 
-    public static void RanOutOfOxygen(int entityID, string missingOxygen)
+    public static void RanOutOfOxygen(int entityID, string[] missingOxygen)
     {
         EventManager.TriggerEvent("RanOutOfOxygen", entityID, missingOxygen);
     }

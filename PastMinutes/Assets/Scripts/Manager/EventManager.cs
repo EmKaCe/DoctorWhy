@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class EventManager : MonoBehaviour {
 
    [System.SerializableAttribute]
-    public class ThisEvent : UnityEvent<int, string>
+    public class ThisEvent : UnityEvent<int, string[]>
     {
 
     }
@@ -49,7 +49,7 @@ public class EventManager : MonoBehaviour {
     /// </summary>
     /// <param name="eventName"></param>
     /// <param name="listener"></param>
-    public static void StartListening(string eventName, UnityAction<int, string> listener)
+    public static void StartListening(string eventName, UnityAction<int, string[]> listener)
     {
         ThisEvent thisEvent = null;
         if(Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
@@ -64,7 +64,7 @@ public class EventManager : MonoBehaviour {
         }
     }
 
-    public static void StopListening(string eventName, UnityAction<int, string> listener)
+    public static void StopListening(string eventName, UnityAction<int, string[]> listener)
     {
         if (eventManager == null) return;
         ThisEvent thisEvent = null;
@@ -75,7 +75,7 @@ public class EventManager : MonoBehaviour {
         }
     }
 
-    public static void TriggerEvent (string eventName, int entityID, string value)
+    public static void TriggerEvent (string eventName, int entityID, string[] value)
     {
         ThisEvent thisEvent = null;
         if (Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
@@ -85,88 +85,91 @@ public class EventManager : MonoBehaviour {
     }
 
 
+    #region Deprecated
 
-    public static string CreateMessageString(string[] values)
-    {
-        string s = "";
-        for(int i = 0; i < (values.Length - 1); i++)
-        {
-            s += values[i];
-            s += '|';
-        }
-        s += values[(values.Length - 1)];
-        return s;
-    }
+    //public static string CreateMessageString(string[] values)
+    //{
+    //    string s = "";
+    //    for(int i = 0; i < (values.Length - 1); i++)
+    //    {
+    //        s += values[i];
+    //        s += '|';
+    //    }
+    //    s += values[(values.Length - 1)];
+    //    return s;
+    //}
 
-    public static string CreateMessageString(string[] values, char separator)
-    {
-        string s = "";
-        for (int i = 0; i < (values.Length - 1); i++)
-        {
-            s += values[i];
-            s += separator;
-        }
-        s += values[(values.Length - 1)];
-        return s;
-    }
+    //public static string CreateMessageString(string[] values, char separator)
+    //{
+    //    string s = "";
+    //    for (int i = 0; i < (values.Length - 1); i++)
+    //    {
+    //        s += values[i];
+    //        s += separator;
+    //    }
+    //    s += values[(values.Length - 1)];
+    //    return s;
+    //}
 
 
-    /// <summary>
-    /// Splits the message-string into a string-array using '|' as separator
-    /// </summary>
-    /// <param name="message">message of EventSystem</param>
-    /// <returns>string[]</returns>
-    public static string[] SplitMessageStringInArray(string message)
-    {
-        string[] s = message.Split('|');
-        return s;
-    }
+    ///// <summary>
+    ///// Splits the message-string into a string-array using '|' as separator
+    ///// </summary>
+    ///// <param name="message">message of EventSystem</param>
+    ///// <returns>string[]</returns>
+    //public static string[] SplitMessageStringInArray(string message)
+    //{
+    //    string[] s = message.Split('|');
+    //    return s;
+    //}
 
-    /// <summary>
-    /// Splits the message-string into a string-array using 'separator' as separator
-    /// </summary>
-    /// <param name="message">message of EventSystem</param>
-    /// <param name="seperator">separator to seperate "message"</param>
-    /// <returns>string[]</returns>
-    public static string[] SplitMessageStringInArray(string message, char seperator)
-    {
-        string[] s = message.Split(seperator);
-        return s;
-    }
+    ///// <summary>
+    ///// Splits the message-string into a string-array using 'separator' as separator
+    ///// </summary>
+    ///// <param name="message">message of EventSystem</param>
+    ///// <param name="seperator">separator to seperate "message"</param>
+    ///// <returns>string[]</returns>
+    //public static string[] SplitMessageStringInArray(string message, char seperator)
+    //{
+    //    string[] s = message.Split(seperator);
+    //    return s;
+    //}
 
-    /// <summary>
-    /// Returns the first object of the message-string as an int. 
-    /// </summary>
-    /// <param name="message">message of EventSystem</param>
-    /// <returns>int (usually an EntityID)</returns>
-    public static int GetOtherID(string message)
-    {
-        return int.Parse(SplitMessageStringInArray(message)[0]);
-    }
+    ///// <summary>
+    ///// Returns the first object of the message-string as an int. 
+    ///// </summary>
+    ///// <param name="message">message of EventSystem</param>
+    ///// <returns>int (usually an EntityID)</returns>
+    //public static int GetOtherID(string message)
+    //{
+    //    return int.Parse(SplitMessageStringInArray(message)[0]);
+    //}
 
-    /// <summary>
-    /// Returns the value of the message on "pos" as a int
-    /// Uses SplitMessageStringInArray(message)
-    /// </summary>
-    /// <param name="message">message of EventSystem</param>
-    /// <param name="pos">position of the value in message</param>
-    /// <returns>int</returns>
-    public static int GetOtherInt(string message, int pos)
-    {
-        return int.Parse(SplitMessageStringInArray(message)[pos]);
-    }
+    ///// <summary>
+    ///// Returns the value of the message on "pos" as a int
+    ///// Uses SplitMessageStringInArray(message)
+    ///// </summary>
+    ///// <param name="message">message of EventSystem</param>
+    ///// <param name="pos">position of the value in message</param>
+    ///// <returns>int</returns>
+    //public static int GetOtherInt(string message, int pos)
+    //{
+    //    return int.Parse(SplitMessageStringInArray(message)[pos]);
+    //}
 
-    /// <summary>
-    /// Returns the value of the message on "pos" as a float
-    /// Uses SplitMessageStringInArray(message)
-    /// </summary>
-    /// <param name="message">message of EventSystem</param>
-    /// <param name="pos">position of the value in message</param>
-    /// <returns>float</returns>
-    public static float GetOtherValue(string message, int pos)
-    {
-        return float.Parse(SplitMessageStringInArray(message)[pos]);
-    }
+    ///// <summary>
+    ///// Returns the value of the message on "pos" as a float
+    ///// Uses SplitMessageStringInArray(message)
+    ///// </summary>
+    ///// <param name="message">message of EventSystem</param>
+    ///// <param name="pos">position of the value in message</param>
+    ///// <returns>float</returns>
+    //public static float GetOtherValue(string message, int pos)
+    //{
+    //    return float.Parse(SplitMessageStringInArray(message)[pos]);
+    //}
+
+    #endregion
 
     /*
     public delegate void ClickAction();
