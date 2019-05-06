@@ -12,13 +12,13 @@ public class EventSystem : MonoBehaviour {
 
 
     ///// <summary>
-    ///// 
+    ///// [Description]
+    ///// <para>int: </para>
+    ///// <para>string: </para>
     ///// </summary>
-    ///// <param name="value"></param>
-    ///// <param name="value2"></param>
-    //public static void EventName(int value, string[] value2)
+    //public static string EventName()
     //{
-    //    EventManager.TriggerEvent("EventName", value, value2);
+    //    return "EventName";
     //}
 
     #endregion
@@ -26,36 +26,45 @@ public class EventSystem : MonoBehaviour {
 
     /// <summary>
     /// Entity with entityID takes damage 
+    /// <para>int: entity id of object that takes damage</para>
+    /// <para>string[]: damage as float, entityID of entity that caused damage</para>
     /// </summary>
-    /// <param name="entityID">entity id of object that takes damage</param>
-    /// <param name="damage">damage as float</param>
-    public static void TakeDamage(int entityID, string[] damage)
+    public static string TakeDamage()
     {
-        EventManager.TriggerEvent("TakeDamage", entityID, damage);
+        return "TakeDamage";
     }
 
     /// <summary>
     /// Entity with entityID died
+    /// <para>int: entity id of entity that died</para>
+    /// <para>string: entity id of entity that caused the damage</para>
     /// </summary>
-    /// <param name="entityID">entity id of entity that died</param>
-    /// <param name="damageCauseID">entity id of entity that caused the damage</param>
-    public static void PersonDied(int entityID, string[] damageCauseID)
+    public static string PersonDied()
     {
-        EventManager.TriggerEvent("PersonDied", entityID, damageCauseID);
+        return "PersonDied";
     }
 
     /// <summary>
     /// Entity with entityID was healed
+    /// <para>int: entity id of entity that was healed</para>
+    /// <para>string[]: entity id of entity that caused the heal</para>
     /// </summary>
-    /// <param name="entityID">entity id of entity that was healed</param>
-    /// <param name="healerID">entity id of entity that caused the heal</param>
-    public static void PersonWasHealed(int entityID, string[] healerID)
+    public static string PersonWasHealed()
     {
-        EventManager.TriggerEvent("PersonWasHealed", entityID, healerID);
+        return "PersonWasHealed";
     }
 
-    public static void RanOutOfOxygen(int entityID, string[] missingOxygen)
+    /// <summary>
+    /// Entity ran out of oxygen
+    /// <para>int: entitiyID of entity that run out of oxygen</para>
+    /// <para>string[]: amount of oxygen that was missing</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string RanOutOfOxygen()
     {
-        EventManager.TriggerEvent("RanOutOfOxygen", entityID, missingOxygen);
+        return "RanOutOfOxygen";
     }
+
+
+    
 }
