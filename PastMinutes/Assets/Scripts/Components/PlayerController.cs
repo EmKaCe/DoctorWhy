@@ -7,24 +7,27 @@ public class PlayerController : MonoBehaviour
 
     public float movementSpeed;
     private Rigidbody2D rigid;
-    private Animator anim;
+    private CharacterAnimator cAnim;
     public int direction;
+    private bool walking;
     // Start is called before the first frame update
     void Start()
     {
-        direction = -1;
-        anim = gameObject.GetComponent<Animator>();
+        walking = false;
+        direction = -1;        
         rigid = gameObject.GetComponent<Rigidbody2D>();
+        cAnim = gameObject.GetComponent<CharacterAnimator>();
         if(rigid == null)
         {
             Debug.Log("The player character needs a 2d rigidbody");
             gameObject.GetComponent<PlayerController>().enabled = false;
         }
-        if (anim == null)
+        if(cAnim == null)
         {
-            Debug.Log("The player character needs an Animator");
+            Debug.Log("The character `" + gameObject.name + "´ needs a CharcterAnimator");
             gameObject.GetComponent<PlayerController>().enabled = false;
         }
+
     }
 
     private void FixedUpdate()
@@ -32,35 +35,37 @@ public class PlayerController : MonoBehaviour
         Vector2 currentPos = rigid.position;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
+
         Vector2 movement = inputVector * movementSpeed;
-        Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;       
+        Vector2 newPos = currentPos + movement * Time.fixedDeltaTime; 
+        
         direction = GetDirection(horizontalInput, verticalInput);
-        anim.SetInteger("Direction", direction);
+        cAnim.TurnAndWalk(direction, new string[] { walking.ToString() });
         rigid.MovePosition(newPos);
     }
 
     private int GetDirection(float horizontalMovement, float verticalMovement)
     {
+        walking = true;
         if (horizontalMovement == 0)
         {
             if(verticalMovement > 0)
             {
                 //North
-                anim.SetBool("Walking", true);
                 return 0; 
             }
             else if(verticalMovement < 0)
             {
                 //South
-                anim.SetBool("Walking", true);
                 return 4;
             }
             else
             {
                 //Idle
-                anim.SetBool("Walking", false);
+                walking = false;
                 return direction;
             }
         }
@@ -69,19 +74,16 @@ public class PlayerController : MonoBehaviour
             if (verticalMovement > 0)
             {
                 //North-East
-                anim.SetBool("Walking", true);
                 return 1;
             }
             else if (verticalMovement < 0)
             {
                 //South-East
-                anim.SetBool("Walking", true);
                 return 3;
             }
             else
             {
                 //East
-                anim.SetBool("Walking", true);
                 return 2;
             }
         }
@@ -90,19 +92,16 @@ public class PlayerController : MonoBehaviour
             if (verticalMovement > 0)
             {
                 //North-West
-                anim.SetBool("Walking", true);
                 return 7;
             }
             else if (verticalMovement < 0)
             {
                 //South-West
-                anim.SetBool("Walking", true);
                 return 5;
             }
             else
             {
                 //West
-                anim.SetBool("Walking", true);
                 return 6;
             }
         }

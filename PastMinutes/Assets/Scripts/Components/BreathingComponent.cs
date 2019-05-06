@@ -88,7 +88,7 @@ public class BreathingComponent : MonoBehaviour
             else
             {
                 oxygenRemaining = false;
-                EventSystem.RanOutOfOxygen(gameObject.GetInstanceID(), new string[] { remains.ToString() });
+                EventManager.TriggerEvent(EventSystem.RanOutOfOxygen(), gameObject.GetInstanceID(), new string[] { remains.ToString() });
             }
         }
     }
