@@ -19,4 +19,24 @@ public static class PartFindingSystem
         ArmsWithGun = 30
         
     }
+
+    public enum GunType
+    {
+        AssaultRifle = 0,
+        SubmachineGun = 1,
+        Shotgun = 3,
+        Pistol = 4,
+        GrenadeLauncher = 5,
+        LMG = 6,
+        Minigun = 7
+
+    }
+
+
+    public enum AmmoType
+    {
+        energy = 0,
+        ballistic = 1,
+    }
+
 }

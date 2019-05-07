@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
 {
 
 
-
     public float movementSpeed;
     private Rigidbody2D rigid;
     private CharacterAnimator cAnim;
@@ -31,6 +30,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
 
     private void FixedUpdate()
     {

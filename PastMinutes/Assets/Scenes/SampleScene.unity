@@ -131,6 +131,11 @@ GameObject:
   - component: {fileID: 140077110}
   - component: {fileID: 140077112}
   - component: {fileID: 140077111}
+  - component: {fileID: 140077117}
+  - component: {fileID: 140077116}
+  - component: {fileID: 140077115}
+  - component: {fileID: 140077114}
+  - component: {fileID: 140077113}
   m_Layer: 0
   m_Name: TestItem
   m_TagString: Untagged
@@ -178,6 +183,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityID: 0
+--- !u!114 &140077113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140077109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf3c1e5f841fe245a454b12678480ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunType: 0
+--- !u!114 &140077114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140077109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07acf0b4dd3d6514d80825de4d026a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunType: 0
+--- !u!114 &140077115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140077109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8867a670f96039f49bb8b9ac18f14f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoType: 1
+  gunType: 0
+  weight: 0.12
+--- !u!114 &140077116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140077109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95a4df975e8cda47af623c4c9986c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muzzleVelocity: 0
+  gunType: 0
+  magazine: {fileID: 140077117}
+  rail: {fileID: 140077113}
+  muzzle: {fileID: 140077114}
+--- !u!114 &140077117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140077109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c0fb6dbdff64f4998598247f6ac122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunType: 0
+  projectile: {fileID: 140077115}
+  capacity: 0
+  amountOfAmunition: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
