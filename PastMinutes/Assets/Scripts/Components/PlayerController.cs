@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CharacterAnimator))]
 public class PlayerController : MonoBehaviour
 {
+
+
 
     public float movementSpeed;
     private Rigidbody2D rigid;
