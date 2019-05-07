@@ -9,11 +9,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigid;
     private CharacterAnimator cAnim;
     public int direction;
-    private bool walking;
     // Start is called before the first frame update
     void Start()
     {
-        walking = false;
         direction = -1;        
         rigid = gameObject.GetComponent<Rigidbody2D>();
         cAnim = gameObject.GetComponent<CharacterAnimator>();
@@ -43,13 +41,17 @@ public class PlayerController : MonoBehaviour
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime; 
         
         direction = GetDirection(horizontalInput, verticalInput);
+        bool walking = false;
+        if(movement.magnitude > .01f)
+        {
+            walking = true;
+        }
         cAnim.TurnAndWalk(direction, new string[] { walking.ToString() });
         rigid.MovePosition(newPos);
     }
 
     private int GetDirection(float horizontalMovement, float verticalMovement)
     {
-        walking = true;
         if (horizontalMovement == 0)
         {
             if(verticalMovement > 0)
@@ -65,7 +67,6 @@ public class PlayerController : MonoBehaviour
             else
             {
                 //Idle
-                walking = false;
                 return direction;
             }
         }

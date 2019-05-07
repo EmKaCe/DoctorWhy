@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,7 +7,6 @@ using UnityEngine.Events;
 public class CharacterAnimator : MonoBehaviour
 {
     private Animator anim;
-
 
     private void Start()
     {
@@ -19,16 +19,10 @@ public class CharacterAnimator : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void TurnAndWalk(int movement, string[] walking)
     {
-        bool.TryParse(walking[0],out bool res);
-        anim.SetBool("Walking", res);
+        bool res = bool.Parse(walking[0]);
+        //anim.SetBool("Walking", res);
         //walking
         if (res)
         {
@@ -98,6 +92,7 @@ public class CharacterAnimator : MonoBehaviour
             }
         }
         
-        
     }
+
+   
 }
