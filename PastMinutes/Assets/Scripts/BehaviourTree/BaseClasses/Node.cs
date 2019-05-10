@@ -5,47 +5,53 @@ using UnityEngine;
 public abstract class Node : MonoBehaviour
 {
     public bool root;
-    public Node parentNode;
-    private bool active;
+    public ExtendedNode parentNode;
+    private State state;
 
     public enum State{
         Success,
         Running,
-        Failure
+        Failure,
+        NotActive
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         if (parentNode != null)
         {
+            state = State.NotActive;
             root = false;
         }
         else
         {
+            state = State.Running;
             root = true;
         }
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-        if (active)
+        if (State.Running == state)
         {
-            parentNode.GetChildState(State.Running);
             Run();
         }
     }
 
     public void SetActive()
     {
-        active = true;
+        parentNode.SetChildState(State.Running);
+        state = State.Running;
     }
 
-    public abstract void GetChildState(State state);
 
 
     public abstract void Run();
+
+    public abstract void Success();
+
+    public abstract void Failure();
 
 
 }
