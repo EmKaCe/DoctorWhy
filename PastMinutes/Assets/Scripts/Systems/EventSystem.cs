@@ -56,14 +56,81 @@ public class EventSystem : MonoBehaviour {
 
     /// <summary>
     /// Entity ran out of oxygen
-    /// <para>int: entitiyID of entity that run out of oxygen</para>
+    /// <para>int: entityID of entity that run out of oxygen</para>
     /// <para>string[]: amount of oxygen that was missing</para>
     /// </summary>
-    /// <returns></returns>
+    /// <returns>"RanOutOfOxygen"</returns>
     public static string RanOutOfOxygen()
     {
         return "RanOutOfOxygen";
     }
+
+    /// <summary>
+    /// Entity switched gun
+    /// <para>int: entityID of entity that switched the gun</para>
+    /// <para>string[]: name of the gun</para>
+    /// </summary>
+    /// <returns>"GunSwitched"</returns>
+    public static string GunSwitched()
+    {
+        return "GunSwitched";
+    }
+
+    /// <summary>
+    /// Entity changed Attachment
+    /// <para>int: entityID of entity that changed Attachment</para>
+    /// <para>string[]: name of the gun, attachmentSlot, name of attachment</para>
+    /// </summary>
+    /// <returns>"AttachmentChanged"</returns>
+    public static string AttachmentChanged()
+    {
+        return "AttachmentChanged";
+    }
+
+    /// <summary>
+    /// Entity added attachment
+    /// <para>int: entityID of entity that added attachment</para>
+    /// <para>string[]: name of the gun, attachmentSlot, name of attachment</para>
+    /// </summary>
+    /// <returns>"AttachmentAdded"</returns>
+    public static string AttachmentAdded()
+    {
+        return "AttachmentAdded";
+    }
+
+    /// <summary>
+    /// Entity removed attachment
+    /// <para>int: entityID of entity that removed attachment</para>
+    /// <para>string[]: name of the gun, attachmentSlot, name of attachment</para>
+    /// </summary>
+    /// <returns>"AttachmentRemoved"</returns>
+    public static string AttachmentRemoved()
+    {
+        return "AttachmentRemoved";
+    }
+
+    /// <summary>
+    /// Entity pulled Trigger
+    /// <para>int: entityID of entity that pulled Trigger</para>
+    /// <para>string[]: name of the gun</para>
+    /// </summary>
+    /// <returns>"AttachmentRemoved"</returns>
+    public static string TriggerPulled()
+    {
+        return "TriggerPulled";
+    }
+
+    /// <summary>
+    /// Shooting component gets initialized (called on start)
+    /// <para>int: entityID of entity that contains ShootingComponent</para>
+    /// <para>string[]: 0</para>
+    /// </summary>
+    /// <returns>"InitializingShootingComponent"/></returns>
+    public static string InitializingShootingComponent()
+    {
+        return "InitializingShootingComponent";
+    }
+
 
 
     

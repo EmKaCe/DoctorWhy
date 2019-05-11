@@ -49,14 +49,34 @@ public class EntityManager : MonoBehaviour {
         Instance.entityDictionary.Remove(entityID);
     }
 
+    /// <summary>
+    /// searches only obj for component
+    /// </summary>
+    /// <param name="entityID"></param>
+    /// <param name="componentName"></param>
+    /// <returns></returns>
     public static Component GetEntityComponent(int entityID, string componentName)
     {
-        string test = componentName;
         Component c = new Component();
         if (Instance.entityDictionary.ContainsKey(entityID))
         {
-            GameObject g = Instance.entityDictionary[entityID];
-            c = g.GetComponent(test) as MonoBehaviour;
+            c = Instance.entityDictionary[entityID].GetComponent(componentName) as MonoBehaviour;
+        }
+        return c;
+    }
+
+    /// <summary>
+    /// Searches obj and children
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="entityID"></param>
+    /// <returns></returns>
+    public static Component GetEntityComponent<T>(int entityID)
+    {
+        Component c = new Component();
+        if (Instance.entityDictionary.ContainsKey(entityID))
+        {
+            c =  Instance.entityDictionary[entityID].GetComponentInChildren<T>() as MonoBehaviour;
         }
         return c;
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public abstract class Node : MonoBehaviour
 {
     public bool root;
@@ -18,16 +19,20 @@ public abstract class Node : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        if (parentNode != null)
+        if (!root)
         {
-            state = State.NotActive;
-            root = false;
+            if (parentNode != null)
+            {
+                state = State.NotActive;
+                root = false;
+            }
+            else
+            {
+                state = State.Running;
+                root = true;
+            }
         }
-        else
-        {
-            state = State.Running;
-            root = true;
-        }
+        
     }
 
     // Update is called once per frame
@@ -41,7 +46,10 @@ public abstract class Node : MonoBehaviour
 
     public void SetActive()
     {
-        parentNode.SetChildState(State.Running);
+        if (!root)
+        {
+            parentNode.SetChildState(State.Running);
+        }       
         state = State.Running;
     }
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+[AddComponentMenu("BehaviourTree/Sequence")]
 public class Sequence : ExtendedNode
 {
     // Start is called before the first frame update

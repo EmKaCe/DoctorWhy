@@ -4,8 +4,13 @@ using UnityEditor;
 public class EditorTestWindow : EditorWindow
 {
     string textString = "Hello World";
-    HealthComponent healthComp;
+    Node node;
     bool fold = true;
+
+    private float x = 5;
+    private float y = 100;
+
+    Rect all = new Rect(-5, -5, 10000, 10000);
 
 
     [MenuItem("Window/EditorTest")]
@@ -28,17 +33,21 @@ public class EditorTestWindow : EditorWindow
 
         //if (GUILayout.Button("Press Me"))
         //{
-        healthComp = null;
+        node = null;
             foreach (GameObject obj in Selection.gameObjects)
             {
-                healthComp = obj.GetComponent<HealthComponent>();
-                if (healthComp != null)
+                node = obj.GetComponent<Node>();
+                if (node != null)
                 {
-                    fold = EditorGUILayout.InspectorTitlebar(fold, healthComp);
-                    break;
+                    if (node.root || node.parentNode == null)
+                    {
+                        node.root = true;
+                        fold = EditorGUILayout.InspectorTitlebar(fold, node);
+                        break;
+                    }                    
                 }
             }
-        if (healthComp == null)
+        if (node == null)
         {
 
         }
@@ -46,11 +55,42 @@ public class EditorTestWindow : EditorWindow
         {
             if (fold)
             {
-                EditorGUILayout.RectField(new Rect(0, 0, 100, 50));
-                healthComp.health = EditorGUILayout.FloatField("Health", healthComp.health);
+                //EditorGUILayout.RectField(new Rect(0, 0, 100, 50));
+                node.name = EditorGUILayout.TextField("Name", node.name);
                 EditorGUILayout.Space();
+                CreateTreeItem(node);
             }
         }
+    }
+
+
+    private void CreateTreeItem(Node node)
+    {
+        GUILayout.BeginArea(new Rect(x, y, 500 , 50));
+        BeginWindows();
+        Debug.Log(node.GetType());
+        if (typeof(NodeWithChildState).IsAssignableFrom(node.GetType()) && !typeof(ExtendedNode).IsAssignableFrom(node.GetType()))
+        {
+                NodeWithChildState test = node as NodeWithChildState;
+                node.name = EditorGUILayout.TextField("Decorator", node.name);
+                //Decorator
+
+            
+        }
+        else if (typeof(ExtendedNode).IsAssignableFrom(node.GetType()))
+        {
+            //Sequence or Selector
+            ExtendedNode test = node as ExtendedNode;
+            node.name = EditorGUILayout.TextField("ExtendedNode", node.name);
+        }
+        else
+        {
+            //Behaviour
+            node.name = EditorGUILayout.TextField("Behaviour", node.name);
+        }
+
+        EndWindows();
+        GUILayout.EndArea();
     }
 
 

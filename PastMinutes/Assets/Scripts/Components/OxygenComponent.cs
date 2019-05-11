@@ -52,6 +52,7 @@ public class OxygenComponent : MonoBehaviour
             oxygenLevel -= decrease;
             remains = 0;
         }
+        displayValue = (int) oxygenLevel;
     }
 
     /// <summary>
@@ -72,10 +73,7 @@ public class OxygenComponent : MonoBehaviour
             oxygenLevel += refill;
             remains = 0;
         }
+        displayValue = (int)oxygenLevel;
     }
 
-    public void Refill(float test, out float test2)
-    {
-        test2 = test;
-    }
 }
