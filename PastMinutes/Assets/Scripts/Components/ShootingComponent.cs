@@ -14,6 +14,7 @@ public class ShootingComponent : MonoBehaviour
     private Sprite projectile;
     public bool autoFire;
     private bool shooting;
+    private GunComponent gun;
 
 
     // Start is called before the first frame update
@@ -23,6 +24,8 @@ public class ShootingComponent : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         projectile = Resources.Load<Sprite>("Items/" + projectileSpritesheet);
         Debug.Log(projectile);
+        //work in progress: take gun component for projectile information
+        gun = gameObject.GetComponent<GunComponent>() as GunComponent;
 
     }
 
