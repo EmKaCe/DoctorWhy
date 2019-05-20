@@ -9,6 +9,8 @@ public class GunComponent : MonoBehaviour
     public MagazineComponent magazine;
     public RailAttachmentComponent rail;
     public MuzzleAttachmentComponent muzzle;
+    public PartFindingSystem.FiringModes firingModes;
+    public PartFindingSystem.CurrentFiringMode currentMode;
 
     // Start is called before the first frame update
     void Start()
