@@ -22,13 +22,14 @@ public class ShootingSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shootingComponentDictionary = new Dictionary<int, ShootingComponent>();
+        
         Debug.Log(activeGun);
 
     }
 
     private void Awake()
     {
+        shootingComponentDictionary = new Dictionary<int, ShootingComponent>();
         initializingListener = new UnityAction<int, string[]>(InitializeComponent);
         gunSwitchedListener = new UnityAction<int, string[]>(SwitchGun);
         attachmentAddedListener = new UnityAction<int, string[]>(AddAttachment);

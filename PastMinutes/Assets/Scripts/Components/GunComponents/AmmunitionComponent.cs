@@ -2,22 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmmunitionComponent : MonoBehaviour
+[CreateAssetMenu(fileName = "Projectile", menuName = "GunComponents/Projectile", order = 20)]
+public class AmmunitionComponent : ScriptableObject
 {
 
     public PartFindingSystem.AmmoType ammoType;
     public PartFindingSystem.GunType gunType;
     public float weight;
+    public Sprite projectile;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

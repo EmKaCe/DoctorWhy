@@ -10,14 +10,14 @@ public static class PartFindingSystem
     /// <summary>
     /// Location of bodyparts in spritesheet. Index is first occurence of body part
     /// </summary>
-   public enum BodyParts
+    public enum BodyParts
     {
         Head = 0,
         Torso = 5,
         Arms = 10,
         Legs = 20,
         ArmsWithGun = 30
-        
+
     }
 
     public enum GunType
@@ -37,6 +37,25 @@ public static class PartFindingSystem
     {
         energy = 0,
         ballistic = 1,
+    }
+
+    [System.Serializable]
+    public class FiringModes
+    {
+        [SerializeField]
+        bool single;
+        [SerializeField]
+        bool burst;
+        [SerializeField]
+        bool auto;
+    }
+
+
+    public enum CurrentFiringMode
+    {
+        single = 0,
+        burst = 2,
+        auto = 3,
     }
 
 }
