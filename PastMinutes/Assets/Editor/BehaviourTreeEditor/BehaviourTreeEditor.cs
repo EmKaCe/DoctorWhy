@@ -227,7 +227,10 @@ public class BehaviourTreeEditor : EditorWindow
         {
             nodes = new List<BehaviourNode>();
         }
-        nodes.Add(new BaseBehaviour(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+        BaseBehaviour b = ScriptableObject.CreateInstance<BaseBehaviour>();
+        AssetDatabase.CreateAsset(b, "Assets/Scripts/test.asset");
+        b.CreateBaseBehaviour(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+        nodes.Add(b);
     }
 
     private void OnClickAddSelector(Vector2 mousePosition)
@@ -260,8 +263,10 @@ public class BehaviourTreeEditor : EditorWindow
         {
             nodes = new List<BehaviourNode>();
         }
+        TestBehaviourNode t = ScriptableObject.CreateInstance<TestBehaviourNode>();
         GameObject g = new GameObject();
-        nodes.Add(new TestBehaviourNode(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, g.AddComponent(typeof (TestBehaviour )) as TestBehaviour));
+        t.CreateTestBehaviourNode(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, g.AddComponent(typeof(TestBehaviour)) as TestBehaviour);     
+        nodes.Add(t);
     }
 
     private void OnClickInPoint(BehaviourConnectionPoint inPoint)
