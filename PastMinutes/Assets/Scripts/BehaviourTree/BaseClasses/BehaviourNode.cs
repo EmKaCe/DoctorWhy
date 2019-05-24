@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -27,6 +28,12 @@ public abstract class BehaviourNode : ScriptableObject
 
     public Action<BehaviourNode> OnRemoveNode;
 
+    [HideInInspector]
+    public readonly float rowHeight = 20f;
+    [HideInInspector]
+    public readonly float offset = 10;
+
+
     public void CreateBehaviourNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode)
     {
         rect = new Rect(position.x, position.y, width, height);
@@ -40,7 +47,7 @@ public abstract class BehaviourNode : ScriptableObject
 
 
 
-    public void Drag(Vector2 delta)
+    public virtual void Drag(Vector2 delta)
     {
         rect.position += delta;
     }

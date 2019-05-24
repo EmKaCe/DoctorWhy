@@ -229,7 +229,7 @@ public class BehaviourTreeEditor : EditorWindow
         }
         BaseBehaviour b = ScriptableObject.CreateInstance<BaseBehaviour>();
         AssetDatabase.CreateAsset(b, "Assets/Scripts/test.asset");
-        b.CreateBaseBehaviour(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+        b.CreateBaseBehaviour(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
         nodes.Add(b);
     }
 
