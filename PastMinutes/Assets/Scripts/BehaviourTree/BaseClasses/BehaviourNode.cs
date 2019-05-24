@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using static BaseBehaviour;
 
 public abstract class BehaviourNode : ScriptableObject
 {
     [HideInInspector]
     public Rect rect;
+    [HideInInspector]
+    public Rect rectTitle;
     [HideInInspector]
     public string title;
     [HideInInspector]
@@ -33,10 +36,14 @@ public abstract class BehaviourNode : ScriptableObject
     [HideInInspector]
     public readonly float offset = 10;
 
+    private readonly float titleOffset = 10;
+
+
 
     public void CreateBehaviourNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode)
     {
         rect = new Rect(position.x, position.y, width, height);
+        rectTitle = new Rect(position.x + offset, position.y + titleOffset, width - 2 * offset, rowHeight);
         style = nodeStyle;
         inPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint);
         outPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint);
@@ -114,5 +121,12 @@ public abstract class BehaviourNode : ScriptableObject
             OnRemoveNode(this);
         }
     }
+
+    public abstract void Run();
+
+    /// <summary>
+    /// Should react to return values of behaviour(s)
+    /// </summary>
+    public abstract void OnBehaviourResult(State state);
 
 }

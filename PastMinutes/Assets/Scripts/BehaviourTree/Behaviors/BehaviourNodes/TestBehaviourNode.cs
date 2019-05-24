@@ -24,4 +24,13 @@ public class TestBehaviourNode : BehaviourNode
 
     }
 
+    public override void OnBehaviourResult(BaseBehaviour.State state)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void Run()
+    {
+        throw new NotImplementedException();
+    }
 }

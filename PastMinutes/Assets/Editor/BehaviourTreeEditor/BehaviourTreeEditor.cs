@@ -227,9 +227,9 @@ public class BehaviourTreeEditor : EditorWindow
         {
             nodes = new List<BehaviourNode>();
         }
-        BaseBehaviour b = ScriptableObject.CreateInstance<BaseBehaviour>();
+        BaseBehaviourNode b = ScriptableObject.CreateInstance<BaseBehaviourNode>();
         AssetDatabase.CreateAsset(b, "Assets/Scripts/test.asset");
-        b.CreateBaseBehaviour(mousePosition, 200, 100, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+        b.CreateBaseBehaviour(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
         nodes.Add(b);
     }
 
