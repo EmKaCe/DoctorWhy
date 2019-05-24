@@ -21,11 +21,50 @@ public class BehaviourTreeEditor : EditorWindow
     private Vector2 offset;
     private Vector2 drag;
 
+    private static string folderPath;
+    private static BehaviourEditorSettings settings;
+
+    private static BehaviourEditorNodes nodeSaver;
+    private static GameObject behaviours;
+
     [MenuItem("Window/BehaviourTree")]
     private static void OpenWindow()
     {
         BehaviourTreeEditor window = GetWindow<BehaviourTreeEditor>();
         window.titleContent = new GUIContent("BehaviourTree Editor");
+        //AssetDatabase.CreateAsset(b, "Assets/Scripts/test.asset");
+
+        #region CreateFolder
+        if (!AssetDatabase.IsValidFolder("Assets/Behaviours/BehaviourTrees"))
+        {
+            AssetDatabase.CreateFolder("Assets", "Behaviours");
+            folderPath = AssetDatabase.CreateFolder("Assets/Behaviours", "BehaviourTrees");
+            
+        }
+        else
+        {
+            folderPath = AssetDatabase.AssetPathToGUID("Assets/Behaviours/BehaviourTrees");
+        }
+        #endregion
+
+        #region Creation of EditorSettings
+
+        if ((settings = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(folderPath) + "/Settings.asset", typeof(BehaviourEditorSettings)) as BehaviourEditorSettings)  == null){
+            settings = ScriptableObject.CreateInstance<BehaviourEditorSettings>();
+            AssetDatabase.CreateAsset(settings, AssetDatabase.GUIDToAssetPath(folderPath) + "/Settings.asset");
+        }
+
+        #endregion
+        
+        if((nodeSaver = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset", typeof(Object)) as BehaviourEditorNodes) == null)
+        {
+            nodeSaver = ScriptableObject.CreateInstance<BehaviourEditorNodes>();
+            AssetDatabase.CreateAsset(nodeSaver, AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset");
+            behaviours = PrefabUtility.SaveAsPrefabAsset(new GameObject(), AssetDatabase.GUIDToAssetPath(folderPath) + "/Behaviours.prefab");
+        }
+        //if((PrefabUtility.LoadPr))
+        
+
     }
 
     private void OnEnable()
@@ -228,8 +267,11 @@ public class BehaviourTreeEditor : EditorWindow
             nodes = new List<BehaviourNode>();
         }
         BaseBehaviourNode b = ScriptableObject.CreateInstance<BaseBehaviourNode>();
-        AssetDatabase.CreateAsset(b, "Assets/Scripts/test.asset");
-        b.CreateBaseBehaviour(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+        nodeSaver.nodes.Add(b);
+        AssetDatabase.AddObjectToAsset(b, nodeSaver);
+        //AssetDatabase.CreateAsset(b, "Assets/Scripts/test.asset");
+        b.CreateBaseBehaviour(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, behaviours);
+        //AssetDatabase.
         nodes.Add(b);
     }
 
@@ -325,6 +367,8 @@ public class BehaviourTreeEditor : EditorWindow
             connectionsToRemove = null;
 
         }
+        nodeSaver.nodes.Remove(node);
+        AssetDatabase.RemoveObjectFromAsset(node);
         nodes.Remove(node);
     }
 
