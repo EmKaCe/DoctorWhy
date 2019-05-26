@@ -17,15 +17,19 @@ public class BaseBehaviourNode : BehaviourNode
 
     private Vector2 pos;
 
-    public void CreateBaseBehaviour(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, GameObject behaviourStorage)
+    public void CreateBaseBehaviour(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode)
     {
         base.CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
         pos = position;
         rectContent = new Rect(position.x + offset, position.y + rowHeight, width - (2 * offset), height - rowHeight);
         serializedBehaviour = new SerializedObject(this).FindProperty("behaviour");
-        behaviourStorage.AddComponent<BaseBehaviour>();
     }
 
+
+    public override Type GetBehaviourType()
+    {
+        return behaviour.GetType();
+    }
     
 
 

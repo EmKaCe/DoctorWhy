@@ -31,6 +31,8 @@ public abstract class BehaviourNode : ScriptableObject
 
     public Action<BehaviourNode> OnRemoveNode;
 
+    public BehaviourNode parent;
+
     [HideInInspector]
     public readonly float rowHeight = 20f;
     [HideInInspector]
@@ -129,5 +131,7 @@ public abstract class BehaviourNode : ScriptableObject
     /// Should react to return values of behaviour(s)
     /// </summary>
     public abstract void OnBehaviourResult(State state);
+
+    public abstract Type GetBehaviourType();
 
 }
