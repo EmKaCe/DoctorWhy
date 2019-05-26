@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+using static BehaviourEditorNodes;
 
 public class BehaviourTreeEditor : EditorWindow
 {
@@ -114,11 +114,19 @@ public class BehaviourTreeEditor : EditorWindow
         if(GUI.Button(new Rect(0, 0, 50, 30), "Load"))
         {
             nodes = new List<BehaviourNode>();
-            nodes.AddRange(nodeSaver.nodes);
+           // nodes.AddRange(nodeSaver.nodes);
             connections = new List<BehaviourConnection>();
             connections.AddRange(nodeSaver.connections);
+            foreach(NodeSaver n in nodeSaver.nodes2)
+            {
+                n.node.inPoint = n.inPoint;
+                n.node.outPoint = n.outPoint;
+            }
+            nodeSaver.nodes2.ForEach(n => nodes.Add(n.node));
+
             
             
+        
         }
     }
 
@@ -258,6 +266,7 @@ public class BehaviourTreeEditor : EditorWindow
         genericMenu.AddItem(new GUIContent("Add Decorator"), false, () => OnClickAddDecorator(mousePosition));
         genericMenu.AddItem(new GUIContent("Add TestBehaviour"), false, () => OnClickAddTestBehaviour(mousePosition));
         genericMenu.ShowAsContext();
+        AssetDatabase.SaveAssets();
     }
 
     private void OnDrag(Vector2 delta)
@@ -280,13 +289,13 @@ public class BehaviourTreeEditor : EditorWindow
             nodes = new List<BehaviourNode>();
         }
         //BaseBehaviour bh = behaviours.AddComponent<BaseBehaviour>();
-        BaseBehaviourNode b = ScriptableObject.CreateInstance<BaseBehaviourNode>();
-        nodeSaver.nodes.Add(b);
+        BaseBehaviourNode b = ScriptableObject.CreateInstance<BaseBehaviourNode>();     
         //AssetDatabase.CreateAsset(b, "Assets/Scripts/test.asset");
         b.CreateBaseBehaviour(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
-       // b.behaviour = bh;
+        // b.behaviour = bh;
+        nodeSaver.nodes.Add(b);
+        nodeSaver.nodes2.Add(new NodeSaver(b, b.inPoint, b.outPoint));
         AssetDatabase.AddObjectToAsset(b, nodeSaver);
-        //AssetDatabase.
         nodes.Add(b);
     }
 
@@ -384,6 +393,7 @@ public class BehaviourTreeEditor : EditorWindow
 
         }
         nodeSaver.nodes.Remove(node);
+        nodeSaver.nodes2.RemoveAll(n => (n.node == node));
         AssetDatabase.RemoveObjectFromAsset(node);
         nodes.Remove(node);
     }
