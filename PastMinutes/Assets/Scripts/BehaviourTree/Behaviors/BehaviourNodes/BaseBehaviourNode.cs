@@ -46,7 +46,7 @@ public class BaseBehaviourNode : BehaviourNode
         GUILayout.Space(rowHeight);
         EditorGUIUtility.labelWidth = 75;
 
-        EditorGUILayout.PropertyField(serializedBehaviour, new GUIContent("Behaviour"));
+        //EditorGUILayout.PropertyField(serializedBehaviour, new GUIContent("Behaviour"));
 
         test = EditorGUILayout.FloatField("TestValue", test);
         GUILayout.EndArea();

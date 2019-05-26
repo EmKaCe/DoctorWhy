@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using static BehaviourEditorNodes;
 
 public class BehaviourTreeEditor : EditorWindow
 {
@@ -24,8 +23,8 @@ public class BehaviourTreeEditor : EditorWindow
     private static string folderPath;
     private static BehaviourEditorSettings settings;
 
-    private static BehaviourEditorNodes nodeSaver;
-   // private static GameObject behaviours;
+    public static NodeSaver nodeSaver;
+
 
     [MenuItem("Window/BehaviourTree")]
     private static void OpenWindow()
@@ -55,17 +54,13 @@ public class BehaviourTreeEditor : EditorWindow
         }
 
         #endregion
-        
-        if((nodeSaver = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset", typeof(Object)) as BehaviourEditorNodes) == null)
+
+        if ((nodeSaver = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset", typeof(Object)) as NodeSaver) == null)
         {
-            //GameObject g = new GameObject();
-            nodeSaver = ScriptableObject.CreateInstance<BehaviourEditorNodes>();
+            nodeSaver = ScriptableObject.CreateInstance<NodeSaver>();
             AssetDatabase.CreateAsset(nodeSaver, AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset");
-            //behaviours = PrefabUtility.SaveAsPrefabAsset(g, AssetDatabase.GUIDToAssetPath(folderPath) + "/Behaviours.prefab");
-            //DestroyImmediate(g);
         }
-        //if((PrefabUtility.LoadPr))
-        
+
 
     }
 
@@ -93,7 +88,7 @@ public class BehaviourTreeEditor : EditorWindow
 
     private void OnGUI()
     {
-        DrawBehaviourTreeChooser();
+        DrawLoader();
 
         DrawGrid(20, 0.2f, Color.gray);
         DrawGrid(100, 0.4f, Color.gray);
@@ -109,25 +104,65 @@ public class BehaviourTreeEditor : EditorWindow
         if (GUI.changed) Repaint();
     }
 
-    private void DrawBehaviourTreeChooser()
+    private void DrawLoader()
     {
         if(GUI.Button(new Rect(0, 0, 50, 30), "Load"))
         {
             nodes = new List<BehaviourNode>();
-           // nodes.AddRange(nodeSaver.nodes);
             connections = new List<BehaviourConnection>();
-            connections.AddRange(nodeSaver.connections);
-            foreach(NodeSaver n in nodeSaver.nodes2)
-            {
-                n.node.inPoint = n.inPoint;
-                n.node.outPoint = n.outPoint;
-            }
-            nodeSaver.nodes2.ForEach(n => nodes.Add(n.node));
 
+            foreach(StandardNodeSave save in nodeSaver.nodes)
+            {
+                save.node.inPoint = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint);
+                save.node.outPoint = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.Out, outPointStyle, OnClickInPoint);
+                nodes.Add(save.node);
+            }
+            foreach(ConnectionSave connection in nodeSaver.connections)
+            {
+                connections.Add(new BehaviourConnection(connection.startNode.inPoint, connection.endNode.outPoint, OnClickRemoveConnection));
+            }
             
             
         
         }
+        if(GUI.Button(new Rect(50, 0, 50, 30), "Save"))
+        {
+            nodeSaver.nodes = new List<StandardNodeSave>();
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                SaveBehaviourNode(nodes[i]);
+            }
+            nodeSaver.connections = new List<ConnectionSave>();
+            for (int i = 0; i < connections.Count; i++)
+            {
+                SaveBehaviourConnections(connections[i]);
+            }
+            AssetDatabase.SaveAssets();
+        }
+    }
+
+    private void SaveBehaviourNode(BehaviourNode node)
+    {       
+        StandardNodeSave saveNode = CreateInstance<StandardNodeSave>();
+        ConnectionPointSave saveIn = CreateInstance<ConnectionPointSave>();
+        ConnectionPointSave saveOut = CreateInstance<ConnectionPointSave>();
+        saveNode.node = node;
+        saveNode.inPoint = saveIn;
+        saveNode.outPoint = saveOut;
+        nodeSaver.nodes.Add(saveNode);
+        AssetDatabase.AddObjectToAsset(saveNode, nodeSaver);
+        AssetDatabase.AddObjectToAsset(saveIn, saveNode);
+        AssetDatabase.AddObjectToAsset(saveOut, saveNode);
+    }
+
+    private void SaveBehaviourConnections(BehaviourConnection connection)
+    {
+        Debug.Log("Connection: " + connection.inPoint.ToString());
+        Debug.Log("Connection: " + connection.outPoint.node.ToString());
+        ConnectionSave cSave = CreateInstance<ConnectionSave>();
+        cSave.Init(connection);
+        nodeSaver.connections.Add(cSave);
+        AssetDatabase.AddObjectToAsset(cSave, nodeSaver);
     }
 
     private void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
@@ -266,7 +301,7 @@ public class BehaviourTreeEditor : EditorWindow
         genericMenu.AddItem(new GUIContent("Add Decorator"), false, () => OnClickAddDecorator(mousePosition));
         genericMenu.AddItem(new GUIContent("Add TestBehaviour"), false, () => OnClickAddTestBehaviour(mousePosition));
         genericMenu.ShowAsContext();
-        AssetDatabase.SaveAssets();
+        
     }
 
     private void OnDrag(Vector2 delta)
@@ -293,10 +328,12 @@ public class BehaviourTreeEditor : EditorWindow
         //AssetDatabase.CreateAsset(b, "Assets/Scripts/test.asset");
         b.CreateBaseBehaviour(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
         // b.behaviour = bh;
-        nodeSaver.nodes.Add(b);
-        nodeSaver.nodes2.Add(new NodeSaver(b, b.inPoint, b.outPoint));
+
         AssetDatabase.AddObjectToAsset(b, nodeSaver);
+        //AssetDatabase.AddObjectToAsset(ns, nodeSaver);
         nodes.Add(b);
+
+        AssetDatabase.SaveAssets();
     }
 
     private void OnClickAddSelector(Vector2 mousePosition)
@@ -387,22 +424,20 @@ public class BehaviourTreeEditor : EditorWindow
             foreach(BehaviourConnection connect in connectionsToRemove)
             {
                 connections.Remove(connect);
-                nodeSaver.connections.Remove(connect);
             }
             connectionsToRemove = null;
 
         }
-        nodeSaver.nodes.Remove(node);
-        nodeSaver.nodes2.RemoveAll(n => (n.node == node));
-        AssetDatabase.RemoveObjectFromAsset(node);
         nodes.Remove(node);
+        AssetDatabase.RemoveObjectFromAsset(node);
+        DestroyImmediate(node, true);
+        AssetDatabase.SaveAssets();
     }
 
     private void OnClickRemoveConnection(BehaviourConnection connection)
     {
         connection.inPoint.node.parent = null;
         connections.Remove(connection);
-        nodeSaver.connections.Remove(connection);
     }
 
     private void CreateConnection()
@@ -414,7 +449,6 @@ public class BehaviourTreeEditor : EditorWindow
         selectedInPoint.node.parent = selectedOutPoint.node;
         BehaviourConnection beCon = new BehaviourConnection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection);
         connections.Add(beCon);
-        nodeSaver.connections.Add(beCon);
     }
 
     private void ClearConnectionSelection()

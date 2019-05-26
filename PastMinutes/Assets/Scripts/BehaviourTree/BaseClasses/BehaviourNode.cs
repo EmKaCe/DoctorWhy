@@ -26,7 +26,9 @@ public abstract class BehaviourNode : ScriptableObject
     [HideInInspector]
     public GUIStyle selectedNodeStyle;
 
+    [HideInInspector]
     public BehaviourConnectionPoint inPoint;
+    [HideInInspector]
     public BehaviourConnectionPoint outPoint;
 
     public Action<BehaviourNode> OnRemoveNode;
