@@ -1,38 +1,80 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="Test")]
-public class BaseBehaviour : BehaviourNode
+public class BaseBehaviour : MonoBehaviour
 {
 
-    public float test;
-    public MonoBehaviour behaviour;
-
-    public void CreateBaseBehaviour(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode)
+    public enum State
     {
-        base.CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
-        //rect = new Rect(position.x, position.y, width, height);
-        //style = nodeStyle;
-        //inPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint);
-        //outPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint);
-        //defaultNodeStyle = nodeStyle;
-        //selectedNodeStyle = selectedStyle;
-        //OnRemoveNode = OnClickRemoveNode;
+        inactive = 0,
+        running = 1,
+        success = 2,
+        failure = 3,
     }
 
+    public State currentState;
+    public BehaviourNode parent;
 
+    private float test;
+    private float goal;
 
-
-    public override void Draw()
+    // Start is called before the first frame update
+    void Start()
     {
-        inPoint.Draw();
-        outPoint.Draw();
-        GUI.Box(rect, title, style);
-        GUI.TextField(rect, test.ToString());
-
+        currentState = State.inactive;
+        test = 0;
+        goal = 100;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        Debug.Log("Test");
+        //Disables Behaviour to save unnecessary calls of update
+        if (currentState == State.inactive)
+        {
+            enabled = false;
+        }
+        else if(currentState == State.running)
+        {
+            Run();
+        }
+        else if(currentState == State.success)
+        {
+            OnSuccess();
+        }
+        else if (currentState == State.failure)
+        {
+            OnFailure();
+        }
+    }
+
+    public virtual void Run()
+    {
+        if(test < goal)
+        {
+            test += Time.deltaTime;
+        }
+        else
+        {
+            currentState = State.success;
+        }
+    }
+
+    public void OnSuccess()
+    {
+        parent.OnBehaviourResult(State.success);
+    }
+
+    public void OnFailure()
+    {
+        parent.OnBehaviourResult(State.failure);
+    }
+
+    public void ActivateBehaviour()
+    {
+        currentState = State.running;
+        enabled = true;
+    }
 }

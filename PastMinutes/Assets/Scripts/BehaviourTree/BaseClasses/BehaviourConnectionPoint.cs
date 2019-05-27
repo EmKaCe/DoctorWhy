@@ -31,6 +31,7 @@ public class BehaviourConnectionPoint
         rect = new Rect(0, 0, 10f, 20f);
     }
 
+
     public void Draw()
     {
         rect.y = node.rect.y + (node.rect.height * 0.5f) - rect.height * 0.5f;
