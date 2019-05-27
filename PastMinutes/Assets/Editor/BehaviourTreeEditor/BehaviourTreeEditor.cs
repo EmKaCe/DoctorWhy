@@ -21,7 +21,7 @@ public class BehaviourTreeEditor : EditorWindow
     private Vector2 drag;
 
     private static string folderPath;
-    private static string tempPath;
+    //private static string tempPath;
     private static BehaviourEditorSettings settings;
 
     public static NodeSaver nodeSaver;
@@ -45,14 +45,14 @@ public class BehaviourTreeEditor : EditorWindow
         {
             folderPath = AssetDatabase.AssetPathToGUID("Assets/Behaviours/BehaviourTrees");
         }
-        if (!AssetDatabase.IsValidFolder("Assets/Behaviours/BehaviourTrees/temp"))
-        {
-            tempPath = AssetDatabase.CreateFolder("Assets/Behaviours/BehaviourTrees", "temp");
-        }
-        else
-        {
-            tempPath = AssetDatabase.AssetPathToGUID("Assets/Behaviours/BehaviourTrees/temp");
-        }
+        //if (!AssetDatabase.IsValidFolder("Assets/Behaviours/BehaviourTrees/temp"))
+        //{
+        //    tempPath = AssetDatabase.CreateFolder("Assets/Behaviours/BehaviourTrees", "temp");
+        //}
+        //else
+        //{
+        //    tempPath = AssetDatabase.AssetPathToGUID("Assets/Behaviours/BehaviourTrees/temp");
+        //}
         #endregion
 
         #region Creation of EditorSettings
@@ -115,10 +115,9 @@ public class BehaviourTreeEditor : EditorWindow
 
     private void DrawLoader()
     {
+        //Load
         if(GUI.Button(new Rect(0, 0, 50, 30), "Load"))
         {
-            //AssetDatabase.CopyAsset(AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset", AssetDatabase.GUIDToAssetPath(tempPath) + "/Nodes.asset");
-            //nodeSaver = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(tempPath) + "/Nodes.asset", typeof(Object)) as NodeSaver;
             nodes = new List<BehaviourNode>();
             connections = new List<BehaviourConnection>();
 
@@ -126,6 +125,7 @@ public class BehaviourTreeEditor : EditorWindow
             {
                 save.node.inPoint = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint);
                 save.node.outPoint = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint);
+                save.node.OnRemoveNode = OnClickRemoveNode;
                 nodes.Add(save.node);
             }
             foreach(ConnectionSave connection in nodeSaver.connections)
@@ -136,6 +136,8 @@ public class BehaviourTreeEditor : EditorWindow
             
         
         }
+        //Save
+        
         if(GUI.Button(new Rect(50, 0, 50, 30), "Save"))
         {
             nodeSaver.nodes = new List<StandardNodeSave>();
