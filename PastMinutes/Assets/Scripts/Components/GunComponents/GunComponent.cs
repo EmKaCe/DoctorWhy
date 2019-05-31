@@ -11,6 +11,9 @@ public class GunComponent : MonoBehaviour
     public MuzzleAttachmentComponent muzzle;
     public PartFindingSystem.FiringModes firingModes;
     public PartFindingSystem.CurrentFiringMode currentMode;
+    public float xOffset;
+    public float yOffset;
+
 
     // Start is called before the first frame update
     void Start()

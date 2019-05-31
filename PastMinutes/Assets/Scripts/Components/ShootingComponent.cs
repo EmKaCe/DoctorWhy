@@ -18,6 +18,8 @@ public class ShootingComponent : MonoBehaviour
     private AmmunitionComponent ammo;
 
     private float muzzleVelocity;
+
+    private float rotationZ;
     
 
 
@@ -51,6 +53,8 @@ public class ShootingComponent : MonoBehaviour
     {
         if (activeGun)
         {
+            rotationZ = CalculateRotation(Input.mousePosition, transform.position);
+            //transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotationZ));
             if (autoFire)
             {
                 if (Input.GetMouseButtonDown(0))
@@ -93,19 +97,36 @@ public class ShootingComponent : MonoBehaviour
             mag.amountOfAmunition--;
             Vector3 mouse = Input.mousePosition;
             mouse = Camera.main.ScreenToWorldPoint(mouse);
+            Vector3 rotation = new Vector3(0, 0, rotationZ);
+            //Create bullet
             GameObject bullet = new GameObject("Projectile");
-            Debug.Log(gameObject.name);
-            bullet.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -1.5f);
+            //Pos equals gunPos
+            bullet.transform.position = new Vector3(gameObject.transform.position.x + gun.xOffset, gameObject.transform.position.y + gun.yOffset, -1.5f);
+            //Adding Sprite
             SpriteRenderer r = bullet.AddComponent<SpriteRenderer>();
             r.sprite = projectile;
+            //SetRotation;
+            r.transform.Rotate(rotation);
+            //Shoot bullet
             ProjectileComponent p = bullet.AddComponent<ProjectileComponent>();
             p.speed = muzzleVelocity;
             p.seconds = 10;
-            p.direction = new Vector2(mouse.x, mouse.y);
+            p.direction = new Vector2(mouse.x - transform.position.x, mouse.y - transform.position.y);
             p.direction.Normalize();
         }
         
 
+    }
+
+    private float CalculateRotation(Vector3 mousePos, Vector3 playerPos)
+    {
+        mousePos = Input.mousePosition;
+        mousePos.z = 0;
+        playerPos = Camera.main.WorldToScreenPoint(transform.position);
+        mousePos.x = mousePos.x - playerPos.x;
+        mousePos.y = mousePos.y - playerPos.y;
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        return angle;
     }
 
     public void SetActiveGun(bool gun)

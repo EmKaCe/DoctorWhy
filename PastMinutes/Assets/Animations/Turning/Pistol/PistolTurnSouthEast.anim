@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TurnSouth
+  m_Name: PistolTurnSouthEast
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -5695559497030634278, guid: 2b1679169b4409e4884c184f25fabca7,
+      value: {fileID: 1800293751824154442, guid: 2b1679169b4409e4884c184f25fabca7,
         type: 3}
     attribute: m_Sprite
     path: Head
@@ -28,7 +28,7 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
     - time: 0
-      value: {fileID: 3408994539704203993, guid: 2b1679169b4409e4884c184f25fabca7,
+      value: {fileID: 3549649777345302095, guid: 2b1679169b4409e4884c184f25fabca7,
         type: 3}
     attribute: m_Sprite
     path: Torso
@@ -36,7 +36,7 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
     - time: 0
-      value: {fileID: -2285383741057407757, guid: 644fa3eaac4b49a49a21e023e54c774f,
+      value: {fileID: 2657927270712450514, guid: 644fa3eaac4b49a49a21e023e54c774f,
         type: 3}
     attribute: m_Sprite
     path: Arms
@@ -44,7 +44,7 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
     - time: 0
-      value: {fileID: 8044812663424734560, guid: 2b1679169b4409e4884c184f25fabca7,
+      value: {fileID: -4870820336312148303, guid: 2b1679169b4409e4884c184f25fabca7,
         type: 3}
     attribute: m_Sprite
     path: Legs
@@ -86,10 +86,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -5695559497030634278, guid: 2b1679169b4409e4884c184f25fabca7, type: 3}
-    - {fileID: 3408994539704203993, guid: 2b1679169b4409e4884c184f25fabca7, type: 3}
-    - {fileID: -2285383741057407757, guid: 644fa3eaac4b49a49a21e023e54c774f, type: 3}
-    - {fileID: 8044812663424734560, guid: 2b1679169b4409e4884c184f25fabca7, type: 3}
+    - {fileID: 1800293751824154442, guid: 2b1679169b4409e4884c184f25fabca7, type: 3}
+    - {fileID: 3549649777345302095, guid: 2b1679169b4409e4884c184f25fabca7, type: 3}
+    - {fileID: 2657927270712450514, guid: 644fa3eaac4b49a49a21e023e54c774f, type: 3}
+    - {fileID: -4870820336312148303, guid: 2b1679169b4409e4884c184f25fabca7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
