@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using static BaseBehaviour;
@@ -17,9 +18,9 @@ public class BaseBehaviourNode : BehaviourNode
 
     private Vector2 pos;
 
-    public void CreateBaseBehaviour(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode)
+    public void CreateBaseBehaviour(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints)
     {
-        base.CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+        base.CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints);
         pos = position;
         rectContent = new Rect(position.x + offset, position.y + rowHeight, width - (2 * offset), height - rowHeight);
         serializedBehaviour = new SerializedObject(this).FindProperty("behaviour");
@@ -35,8 +36,16 @@ public class BaseBehaviourNode : BehaviourNode
 
     public override void Draw()
     {
-        inPoint.Draw();
-        outPoint.Draw();
+        //inPoint.Draw();
+        //outPoint.Draw();
+        foreach(BehaviourConnectionPoint i in inPoint)
+        {
+            i.Draw();
+        }
+        foreach(BehaviourConnectionPoint o in outPoint)
+        {
+            o.Draw();
+        }
 
 
         GUI.Box(rect, title, style);
@@ -66,20 +75,5 @@ public class BaseBehaviourNode : BehaviourNode
         rectContent.position += delta;
     }
 
-    public override void Run()
-    {
-        throw new NotImplementedException();
-    }
 
-    public override void OnBehaviourResult(State state)
-    {
-        if(state == State.success)
-        {
-            Debug.Log("BaseBehaviourNode: Success");
-        }
-        else if(state == State.failure)
-        {
-            Debug.Log("BaseBehaviourNode: Failure");
-        }
-    }
 }

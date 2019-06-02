@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -123,14 +124,23 @@ public class BehaviourTreeEditor : EditorWindow
 
             foreach(StandardNodeSave save in nodeSaver.nodes)
             {
-                save.node.inPoint = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint);
-                save.node.outPoint = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint);
+
+                save.node.inPoint = new BehaviourConnectionPoint[save.node.inPoints];
+                save.node.outPoint = new BehaviourConnectionPoint[save.node.outPoints];
+                for (int i = 0; i < save.node.inPoint.Length; i++)
+                {
+                    save.node.inPoint[i] = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, i, save.node.inPoint.Length);
+                }
+                for(int o = 0; o < save.node.outPoint.Length; o++)
+                {
+                    save.node.outPoint[o] = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, o, save.node.outPoint.Length); ;
+                }
                 save.node.OnRemoveNode = OnClickRemoveNode;
                 nodes.Add(save.node);
             }
             foreach(ConnectionSave connection in nodeSaver.connections)
             {
-                connections.Add(new BehaviourConnection(connection.startNode.inPoint, connection.endNode.outPoint, OnClickRemoveConnection));
+                connections.Add(new BehaviourConnection(connection.startNode.inPoint[connection.inIndex], connection.endNode.outPoint[connection.outIndex], OnClickRemoveConnection));
             }
             
             
@@ -157,15 +167,27 @@ public class BehaviourTreeEditor : EditorWindow
     private void SaveBehaviourNode(BehaviourNode node)
     {       
         StandardNodeSave saveNode = CreateInstance<StandardNodeSave>();
-        ConnectionPointSave saveIn = CreateInstance<ConnectionPointSave>();
-        ConnectionPointSave saveOut = CreateInstance<ConnectionPointSave>();
         saveNode.node = node;
-        saveNode.inPoint = saveIn;
-        saveNode.outPoint = saveOut;
-        nodeSaver.nodes.Add(saveNode);
+        saveNode.inPoint = new List<ConnectionPointSave>();
+        saveNode.outPoint = new List<ConnectionPointSave>();
         AssetDatabase.AddObjectToAsset(saveNode, nodeSaver);
-        AssetDatabase.AddObjectToAsset(saveIn, saveNode);
-        AssetDatabase.AddObjectToAsset(saveOut, saveNode);
+        foreach (BehaviourConnectionPoint i in node.inPoint)
+        {
+            ConnectionPointSave saveIn = CreateInstance<ConnectionPointSave>();
+            saveIn.Init(i);
+            saveNode.inPoint.Add(saveIn);
+            AssetDatabase.AddObjectToAsset(saveIn, saveNode);
+        }
+        foreach(BehaviourConnectionPoint o in node.outPoint)
+        {
+            ConnectionPointSave saveOut = CreateInstance<ConnectionPointSave>();
+            saveOut.Init(o);
+            saveNode.outPoint.Add(saveOut);
+            AssetDatabase.AddObjectToAsset(saveOut, saveNode);
+        }
+        nodeSaver.nodes.Add(saveNode);
+        
+        
     }
 
     private void SaveBehaviourConnections(BehaviourConnection connection)
@@ -218,10 +240,6 @@ public class BehaviourTreeEditor : EditorWindow
     {
         if(connections != null)
         {
-            //foreach(BehaviourConnection conect in connections)
-            //{
-            //    conect.Draw();
-            //}
             for(int i  = 0; i < connections.Count; i++)
             {
                 connections[i].Draw();
@@ -336,14 +354,10 @@ public class BehaviourTreeEditor : EditorWindow
         {
             nodes = new List<BehaviourNode>();
         }
-        //BaseBehaviour bh = behaviours.AddComponent<BaseBehaviour>();
         BaseBehaviourNode b = ScriptableObject.CreateInstance<BaseBehaviourNode>();     
-        //AssetDatabase.CreateAsset(b, "Assets/Scripts/test.asset");
-        b.CreateBaseBehaviour(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
-        // b.behaviour = bh;
+        b.CreateBaseBehaviour(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 1);
 
         AssetDatabase.AddObjectToAsset(b, nodeSaver);
-        //AssetDatabase.AddObjectToAsset(ns, nodeSaver);
         nodes.Add(b);
 
         AssetDatabase.SaveAssets();
@@ -381,7 +395,6 @@ public class BehaviourTreeEditor : EditorWindow
         }
         TestBehaviourNode t = ScriptableObject.CreateInstance<TestBehaviourNode>();
         GameObject g = new GameObject();
-        t.CreateTestBehaviourNode(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, g.AddComponent(typeof(TestBehaviour)) as TestBehaviour);     
         nodes.Add(t);
     }
 
@@ -429,9 +442,19 @@ public class BehaviourTreeEditor : EditorWindow
 
             foreach(BehaviourConnection connect in connections)
             {
-                if(connect.inPoint == node.inPoint || connect.outPoint == node.outPoint)
+                foreach(BehaviourConnectionPoint i in node.inPoint)
                 {
-                    connectionsToRemove.Add(connect);
+                    if(connect.inPoint == i)
+                    {
+                        connectionsToRemove.Add(connect);
+                    }
+                }
+                foreach(BehaviourConnectionPoint o in node.outPoint)
+                {
+                    if (connect.outPoint == o)
+                    {
+                        connectionsToRemove.Add(connect);
+                    }
                 }
             }
             foreach(BehaviourConnection connect in connectionsToRemove)

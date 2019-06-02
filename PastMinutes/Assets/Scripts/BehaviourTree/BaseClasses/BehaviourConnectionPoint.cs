@@ -22,30 +22,50 @@ public class BehaviourConnectionPoint
     [HideInInspector]
     public Action<BehaviourConnectionPoint> OnClickConnectionPoint;
 
-    public BehaviourConnectionPoint(BehaviourNode node, BehaviourConnectionPointType type, GUIStyle style, Action<BehaviourConnectionPoint> OnClickConnectionPoint)
+    [HideInInspector]
+    public int index;
+    [HideInInspector]
+    public int count;
+
+    public BehaviourConnectionPoint(BehaviourNode node, BehaviourConnectionPointType type, GUIStyle style, Action<BehaviourConnectionPoint> OnClickConnectionPoint, int index, int count)
     {
         this.node = node;
         this.type = type;
         this.style = style;
         this.OnClickConnectionPoint = OnClickConnectionPoint;
-        rect = new Rect(0, 0, 10f, 20f);
+        rect = new Rect(0, 0, 20f, 10f);
+        this.index = index;
+        this.count = count;
     }
 
 
     public void Draw()
     {
-        rect.y = node.rect.y + (node.rect.height * 0.5f) - rect.height * 0.5f;
+        rect.x = node.rect.x + ((node.rect.width - 16f) / (count + 1) * (index + 1)) + 8f - (rect.width / 2);
 
         switch (type)
         {
             case BehaviourConnectionPointType.In:
-                rect.x = node.rect.x - rect.width + 8f;
+                rect.y = node.rect.y - rect.height + 8f;
                 break;
 
             case BehaviourConnectionPointType.Out:
-                rect.x = node.rect.x + node.rect.width - 8f;
+                rect.y = node.rect.y + node.rect.height - 8f;
                 break;
         }
+
+        //rect.y = node.rect.y + (node.rect.height * 0.5f) - rect.height * 0.5f;
+
+        //switch (type)
+        //{
+        //    case BehaviourConnectionPointType.In:
+        //        rect.x = node.rect.x - rect.width + 8f;
+        //        break;
+
+        //    case BehaviourConnectionPointType.Out:
+        //        rect.x = node.rect.x + node.rect.width - 8f;
+        //        break;
+        //}
 
         if (GUI.Button(rect, "", style))
         {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseBehaviour : MonoBehaviour
+public abstract class BaseBehaviour : MonoBehaviour
 {
 
     public enum State
@@ -14,23 +14,18 @@ public class BaseBehaviour : MonoBehaviour
     }
 
     public State currentState;
-    public BehaviourNode parent;
+    public BaseBehaviour parent;
 
-    private float test;
-    private float goal;
 
     // Start is called before the first frame update
     void Start()
     {
         currentState = State.inactive;
-        test = 0;
-        goal = 100;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Test");
         //Disables Behaviour to save unnecessary calls of update
         if (currentState == State.inactive)
         {
@@ -50,17 +45,7 @@ public class BaseBehaviour : MonoBehaviour
         }
     }
 
-    public virtual void Run()
-    {
-        if(test < goal)
-        {
-            test += Time.deltaTime;
-        }
-        else
-        {
-            currentState = State.success;
-        }
-    }
+    public abstract void Run();
 
     public void OnSuccess()
     {
@@ -77,4 +62,9 @@ public class BaseBehaviour : MonoBehaviour
         currentState = State.running;
         enabled = true;
     }
+
+    /// <summary>
+    /// Should react to return values of behaviour(s)
+    /// </summary>
+    public abstract void OnBehaviourResult(State state);
 }

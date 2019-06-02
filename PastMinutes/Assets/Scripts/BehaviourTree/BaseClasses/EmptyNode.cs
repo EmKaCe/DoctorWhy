@@ -10,16 +10,6 @@ public class EmptyNode : BehaviourNode
         throw new System.NotImplementedException();
     }
 
-    public override void OnBehaviourResult(BaseBehaviour.State state)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void Run()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public override Type GetBehaviourType()
     {
         throw new NotImplementedException();

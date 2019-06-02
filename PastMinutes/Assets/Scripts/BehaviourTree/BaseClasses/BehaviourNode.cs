@@ -27,9 +27,14 @@ public abstract class BehaviourNode : ScriptableObject
     public GUIStyle selectedNodeStyle;
 
     [HideInInspector]
-    public BehaviourConnectionPoint inPoint;
+    public BehaviourConnectionPoint[] inPoint;
     [HideInInspector]
-    public BehaviourConnectionPoint outPoint;
+    public BehaviourConnectionPoint[] outPoint;
+
+    //[HideInInspector]
+    //public BehaviourConnectionPoint inPoint;
+    //[HideInInspector]
+    //public BehaviourConnectionPoint outPoint;
 
     public Action<BehaviourNode> OnRemoveNode;
 
@@ -42,16 +47,31 @@ public abstract class BehaviourNode : ScriptableObject
 
     private readonly float titleOffset = 10;
 
+    public int inPoints;
+    public int outPoints;
 
 
 
-    public void CreateBehaviourNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode)
+
+    public void CreateBehaviourNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints)
     {
         rect = new Rect(position.x, position.y, width, height);
         rectTitle = new Rect(position.x + offset, position.y + titleOffset, width - 2 * offset, rowHeight);
         style = nodeStyle;
-        inPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint);
-        outPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint);
+        this.inPoints = inPoints;
+        this.outPoints = outPoints;
+        inPoint = new BehaviourConnectionPoint[inPoints];
+        outPoint = new BehaviourConnectionPoint[outPoints];
+        for(int i = 0; i < inPoint.Length; i++)
+        {
+            inPoint[i] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, i, inPoint.Length);
+        }
+        for(int i = 0; i < outPoint.Length; i++)
+        {
+            outPoint[i] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, i, inPoint.Length);
+        }
+        //inPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint);
+        //outPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         defaultNodeStyle = nodeStyle;
         selectedNodeStyle = selectedStyle;
         OnRemoveNode = OnClickRemoveNode;
@@ -127,12 +147,6 @@ public abstract class BehaviourNode : ScriptableObject
         }
     }
 
-    public abstract void Run();
-
-    /// <summary>
-    /// Should react to return values of behaviour(s)
-    /// </summary>
-    public abstract void OnBehaviourResult(State state);
 
     public abstract Type GetBehaviourType();
 
