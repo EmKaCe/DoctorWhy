@@ -17,22 +17,14 @@ public class TestBehaviourNode : BehaviourNode
 
     public override void Draw()
     {
-    foreach (BehaviourConnectionPoint i in inPoint)
-    {
-        i.Draw();
-    }
-    foreach (BehaviourConnectionPoint o in outPoint)
-    {
-        o.Draw();
-    }
-    GUI.Box(rect, title, style);
+        base.Draw();
         GUI.Label(rect, "Test");
 
     }
 
-    public override Type GetBehaviourType()
+    public override string GetBehaviourType()
     {
-        return testBehaviour.GetType();
+        return testBehaviour.GetType().ToString();
     }
 
 

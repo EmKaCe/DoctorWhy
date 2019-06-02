@@ -17,6 +17,9 @@ public class BehaviourConnectionPoint
     public BehaviourNode node;
 
     [HideInInspector]
+    public BehaviourNode connectedNode;
+
+    [HideInInspector]
     public GUIStyle style;
 
     [HideInInspector]
