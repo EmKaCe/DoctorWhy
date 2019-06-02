@@ -6,8 +6,8 @@ public class StandardNodeSave : ScriptableObject
 {
 
     public BehaviourNode node;
-    public ConnectionPointSave inPoint;
-    public ConnectionPointSave outPoint;
+    public List<ConnectionPointSave> inPoint;
+    public List<ConnectionPointSave> outPoint;
 
 
 }
