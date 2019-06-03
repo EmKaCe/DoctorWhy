@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-
+    public bool gunTest;
     public float movementSpeed;
     private Rigidbody2D rigid;
     private CharacterAnimator cAnim;
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         {
             walking = true;
         }
-        cAnim.TurnAndWalk(direction, new string[] { walking.ToString() });
+        cAnim.TurnAndWalk(direction, new string[] { walking.ToString(), gunTest.ToString() });
         rigid.MovePosition(newPos);
     }
 
