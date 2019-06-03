@@ -10,7 +10,7 @@ public class EmptyNode : BehaviourNode
         throw new System.NotImplementedException();
     }
 
-    public override Type GetBehaviourType()
+    public override string GetBehaviourType()
     {
         throw new NotImplementedException();
     }

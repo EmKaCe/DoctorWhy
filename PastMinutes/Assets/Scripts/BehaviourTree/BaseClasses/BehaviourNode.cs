@@ -84,7 +84,18 @@ public abstract class BehaviourNode : ScriptableObject
         rect.position += delta;
     }
 
-    public abstract void Draw();
+    public virtual void Draw()
+    {
+        GUI.Box(rect, title, style);
+        foreach (BehaviourConnectionPoint i in inPoint)
+        {
+            i.Draw();
+        }
+        foreach (BehaviourConnectionPoint o in outPoint)
+        {
+            o.Draw();
+        }
+    }
 
     public bool ProcessEvents(Event e)
     {
@@ -148,6 +159,6 @@ public abstract class BehaviourNode : ScriptableObject
     }
 
 
-    public abstract Type GetBehaviourType();
+    public abstract String GetBehaviourType();
 
 }

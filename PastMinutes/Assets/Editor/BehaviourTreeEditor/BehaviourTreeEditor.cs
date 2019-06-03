@@ -140,6 +140,8 @@ public class BehaviourTreeEditor : EditorWindow
             }
             foreach(ConnectionSave connection in nodeSaver.connections)
             {
+                connection.startNode.inPoint[connection.inIndex].connectedNode = connection.endNode;
+                connection.endNode.outPoint[connection.outIndex].connectedNode = connection.startNode;
                 connections.Add(new BehaviourConnection(connection.startNode.inPoint[connection.inIndex], connection.endNode.outPoint[connection.outIndex], OnClickRemoveConnection));
             }
             
@@ -150,6 +152,7 @@ public class BehaviourTreeEditor : EditorWindow
         
         if(GUI.Button(new Rect(50, 0, 50, 30), "Save"))
         {
+            nodeSaver.path = AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset";
             nodeSaver.nodes = new List<StandardNodeSave>();
             for (int i = 0; i < nodes.Count; i++)
             {
@@ -453,6 +456,7 @@ public class BehaviourTreeEditor : EditorWindow
                 {
                     if (connect.outPoint == o)
                     {
+                        connect.outPoint.connectedNode = null;
                         connectionsToRemove.Add(connect);
                     }
                 }
@@ -472,7 +476,9 @@ public class BehaviourTreeEditor : EditorWindow
 
     private void OnClickRemoveConnection(BehaviourConnection connection)
     {
+        connection.inPoint.connectedNode = null;
         connection.inPoint.node.parent = null;
+        connection.outPoint.connectedNode = null;
         connections.Remove(connection);
     }
 
@@ -483,6 +489,8 @@ public class BehaviourTreeEditor : EditorWindow
             connections = new List<BehaviourConnection>();
         }
         selectedInPoint.node.parent = selectedOutPoint.node;
+        selectedInPoint.connectedNode = selectedOutPoint.node;
+        selectedOutPoint.connectedNode = selectedInPoint.node;
         BehaviourConnection beCon = new BehaviourConnection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection);
         connections.Add(beCon);
     }

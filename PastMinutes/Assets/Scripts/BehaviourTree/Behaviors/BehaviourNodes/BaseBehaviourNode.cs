@@ -27,28 +27,19 @@ public class BaseBehaviourNode : BehaviourNode
     }
 
 
-    public override Type GetBehaviourType()
+    public override string GetBehaviourType()
     {
-        return behaviour.GetType();
+        return behaviour.GetType().ToString();
     }
     
 
 
     public override void Draw()
     {
-        //inPoint.Draw();
-        //outPoint.Draw();
-        foreach(BehaviourConnectionPoint i in inPoint)
-        {
-            i.Draw();
-        }
-        foreach(BehaviourConnectionPoint o in outPoint)
-        {
-            o.Draw();
-        }
+        base.Draw();
 
 
-        GUI.Box(rect, title, style);
+       
 
         GUI.Label(rectTitle, "BaseNode");
         GUILayout.BeginArea(rectContent);

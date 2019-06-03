@@ -49,12 +49,28 @@ public abstract class BaseBehaviour : MonoBehaviour
 
     public void OnSuccess()
     {
-        parent.OnBehaviourResult(State.success);
+        if(parent != null)
+        {
+            parent.OnBehaviourResult(State.success);
+        }
+        else
+        {
+            (gameObject.GetComponent<AIComponent>() as AIComponent).TreeDone(State.success);
+        }
+        
     }
 
     public void OnFailure()
     {
-        parent.OnBehaviourResult(State.failure);
+        if(parent != null)
+        {
+            parent.OnBehaviourResult(State.failure);
+        }
+        else
+        {
+            (gameObject.GetComponent<AIComponent>() as AIComponent).TreeDone(State.failure);
+        }
+
     }
 
     public void ActivateBehaviour()
