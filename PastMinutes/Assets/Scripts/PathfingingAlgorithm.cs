@@ -76,11 +76,16 @@ public class PathfingingAlgorithm
             }
             else if (openList.ContainsKey(point))
             {
-                //Check Value
+                openList.TryGetValue(point, out float pointValue);
+                float newPointValue = CalcF(start.Key, point, mask[i].weight);
+                if (pointValue > newPointValue)
+                {
+                    openList[point] = newPointValue;
+                }
             }
             else
             {
-                //Add
+                openList.Add(point, CalcF(start.Key, point, mask[i].weight));
             }
         }
 
@@ -110,7 +115,7 @@ public class PathfingingAlgorithm
         return new KeyValuePair<Vector3Int, float>(pos, distance);
     }
 
-    private float CalcG(Vector3Int start, Vector3Int end)
+    private float CalcH(Vector3Int start, Vector3Int end)
     {
         return Mathf.Abs(Mathf.Sqrt(Mathf.Pow(end.x - start.x, 2) + Mathf.Pow(end.y - start.y, 2)));
     }
@@ -118,7 +123,7 @@ public class PathfingingAlgorithm
     private float CalcF(Vector3Int start, Vector3Int end, float endWeight)
     {
         openList.TryGetValue(start, out float startValue);
-        return startValue + CalcG(start, end) + endWeight;
+        return startValue + CalcH(start, end) + endWeight;
     }
 
 }
