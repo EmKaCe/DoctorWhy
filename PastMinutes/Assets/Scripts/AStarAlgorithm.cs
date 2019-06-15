@@ -19,11 +19,11 @@ public class AStarAlgorithm
 
 
 
-    public AStarAlgorithm(GridLayout pLayout, Tilemap pMap, int searchArea)
+    public AStarAlgorithm(GridLayout pLayout, Tilemap pMap, List<Tilemap> collider)
     {
         layout = pLayout;
         tilemap = pMap;
-        map = new int[searchArea, searchArea];
+        this.collider = collider;
     }
 
     public class Mask
@@ -40,7 +40,7 @@ public class AStarAlgorithm
         }
     }
 
-    public class Coord
+    public class Coord : IEquatable<Coord>
     {
         public int x;
         public int y;
@@ -49,6 +49,15 @@ public class AStarAlgorithm
         {
             x = _x;
             y = _y;
+        }
+
+        public bool Equals(Coord c)
+        {
+            if(x == c.x && y == c.y)
+            {
+                return true;
+            }
+            return false;
         }
     }
 
@@ -80,6 +89,10 @@ public class AStarAlgorithm
 
     public List<Waypoint> FindPath(Vector3 startPos, Vector3 endPos)
     {
+        if(startPos == endPos)
+        {
+            return new List<Waypoint>();
+        }
         mask[0] = new Mask(-1, -1, 1.4f);
         mask[1] = new Mask(-1, 0, 1f);
         mask[2] = new Mask(-1, 1, 1.4f);
@@ -99,7 +112,20 @@ public class AStarAlgorithm
         Vector3Int end = layout.WorldToCell(endPos);
         openList.Add(new Waypoint(new Coord(start.x, start.y), 0, CalcH(new Coord(start.x, start.y), new Coord(end.x, end.y)), new Coord(start.x, start.y)));
         FindPath(new Coord(end.x, end.y));
-
+        //FindPath(new Coord(end.x, end.y));
+        //foreach (Waypoint point in closedList)
+        //{
+        //    Debug.Log("Point: " + point.position.x + " " + point.position.y + ", WorldCoords: "  + layout.CellToWorld(new Vector3Int(point.position.x, point.position.y, 0)));
+        //}
+        Debug.Log("closedList.Count: " + closedList.Count);
+        path = Backtrack();
+        path.Reverse();
+        Debug.Log("path.Count: " + path.Count);
+        foreach (Waypoint point in path)
+        {
+            Debug.Log("Path: " + point.position.x + " " + point.position.y + ", WorldCoords: " + layout.CellToWorld(new Vector3Int(point.position.x, point.position.y, 0)));
+        }
+        
         return path;
     }
 
@@ -121,32 +147,31 @@ public class AStarAlgorithm
 
             //Calc H in case that p isn't in openList or is replacing old one
             p.h = CalcH(p.position, end);
-            //if (walkable)
-            //{
-            if (closedList.Contains(p))
+            if (IsWalkable(new Vector2Int(p.position.x, p.position.y)))
             {
-
-            }
-            else if (openList.Contains(p))
-            {
-                Waypoint oldP = openList.Find(w => w.Equals(p));
-                float distance = CalcF(p);
-                if(distance < CalcF(oldP))
+                if (closedList.Contains(p))
                 {
-                    openList.Remove(oldP);
+
+                }
+                else if (openList.Contains(p))
+                {
+                    Waypoint oldP = openList.Find(w => w.Equals(p));
+                    float distance = CalcF(p);
+                    if(distance < CalcF(oldP))
+                    {
+                        openList.Remove(oldP);
+                        openList.Add(p);
+                    }
+                }
+                else
+                {
                     openList.Add(p);
                 }
             }
-            else
-            {
-                openList.Add(p);
-            }
-            //}
-            
-
-
-
         }
+        FindPath(end);
+
+        
     }
 
     private Waypoint FindClosestTile()
@@ -180,7 +205,40 @@ public class AStarAlgorithm
         if(tilemap.GetTile(new Vector3Int(tilePos.x, tilePos.y, 0)) == null){
             return false;
         }
+        foreach(Tilemap map in collider)
+        {
+            if (map.GetTile(new Vector3Int(tilePos.x, tilePos.y, 0)) != null)
+            {
+                return false;
+            }
+        }
+
         return true;
+    }
+
+    private List<Waypoint> Backtrack()
+    {
+        List<Waypoint> path = new List<Waypoint>();
+        //First element has to be starting square
+        Coord start = closedList[0].position;
+        //Last element has to be final square
+        Waypoint currentTile = closedList[closedList.Count - 1];
+        path = Backtrack(currentTile, start, path);
+
+        return path;
+    }
+
+    private List<Waypoint> Backtrack(Waypoint currentWaypoint, Coord startPos, List<Waypoint> path)
+    {
+        path.Add(currentWaypoint);
+        if (!currentWaypoint.parent.Equals(startPos))
+        {
+            currentWaypoint = closedList.Find(w => w.position.Equals(currentWaypoint.parent));
+            Backtrack(currentWaypoint, startPos, path);
+
+        }
+        path.Add(closedList.Find(w => w.position.Equals(startPos)));
+        return path;
     }
 
 }
