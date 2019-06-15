@@ -171,9 +171,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -213,18 +213,18 @@ TextureImporter:
       name: robotShed_0
       rect:
         serializedVersion: 2
-        x: 333
-        y: 1667
-        width: 333
-        height: 333
+        x: 0
+        y: 1600
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eaaf1cd2265f7840ae7a16580629290
+      spriteID: b5f957d87d7618c4bb4cc89d7c193d9d
       internalID: -5353947033961060940
       vertices: []
       indices: 
@@ -234,18 +234,18 @@ TextureImporter:
       name: robotShed_1
       rect:
         serializedVersion: 2
-        x: 666
-        y: 1667
-        width: 333
-        height: 333
+        x: 400
+        y: 1600
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32b5ac6e9ab87f24d92d08a6136ec4f5
+      spriteID: feadc1e4a91619d4e8e52a95e7a07e2a
       internalID: -3399594672983608247
       vertices: []
       indices: 
@@ -255,18 +255,18 @@ TextureImporter:
       name: robotShed_2
       rect:
         serializedVersion: 2
-        x: 999
-        y: 1667
-        width: 333
-        height: 333
+        x: 800
+        y: 1600
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a994c32c0aa6aa545bfec96123580502
+      spriteID: 46bf5707fb546b741a83d2b28b74e5b5
       internalID: -8683004482730605483
       vertices: []
       indices: 
@@ -276,18 +276,18 @@ TextureImporter:
       name: robotShed_3
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 1667
-        width: 333
-        height: 333
+        x: 1200
+        y: 1600
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 996cc88f9abc9b7469ae696c5bd4e14e
+      spriteID: a3f9f97e85a2a7e48ab31cfea4ae85cf
       internalID: 4788657244829182836
       vertices: []
       indices: 
@@ -297,18 +297,18 @@ TextureImporter:
       name: robotShed_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1334
-        width: 333
-        height: 333
+        x: 1600
+        y: 1600
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 389af84b9323df347b822743f83697a3
+      spriteID: aa25e3ffbedfc6f459bd5b8bbeecf755
       internalID: -5269672602872655804
       vertices: []
       indices: 
@@ -318,18 +318,18 @@ TextureImporter:
       name: robotShed_5
       rect:
         serializedVersion: 2
-        x: 333
-        y: 1334
-        width: 333
-        height: 333
+        x: 0
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b89ab24535e792f4785b8c3b22850117
+      spriteID: 2cf94a68d5c08aa4fb4be2fcdaeec4db
       internalID: 4651049110236737668
       vertices: []
       indices: 
@@ -339,18 +339,18 @@ TextureImporter:
       name: robotShed_6
       rect:
         serializedVersion: 2
-        x: 666
-        y: 1334
-        width: 333
-        height: 333
+        x: 400
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7730944c2aacfe6419c574b2ec78a5bd
+      spriteID: 808c482201340e341b232eed127dc7a2
       internalID: 9015259997869170512
       vertices: []
       indices: 
@@ -360,18 +360,18 @@ TextureImporter:
       name: robotShed_7
       rect:
         serializedVersion: 2
-        x: 999
-        y: 1334
-        width: 333
-        height: 333
+        x: 800
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f2b8fe8499f56e44aeaa88fdc79f604
+      spriteID: 2fafac0af3eff5941b1f3c6381055a39
       internalID: 3964229965697294387
       vertices: []
       indices: 
@@ -381,18 +381,18 @@ TextureImporter:
       name: robotShed_8
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 1334
-        width: 333
-        height: 333
+        x: 1200
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63b9c8ec37f2bbe488ebafebf355a2a5
+      spriteID: 9b1a71b4fee068849ae9e0f6605a3028
       internalID: -2680119067731401538
       vertices: []
       indices: 
@@ -402,18 +402,18 @@ TextureImporter:
       name: robotShed_9
       rect:
         serializedVersion: 2
-        x: 1665
-        y: 1334
-        width: 333
-        height: 333
+        x: 1600
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50b4c25d83218294cbdd3785e5d25215
+      spriteID: 3566c2b2f97913643a94d84a5185e4ee
       internalID: 7789951099696074183
       vertices: []
       indices: 
@@ -424,17 +424,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1001
-        width: 333
-        height: 333
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d26eac11892a7648ab48905498b0103
+      spriteID: 9b1fe6db84c63e24b989de6443dbbe83
       internalID: 3962998523029139055
       vertices: []
       indices: 
@@ -444,18 +444,18 @@ TextureImporter:
       name: robotShed_11
       rect:
         serializedVersion: 2
-        x: 333
-        y: 1001
-        width: 333
-        height: 333
+        x: 400
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 817de71af592f2c43b7db421417502f2
+      spriteID: c53a637a10165f649980bb2421502575
       internalID: 6273478005216064651
       vertices: []
       indices: 
@@ -465,18 +465,18 @@ TextureImporter:
       name: robotShed_12
       rect:
         serializedVersion: 2
-        x: 666
-        y: 1001
-        width: 333
-        height: 333
+        x: 800
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd7da7d377743654386766b59423a37c
+      spriteID: 81d072958a9d09f4789fc942fe090ddd
       internalID: 5191260226946883649
       vertices: []
       indices: 
@@ -486,18 +486,18 @@ TextureImporter:
       name: robotShed_13
       rect:
         serializedVersion: 2
-        x: 999
-        y: 1001
-        width: 333
-        height: 333
+        x: 1200
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db481d237862fe84f9cd6c0b9c46945d
+      spriteID: 9bcc6844d65857248b2c5874b6ea3f87
       internalID: 2882646044357551591
       vertices: []
       indices: 
@@ -507,18 +507,18 @@ TextureImporter:
       name: robotShed_14
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 1001
-        width: 333
-        height: 333
+        x: 1600
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba55073bba641fd4194c384b7de106f4
+      spriteID: ffedc16c9e170604e84f7e6e309f81b6
       internalID: 5194469465688388426
       vertices: []
       indices: 
@@ -528,18 +528,18 @@ TextureImporter:
       name: robotShed_15
       rect:
         serializedVersion: 2
-        x: 1665
-        y: 1001
-        width: 333
-        height: 333
+        x: 0
+        y: 400
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3625d43bbf82faf498aafaf5f7d31137
+      spriteID: af9f600128884d141b2efc1a7c4dca94
       internalID: -2378241774721037428
       vertices: []
       indices: 
@@ -549,18 +549,18 @@ TextureImporter:
       name: robotShed_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 668
-        width: 333
-        height: 333
+        x: 400
+        y: 400
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 933ed439440822047b1611920a31c117
+      spriteID: 437ccbd0768c57a488b5a957b3be4320
       internalID: -6163072100250833167
       vertices: []
       indices: 
@@ -570,18 +570,18 @@ TextureImporter:
       name: robotShed_17
       rect:
         serializedVersion: 2
-        x: 333
-        y: 668
-        width: 333
-        height: 333
+        x: 800
+        y: 400
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ba3090fd1d79184bb5a80fa74ecba3c
+      spriteID: 5993587fa2e2c5e47b95fdcfdddb9d63
       internalID: -8543386944853014125
       vertices: []
       indices: 
@@ -591,18 +591,18 @@ TextureImporter:
       name: robotShed_18
       rect:
         serializedVersion: 2
-        x: 666
-        y: 668
-        width: 333
-        height: 333
+        x: 1200
+        y: 400
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50a233d282227224aa1cddcf3e8df628
+      spriteID: 240524141d9bb8444b340eda5a4ef0c1
       internalID: -2055479134423516866
       vertices: []
       indices: 
@@ -612,18 +612,18 @@ TextureImporter:
       name: robotShed_19
       rect:
         serializedVersion: 2
-        x: 999
-        y: 668
-        width: 333
-        height: 333
+        x: 1600
+        y: 400
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb7fa896f25af2b41a5a00125074a5d6
+      spriteID: 61d4e6b7031949944b1eb57a0e4996b4
       internalID: -4714482442401126095
       vertices: []
       indices: 
@@ -633,18 +633,18 @@ TextureImporter:
       name: robotShed_20
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 668
-        width: 333
-        height: 333
+        x: 0
+        y: 0
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 476fa6e17c99ec74ea0752cdeb4db951
+      spriteID: a9f32b9aa5a6ec14cb15d2f220f8c4af
       internalID: 6660677707138822301
       vertices: []
       indices: 
@@ -654,18 +654,18 @@ TextureImporter:
       name: robotShed_21
       rect:
         serializedVersion: 2
-        x: 1665
-        y: 668
-        width: 333
-        height: 333
+        x: 400
+        y: 0
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9225cef7ff9148f4ea2bf8ec901e9d53
+      spriteID: a7feb57f83ed270458381c34380a814d
       internalID: 1023832989044808364
       vertices: []
       indices: 
@@ -675,18 +675,18 @@ TextureImporter:
       name: robotShed_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 335
-        width: 333
-        height: 333
+        x: 800
+        y: 0
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcf9e0a7a0316904a8d29a960b485d34
+      spriteID: 2a7c6d57bb1ed4f419c812a7ad694892
       internalID: -7070293200909538640
       vertices: []
       indices: 
@@ -696,18 +696,18 @@ TextureImporter:
       name: robotShed_23
       rect:
         serializedVersion: 2
-        x: 333
-        y: 335
-        width: 333
-        height: 333
+        x: 1200
+        y: 0
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf19e3b9af641124e8a1c216603220d8
+      spriteID: 06803d91dddbc7544aaba8250e9e3e07
       internalID: -5146261711263202662
       vertices: []
       indices: 
@@ -717,208 +717,19 @@ TextureImporter:
       name: robotShed_24
       rect:
         serializedVersion: 2
-        x: 666
-        y: 335
-        width: 333
-        height: 333
+        x: 1600
+        y: 0
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d99c669b206430f4ebdd3dff4777a6a6
+      spriteID: 655a9c3e728f986439c78d1e28cf6a6b
       internalID: -9171212111021484068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robotShed_25
-      rect:
-        serializedVersion: 2
-        x: 999
-        y: 335
-        width: 333
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e9745f9f1a865644b0f2f108dcf4c23
-      internalID: 1606189243266142395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robotShed_26
-      rect:
-        serializedVersion: 2
-        x: 1332
-        y: 335
-        width: 333
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf1bd2f7083a6754f8d1e46927106285
-      internalID: -6400297611506065317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robotShed_27
-      rect:
-        serializedVersion: 2
-        x: 1665
-        y: 335
-        width: 333
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c75aab333d29c14ab83ab44319b1bd4
-      internalID: -5866549934172295320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robotShed_28
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2
-        width: 333
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b9629691e57ca54e9920e263efa1980
-      internalID: -2155854878171574860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robotShed_29
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 2
-        width: 333
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d27df81286654734882035d291f913b1
-      internalID: -919610530917846425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robotShed_30
-      rect:
-        serializedVersion: 2
-        x: 666
-        y: 2
-        width: 333
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69a41fa0f3183a244819607fa06e32f1
-      internalID: 1358884949005939380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robotShed_31
-      rect:
-        serializedVersion: 2
-        x: 999
-        y: 2
-        width: 333
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48895be47f08ef54b81bb69187db335b
-      internalID: 8509294996917283904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robotShed_32
-      rect:
-        serializedVersion: 2
-        x: 1332
-        y: 2
-        width: 333
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fefe7df7fe719fe41804389e2fbb118b
-      internalID: -3666323189539443107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robotShed_33
-      rect:
-        serializedVersion: 2
-        x: 1665
-        y: 2
-        width: 333
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26ce353e5561feb41a8811e6c6e56b22
-      internalID: -2180223737562313886
       vertices: []
       indices: 
       edges: []
