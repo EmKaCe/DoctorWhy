@@ -12,6 +12,7 @@ public class AStarAlgorithm
     List<Vector3Int> bestPath; //use for backtrack
     GridLayout layout;
     Tilemap tilemap;
+    public List<Tilemap> collider;
     int[,] map;
 
     readonly Mask[] mask = new Mask[8];
@@ -110,6 +111,14 @@ public class AStarAlgorithm
         for(int i = 0; i < 8; i++)
         {
             Waypoint p = new Waypoint(new Coord(start.position.x + mask[i].x, start.position.y + mask[i].y), start.g + mask[i].weight, 0, start.position);
+            //return if end is reached
+            if (p.position.Equals(end))
+            {
+                closedList.Add(p);
+                return;
+            }
+            float z = tilemap.GetComponent<Transform>().position.z;
+
             //Calc H in case that p isn't in openList or is replacing old one
             p.h = CalcH(p.position, end);
             //if (walkable)
@@ -163,6 +172,15 @@ public class AStarAlgorithm
     private float CalcF(Waypoint start)
     {
         return start.g + start.h;
+    }
+
+
+    private bool IsWalkable(Vector2Int tilePos)
+    {
+        if(tilemap.GetTile(new Vector3Int(tilePos.x, tilePos.y, 0)) == null){
+            return false;
+        }
+        return true;
     }
 
 }
