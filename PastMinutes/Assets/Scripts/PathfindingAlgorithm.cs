@@ -21,9 +21,9 @@ public class PathfindingAlgorithm
     {
         public Vector3Int tile;
         public float distance;
-        public Waypoint parent;
+        public Direction parent;
 
-        public Waypoint(Vector3Int pTile, float pDistance, Waypoint pParent)
+        public Waypoint(Vector3Int pTile, float pDistance, Direction pParent)
         {
             tile = pTile;
             distance = pDistance;
@@ -35,17 +35,32 @@ public class PathfindingAlgorithm
         }
     }
 
+    public enum Direction
+    {
+        north,
+        northEast,
+        east,
+        southEast,
+        south,
+        southWest,
+        west,
+        northWest,
+        start,
+    }
+
     public class Mask
     {
         public int x;
         public int y;
         public float weight;
+        public Direction direction;
 
-        public Mask(int x, int y, float weight)
+        public Mask(int x, int y, float weight, Direction direction)
         {
             this.x = x;
             this.y = y;
             this.weight = weight;
+            this.direction = direction;
         }
     }
 
@@ -58,14 +73,14 @@ public class PathfindingAlgorithm
 
     public List<Waypoint> FindPath(Vector3 startPos, Vector3 endPos)
     {
-        mask[0] = new Mask(-1, -1, 1.4f);
-        mask[1] = new Mask(-1, 0, 1f);
-        mask[2] = new Mask(-1, 1, 1.4f);
-        mask[3] = new Mask(0, -1, 1f);
-        mask[4] = new Mask(0, 1, 1f);
-        mask[5] = new Mask(1, -1, 1.4f);
-        mask[6] = new Mask(1, 0, 1f);
-        mask[7] = new Mask(1, 1, 1.4f);
+        mask[0] = new Mask(-1, -1, 1.4f, Direction.northWest);
+        mask[1] = new Mask(-1, 0, 1f, Direction.west);
+        mask[2] = new Mask(-1, 1, 1.4f, Direction.southWest);
+        mask[3] = new Mask(0, -1, 1f, Direction.north);
+        mask[4] = new Mask(0, 1, 1f, Direction.south);
+        mask[5] = new Mask(1, -1, 1.4f, Direction.northEast);
+        mask[6] = new Mask(1, 0, 1f, Direction.east);
+        mask[7] = new Mask(1, 1, 1.4f, Direction.southEast);
 
 
 
@@ -77,19 +92,50 @@ public class PathfindingAlgorithm
         closedList = new List<Waypoint>();
         Vector3Int start = layout.WorldToCell(startPos);
         Vector3Int end = layout.WorldToCell(endPos);
-        openList.Add(new Waypoint(start, 0, null));
+        openList.Add(new Waypoint(start, 0, Direction.start));
         FindPath(end);
 
         //backtracking
         Waypoint w = closedList[closedList.Count];
+        Vector3Int parentTile = new Vector3Int(0,0,0);
         bestPath.Add(w.tile);
-        while(w.parent != null)
+        while(w.parent != Direction.start)
         {
-            w = w.parent;
+            switch (w.parent)
+            {
+                case Direction.north:
+                    parentTile = new Vector3Int(w.tile.x, w.tile.y + 1, w.tile.z);
+                    break;
+                case Direction.northEast:
+                    parentTile = new Vector3Int(w.tile.x - 1, w.tile.y + 1, w.tile.z);
+                    break;
+                case Direction.east:
+                    parentTile = new Vector3Int(w.tile.x - 1, w.tile.y, w.tile.z);
+                    break;
+                case Direction.southEast:
+                    parentTile = new Vector3Int(w.tile.x - 1, w.tile.y - 1, w.tile.z);
+                    break;
+                case Direction.south:
+                    parentTile = new Vector3Int(w.tile.x, w.tile.y - 1, w.tile.z);
+                    break;
+                case Direction.southWest:
+                    parentTile = new Vector3Int(w.tile.x + 1, w.tile.y - 1, w.tile.z);
+                    break;
+                case Direction.west:
+                    parentTile = new Vector3Int(w.tile.x + 1, w.tile.y, w.tile.z);
+                    break;
+                case Direction.northWest:
+                    parentTile = new Vector3Int(w.tile.x + 1, w.tile.y + 1, w.tile.z);
+                    break;
+            }
+            w = closedList.Find(wp => wp.tile == parentTile);
             bestPath.Add(w.tile);
         }
         bestPath.Reverse();
-        
+        foreach(Vector3Int t in bestPath)
+        {
+            Debug.Log(t.ToString() + " " + layout.CellToWorld(t));
+        }
         return path;
     }
 
@@ -103,7 +149,7 @@ public class PathfindingAlgorithm
             Vector3Int point = new Vector3Int(start.tile.x + mask[i].x, start.tile.y + mask[i].y, start.tile.z);
             if(point == endPos)
             {
-                closedList.Add(new Waypoint(point, 0, start));
+                closedList.Add(new Waypoint(point, 0, mask[i].direction));
                 return;
             }
             if (closedList.Exists(w => w.tile.Equals(point)))
@@ -118,13 +164,13 @@ public class PathfindingAlgorithm
                 if (pointValue > newPointValue)
                 {
                     openList.Remove(wp);
-                    wp.parent = start;
+                    wp.parent = mask[i].direction;
                     openList.Add(wp);
                 }
             }
             else
             {
-                openList.Add(new Waypoint(point, CalcF(start, point, mask[i].weight), start));
+                openList.Add(new Waypoint(point, CalcF(start, point, mask[i].weight), mask[i].direction));
             }
             FindPath(endPos);
         }
