@@ -120,4 +120,16 @@ public class BreathingComponent : MonoBehaviour
        
         return true;
     }
+
+    //Returns amount of non-empty Oxygen containers
+    public int getCurrentSupplyCount()
+    {
+        return remainingSupply.Count;
+    }
+
+    //Return Oxygen container from remainingSupply
+    public OxygenComponent GetCurrentlyUsedOxygenCompenent()
+    {
+        return remainingSupply[currentlyUsed];
+    }
 }
