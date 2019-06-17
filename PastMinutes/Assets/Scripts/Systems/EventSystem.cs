@@ -131,7 +131,18 @@ public class EventSystem : MonoBehaviour {
         return "InitializingShootingComponent";
     }
 
+    /// <summary>
+    /// Button was pressed and Item should be picked up
+    /// <para>int: 0</para>
+    /// </summary>
+    /// <returns>"PickUpItem"</returns>
+    public static string PickUpItem()
+    {
+        return "PickUpItem";
+    }
 
-
-    
+    public static string AddItemToInventory()
+    {
+        return "AddItemToInventory";
+    }
 }
