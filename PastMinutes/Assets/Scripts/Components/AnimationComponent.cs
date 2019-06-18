@@ -42,6 +42,10 @@ public class AnimationComponent : MonoBehaviour
             sheetChanged = false;
             sprites = Resources.LoadAll<Sprite>("Characters/" + spritesheet);
         }
+        //Parts of spritesheet name. splits after every _
+        string[] parts = spriteRenderer.sprite.name.Split('_');
+        int.TryParse(parts[parts.Length - 1], out int res);
+        spriteRenderer.sprite = sprites[res];
     }
 
     public void SetSheetChanged(bool changed)

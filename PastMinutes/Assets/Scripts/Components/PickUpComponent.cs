@@ -15,6 +15,12 @@ public class PickUpComponent : InteractionComponent
 
     public override void StopInteraction()
     {
+        Debug.Log("PickUpComponent: StopInteraction");
+        EventManager.StopListening(EventSystem.PickUpItem(), pickUpListener);
+    }
+
+    private void OnDisable()
+    {
         EventManager.StopListening(EventSystem.PickUpItem(), pickUpListener);
     }
 
@@ -23,9 +29,9 @@ public class PickUpComponent : InteractionComponent
         pickUpListener = new UnityAction<int, string[]>(PickUpItem);
     }
 
-    public void PickUpItem(int empty, string[] empty2)
+    private void PickUpItem(int entityID, string[] empty2)
     {
         Debug.Log("PickUpComponent: Item would be picked up");
-        EventManager.TriggerEvent(EventSystem.AddItemToInventory(), gameObject.GetInstanceID(), new string[] { });
+        EventManager.TriggerEvent(EventSystem.AddItemToInventory(), gameObject.GetInstanceID(), new string[] {entityID.ToString() });
     }
 }

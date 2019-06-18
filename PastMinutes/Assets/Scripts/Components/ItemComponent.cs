@@ -56,8 +56,10 @@ public class ItemComponent : MonoBehaviour
             amount -= pAmount;
             return pAmount;
         }
+        //just to save amount that should be returned before setting amount in inventory to 0
+        pAmount = amount;
         amount = 0;
-        return amount;
+        return pAmount;
     }
 
     public int GetAmount()

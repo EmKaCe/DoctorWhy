@@ -132,8 +132,8 @@ public class EventSystem : MonoBehaviour {
     }
 
     /// <summary>
-    /// Button was pressed and Item should be picked up
-    /// <para>int: 0</para>
+    /// Button was pressed or AI triggered event and Item should be picked up
+    /// <para>int: entityID of person who wants to pick up item (usually player</para>
     /// </summary>
     /// <returns>"PickUpItem"</returns>
     public static string PickUpItem()
@@ -141,8 +141,68 @@ public class EventSystem : MonoBehaviour {
         return "PickUpItem";
     }
 
+    /// <summary>
+    /// Triggered after PickUpItem. Answer of Item containing item entityID and person entityID
+    /// <para>int: entityID of item that should be picked up</para>
+    /// <para>string[]: entityID of player/npc who wants to pick up item</para>
+    /// </summary>
+    /// <returns></returns>
     public static string AddItemToInventory()
     {
         return "AddItemToInventory";
+    }
+
+    /// <summary>
+    /// Called when new inventory is initialized
+    /// <para>int: entityID of object that gets new inventory</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string InventoryAdded()
+    {
+        return "InventoryAdded";
+    }
+
+    /// <summary>
+    /// Inventory is too full to add item
+    /// <para>int: entityID of item that couldn't be added</para>
+    /// <para>string[]: name of item</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string InventoryFull()
+    {
+        return "InventoryFull";
+    }
+
+    /// <summary>
+    /// Called when Item was added
+    /// <para>int: entityID of object that was added</para>
+    /// <para>string[]: entityID of player/npc, name of item</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string ItemAdded()
+    {
+        return "ItemAdded";
+    }
+
+    /// <summary>
+    /// Called when item should be removed from inventory
+    /// <para>int: entityID of object that gets removed</para>
+    /// <para>string[]: entityID of player/npc, amount that should be removed</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string RemoveItemFromInventory()
+    {
+        return "RemoveItemFromInventory";
+    }
+
+    /// <summary>
+    /// Called when Item was removed
+    /// <para>int: entityID of object that was removed</para>
+    /// <para>string[]: entityID of player/npc, name of item, amount that was removed</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string ItemRemoved()
+    {
+        return "ItemRemoved";
     }
 }
