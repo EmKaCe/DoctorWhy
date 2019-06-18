@@ -11,12 +11,7 @@ public class InventoryComponent : MonoBehaviour
     void Start()
     {
         inventory = new List<ItemComponent>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        EventManager.TriggerEvent(EventSystem.InventoryAdded(), gameObject.GetComponentInParent<EntityComponent>().gameObject.GetInstanceID(), new string[] { });
     }
 
     /// <summary>
@@ -31,7 +26,7 @@ public class InventoryComponent : MonoBehaviour
             foreach(ItemComponent i in inventory)
             {
                 if (i.itemName.Equals(item.itemName)){
-                    i.AddToStack(1);
+                    i.AddToStack(item.GetAmount());
                     return true;
                 }
             }
@@ -65,6 +60,7 @@ public class InventoryComponent : MonoBehaviour
                 {
                     inventory.Remove(i);
                 }
+                return res;
                 
             }
         }
