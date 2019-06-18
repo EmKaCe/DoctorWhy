@@ -23,7 +23,6 @@ public class ShootingSystem : MonoBehaviour
     void Start()
     {
         
-        Debug.Log(activeGun);
 
     }
 
@@ -86,11 +85,7 @@ public class ShootingSystem : MonoBehaviour
     private void InitializeComponent(int entityID, string[] nothing)
     {
         ShootingComponent comp = EntityManager.GetEntityComponent<ShootingComponent>(entityID) as ShootingComponent;
-        Debug.Log("Comp: " + comp.name);
         shootingComponentDictionary.Add(entityID, comp);
-        //comp.SetActiveGun(GetActiveGun(entityID));
-        comp.SetProjectileSpritesheet("bulletsEnergySide");
-        //comp.LoadSprite();
         
     }
 

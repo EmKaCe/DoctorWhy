@@ -28,7 +28,6 @@ public class ShootingComponent : MonoBehaviour
     {
         EventManager.TriggerEvent(EventSystem.InitializingShootingComponent(), gameObject.GetComponentInParent<EntityComponent>().gameObject.GetInstanceID(), new string[] { "0" });
         projectile = Resources.Load<Sprite>("Items/" + projectileSpritesheet);
-        Debug.Log(projectile);
         //work in progress: take gun component for projectile information
         gun = gameObject.GetComponent<GunComponent>() as GunComponent;       
         

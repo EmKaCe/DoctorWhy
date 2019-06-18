@@ -67,7 +67,10 @@ public class InventorySystem : MonoBehaviour
 
     private void AddInventory(int entityID, string[] empty)
     {
-        inventories.Add(entityID, EntityManager.GetEntityComponent<InventoryComponent>(entityID) as InventoryComponent);
+        InventoryComponent i = EntityManager.GetEntityComponent<InventoryComponent>(entityID) as InventoryComponent;
+        inventories.Add(entityID, i);
+        i.StartUp();
+
     }
 
     private void OnEnable()

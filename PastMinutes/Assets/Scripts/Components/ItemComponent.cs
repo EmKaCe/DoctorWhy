@@ -15,17 +15,6 @@ public class ItemComponent : MonoBehaviour
     [SerializeField]
     private int amount;
 
-    //private int uniqueID;
-
-
-    //[ContextMenuItem("Reset", "ResetBiography")]
-    //[Multiline(8)]
-    //public string playerBiography = "";
-
-    //void ResetBiography()
-    //{
-    //    playerBiography = "";
-    //}
 
     // Start is called before the first frame update
     void Start()

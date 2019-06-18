@@ -9,13 +9,11 @@ public class PickUpComponent : InteractionComponent
 
     public override void StartInteraction()
     {
-        Debug.Log("PickUpComponent: StartInteraction");
         EventManager.StartListening(EventSystem.PickUpItem(), pickUpListener);
     }
 
     public override void StopInteraction()
     {
-        Debug.Log("PickUpComponent: StopInteraction");
         EventManager.StopListening(EventSystem.PickUpItem(), pickUpListener);
     }
 

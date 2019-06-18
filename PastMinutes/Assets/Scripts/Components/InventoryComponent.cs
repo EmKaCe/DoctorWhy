@@ -1,21 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InventoryComponent : MonoBehaviour
 {
 
     public List<ItemComponent> inventory;
     public int inventorySize;
+
+
+    private void Awake()
+    {
+        inventory = new List<ItemComponent>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        inventory = new List<ItemComponent>();
         EventManager.TriggerEvent(EventSystem.InventoryAdded(), gameObject.GetComponentInParent<EntityComponent>().gameObject.GetInstanceID(), new string[] { });
+        
+    }
+
+
+    public void StartUp()
+    {
+        ItemComponent[] items = gameObject.GetComponentsInChildren<ItemComponent>();
+        foreach (ItemComponent item in items)
+        {
+            EventManager.TriggerEvent(EventSystem.AddItemToInventory(), item.gameObject.GetInstanceID(), new string[] { gameObject.GetComponentInParent<EntityComponent>().gameObject.GetInstanceID().ToString() });
+        }
     }
 
     /// <summary>
-    /// 
+    /// Adds item to inventory
     /// </summary>
     /// <param name="item"></param>
     /// <returns>true if space in inventory/ false if not</returns>
@@ -65,5 +83,14 @@ public class InventoryComponent : MonoBehaviour
             }
         }
         return res;
+    }
+
+    /// <summary>
+    /// Returns all ItemComponents as list
+    /// </summary>
+    /// <returns></returns>
+    public List<ItemComponent> ShowInventory()
+    {
+        return inventory;
     }
 }
