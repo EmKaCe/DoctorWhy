@@ -25,7 +25,7 @@ public class DoorComponent : MonoBehaviour
         {
             Vector3 newPos = otherPoint.transform.position + offset;
             newPos.z = collider.gameObject.transform.position.z;
-            collider.gameObject.transform.parent.position = newPos;
+            collider.gameObject.transform.position = newPos;
         }
     }
 }
