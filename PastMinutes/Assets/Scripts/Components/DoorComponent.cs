@@ -4,28 +4,19 @@ using UnityEngine;
 
 public class DoorComponent : MonoBehaviour
 {
-    public BoxCollider2D otherPoint;
     public Vector3 offset;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public DoorComponent otherDoor;
 
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        TagSystem tags = collider.gameObject.GetComponentInParent<TagSystem>();
-        if (tags.Player || tags.NPC)
-        {
-            Vector3 newPos = otherPoint.transform.position + offset;
-            newPos.z = collider.gameObject.transform.position.z;
-            collider.gameObject.transform.position = newPos;
-        }
+            TagSystem tags = collider.gameObject.GetComponentInParent<TagSystem>();
+            if ((tags.Player || tags.NPC) && !collider.isTrigger)
+            {
+                Vector3 newPos = otherDoor.transform.position + offset;
+                newPos.z = collider.gameObject.transform.position.z;
+                collider.gameObject.transform.position = newPos;
+            }
+       
     }
 }

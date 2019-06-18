@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284b360b6d97acf46b676bdc678232c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherPoint: {fileID: 5405902737615435239}
   offset: {x: 0, y: 0, z: 0}
+  otherDoor: {fileID: 5405902737615435236}
 --- !u!1 &5405902737615435225
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284b360b6d97acf46b676bdc678232c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherPoint: {fileID: 5405902736106088583}
   offset: {x: 0, y: 4, z: 0}
+  otherDoor: {fileID: 5405902736106088580}
 --- !u!1 &5405902737674883076
 GameObject:
   m_ObjectHideFlags: 0
