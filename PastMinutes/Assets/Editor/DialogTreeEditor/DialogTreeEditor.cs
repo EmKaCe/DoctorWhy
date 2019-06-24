@@ -411,7 +411,7 @@ namespace DialogTree
             genericMenu.AddItem(new GUIContent("Add StartNode"), false, () => OnClickAddStartNode(mousePosition));
             genericMenu.AddItem(new GUIContent("Add DialogNode"), false, () => OnClickAddDialogNode(mousePosition));
             genericMenu.AddItem(new GUIContent("Add PrerequisiteNode"), false, () => OnClickAddPrerequisiteNode(mousePosition));
-            //genericMenu.AddItem(new GUIContent("Add Sequence"), false, () => OnClickAddSequence(mousePosition));
+            genericMenu.AddItem(new GUIContent("Add ExitNode"), false, () => OnClickAddExitNode(mousePosition));
             //genericMenu.AddItem(new GUIContent("Add Decorator"), false, () => OnClickAddDecorator(mousePosition));
             //genericMenu.AddItem(new GUIContent("Add TestDialog"), false, () => OnClickAddTestDialog(mousePosition));
             genericMenu.ShowAsContext();
@@ -465,6 +465,17 @@ namespace DialogTree
             }
             StartDialogNode b = CreateInstance<StartDialogNode>();
             b.CreateStartDialog(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, "StartNode");
+            nodes.Add(b);
+        }
+
+        private void OnClickAddExitNode(Vector2 mousePosition)
+        {
+            if (nodes == null)
+            {
+                nodes = new List<DialogNode>();
+            }
+            ExitNode b = CreateInstance<ExitNode>();
+            b.CreateExitDialog(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, "ExitNode");
             nodes.Add(b);
         }
 

@@ -9,7 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4780458420935490559}
+  - component: {fileID: 394833602}
   - component: {fileID: 1388412301587003856}
+  - component: {fileID: 394833601}
+  - component: {fileID: 394833600}
   m_Layer: 0
   m_Name: PrerequivisteTest
   m_TagString: Untagged
@@ -31,6 +34,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &394833602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050167598833590385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3771e768439e94e9c3aa67c9c6b253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityID: 0
 --- !u!114 &1388412301587003856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,4 +59,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8514badcc6071f8409cbc3dfa3636fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: {fileID: 1736977022079963220, guid: 2abd2c605e835ba4b9c55e652ecf510c, type: 3}
+  test: {fileID: 0}
+--- !u!58 &394833601
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050167598833590385}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &394833600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050167598833590385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac2d162df50d4f48b9ea743237ded36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTree: {fileID: 11400000, guid: 011d8f84f60528f4f86507103ee839a1, type: 2}
+  prerequisites: []

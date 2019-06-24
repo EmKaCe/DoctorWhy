@@ -21,9 +21,13 @@ namespace DialogTree
 
         public List<string> dialogs;
 
+        public Rect rectAnswer;
+
 
         [HideInInspector]
         public Vector2 pos;
+
+        public string answer;
 
         private Vector2 scrollPos;
 
@@ -31,7 +35,8 @@ namespace DialogTree
         {
             base.CreateDialogNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints, nodeName);
             pos = position;
-            rectContent = new Rect(position.x + offset, position.y + rowHeight, width - (2 * offset), height - rowHeight);
+            rectContent = new Rect(position.x + offset, position.y + 2 * rowHeight, width - (2 * offset), height - rowHeight);
+            rectAnswer = new Rect(position.x + offset, position.y + 2 * rowHeight - 5f, width - (2 * offset), rowHeight);
             testArray = new string[2];
             dialogs = new List<string>
             {
@@ -45,17 +50,22 @@ namespace DialogTree
             
             base.Draw();
 
-
-
-
+            GUILayout.BeginArea(rectAnswer);
+            EditorGUIUtility.labelWidth = 75;
+            GUILayoutOption s = GUILayout.Height(30);
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField("Answer:", GUILayout.Width(50));
+            answer = EditorGUILayout.TextArea(answer, s);
+            EditorGUILayout.EndHorizontal();
+            GUILayout.EndArea();
 
             GUILayout.BeginArea(rectContent);
             //EditorGUILayout.BeginVertical();
             GUILayout.Space(rowHeight);
-            EditorGUIUtility.labelWidth = 75;
+
             //EditorGUILayout.PropertyField(serializedBehaviour, new GUIContent("Behaviour"));
             //test = EditorGUILayout.FloatField("TestValue", test);
-            GUILayoutOption s = GUILayout.Height(30);
+            
             //style.fixedWidth = 20;
             ////scrollPos = EditorGUILayout.BeginScrollView(scrollPos, false, true);
             ////EditorGUILayout.BeginVertical();
@@ -118,7 +128,7 @@ namespace DialogTree
         public override void Drag(Vector2 delta)
         {
             base.Drag(delta);
-            
+            rectAnswer.position += delta;
         }
 
         public override List<UIDialogItem> GetDialog()

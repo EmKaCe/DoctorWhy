@@ -108,7 +108,7 @@ namespace DialogTree
 
         public virtual void Draw()
         {
-            GUI.Box(rect, title, style);
+            GUI.Box(rect, "", style);
 
             GUI.Label(rectStandardTitle, nodeName);
             title = GUI.TextField(rectTitle, title);
