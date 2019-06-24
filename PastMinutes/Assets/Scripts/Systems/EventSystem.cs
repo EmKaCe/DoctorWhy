@@ -205,4 +205,22 @@ public class EventSystem : MonoBehaviour {
     {
         return "ItemRemoved";
     }
+
+    /// <summary>
+    /// Called by DialogComponent when Conversation gets started
+    /// </summary>
+    /// <returns></returns>
+    public static string BeginConversation()
+    {
+        return "BeginConversation";
+    }
+
+    /// <summary>
+    /// Called by DialogComponent when Conversation was ended
+    /// </summary>
+    /// <returns></returns>
+    public static string EndConversation()
+    {
+        return "EndConversation";
+    }
 }

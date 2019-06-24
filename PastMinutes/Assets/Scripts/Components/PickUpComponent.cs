@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(EntityComponent), typeof(ItemComponent))]
 public class PickUpComponent : InteractionComponent
 {
     UnityAction<int, string[]> pickUpListener;
