@@ -93,4 +93,16 @@ public class InventoryComponent : MonoBehaviour
     {
         return inventory;
     }
+
+    public bool ContainsItem(string name)
+    {
+        foreach(ItemComponent i in inventory)
+        {
+            if (i.itemName.Equals(name))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

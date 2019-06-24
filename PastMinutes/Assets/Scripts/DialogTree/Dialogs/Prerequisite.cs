@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DialogTree
 {
-    public abstract class Prerequisite : MonoBehaviour
+    public abstract class Prerequisite : ScriptableObject
     {
         /// <summary>
         /// Checks if prerequisite was fullfilled

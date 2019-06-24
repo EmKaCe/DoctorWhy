@@ -35,6 +35,20 @@ public class EventSystem : MonoBehaviour {
     }
 
     /// <summary>
+    /// Called when timer reaches zero
+    /// </summary>
+    /// <returns></returns>
+    public static string EndWorld()
+    {
+        return "EndWorld";
+    }
+
+    public static string StartWorldEnd()
+    {
+        return "StartWorldEnd";
+    }
+
+    /// <summary>
     /// Entity with entityID died
     /// <para>int: entity id of entity that died</para>
     /// <para>string: entity id of entity that caused the damage</para>
