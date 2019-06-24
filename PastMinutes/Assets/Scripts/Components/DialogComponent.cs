@@ -55,7 +55,7 @@ public class DialogComponent : MonoBehaviour
 
     public UIDialogItem[] GetCurrentDialog()
     {
-        List<UIDialogItem> res = currentPos.GetDialog();
+        List<UIDialogItem> res = currentPos.GetDialog(dialogTree, currentPos);
         //res.AddRange(standardDialog);
         foreach (UIDialogItem re in res)
         {
@@ -66,13 +66,14 @@ public class DialogComponent : MonoBehaviour
 
     public UIDialogItem[] GetNextDialog(int index)
     {
-        currentPos = currentPos.outPoint[index].connectedNode;
+        currentPos = dialogTree.connections.Find(c => c.endNode.Equals(currentPos) && c.outIndex == index).startNode;
+        //currentPos = currentPos.outPoint[index].connectedNode;
         //No further dialog
         if(currentPos == null || currentPos.GetType().Equals(typeof(ExitNode)))
         {
             EndConversation();
         }
-        List<UIDialogItem> res = currentPos.GetDialog();
+        List<UIDialogItem> res = currentPos.GetDialog(dialogTree, currentPos);
         //res.AddRange(standardDialog);
         foreach (UIDialogItem re in res)
         {
@@ -88,12 +89,14 @@ public class DialogComponent : MonoBehaviour
         EventManager.TriggerEvent(EventSystem.BeginConversation(), gameObject.GetComponentInParent<EntityComponent>().entityID, new string[] { });
         if (visited)
         {
-            currentPos = start.outPoint[1].connectedNode;
+            currentPos = dialogTree.connections.Find(c => c.endNode.Equals(start) && c.outIndex == 1).startNode;
+            //currentPos = start.outPoint[1].connectedNode;
         }
         else
         {
             visited = true;
-            currentPos = start.outPoint[0].connectedNode;
+            currentPos = dialogTree.connections.Find(c => c.endNode.Equals(start) && c.outIndex == 0).startNode;
+            //currentPos = start.outPoint[0].connectedNode;
         }
     }
 

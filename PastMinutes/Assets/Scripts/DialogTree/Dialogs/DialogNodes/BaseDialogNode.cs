@@ -131,19 +131,23 @@ namespace DialogTree
             rectAnswer.position += delta;
         }
 
-        public override List<UIDialogItem> GetDialog()
+        public override List<UIDialogItem> GetDialog(NodeSaver save, DialogNode node)
         {
             List<UIDialogItem> result = new List<UIDialogItem>();
             for(int i = 0; i < dialogs.Count; i++)
             {
                 //start with i + 1 because index 0 is input of whole node
-                DialogNode pre = inPoint[i + 1].connectedNode;
+                // DialogNode pre = inPoint[i + 1].connectedNode;
+                ConnectionSave test = save.connections.Find(c => c.startNode.Equals(node) && c.inIndex == (i + 1));
                 //No prerequisite 
-                if (pre == null)
+                if (test == null)
                 {
+                    //Output nodes start with 0 (no whole node output)
                     result.Add(new UIDialogItem(dialogs[i], i));
+                    continue;
                 }
-                else if (pre.GetType().Equals(typeof(PrerequisiteNode)))
+                DialogNode pre = save.connections.Find(c => c.startNode.Equals(node) && c.inIndex == (i + 1)).endNode;
+                if (pre.GetType().Equals(typeof(PrerequisiteNode)))
                 {
                     if((pre as PrerequisiteNode).prerequisite == null)
                     {

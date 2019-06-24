@@ -36,7 +36,7 @@ namespace DialogTree
         }
 
 
-        public override List<UIDialogItem> GetDialog()
+        public override List<UIDialogItem> GetDialog(NodeSaver save, DialogNode node)
         {
             return new List<UIDialogItem>();
         }

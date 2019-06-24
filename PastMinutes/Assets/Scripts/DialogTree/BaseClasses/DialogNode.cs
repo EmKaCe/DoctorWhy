@@ -85,7 +85,7 @@ namespace DialogTree
             }
             for (int i = 0; i < outPoints; i++)
             {
-                outPoint[i] = new DialogConnectionPoint(this, DialogConnectionPointType.Out, outPointStyle, OnClickOutPoint, i, outPoints);
+               outPoint[i] = new DialogConnectionPoint(this, DialogConnectionPointType.Out, outPointStyle, OnClickOutPoint, i, outPoints);
             }
             defaultNodeStyle = nodeStyle;
             selectedNodeStyle = selectedStyle;
@@ -181,7 +181,8 @@ namespace DialogTree
         }
 
 
-        public abstract List<UIDialogItem> GetDialog();
+        public abstract List<UIDialogItem> GetDialog(NodeSaver save, DialogNode node);
+
 
     }
 

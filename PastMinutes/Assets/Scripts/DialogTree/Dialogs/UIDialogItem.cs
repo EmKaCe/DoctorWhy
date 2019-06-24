@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace DialogTree
 {
-    public class UIDialogItem : MonoBehaviour
+    public class UIDialogItem
     {
 
         public enum DialogOption
