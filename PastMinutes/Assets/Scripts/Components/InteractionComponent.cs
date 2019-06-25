@@ -6,11 +6,14 @@ using UnityEngine;
 public abstract class InteractionComponent : MonoBehaviour
 {
     bool triggered = false;
+    [Header("Message shown to player when close to object")]
+    public string interactionMessage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<TagSystem>().Player && !triggered)
         {
+            EventManager.TriggerEvent(EventSystem.InteractionTriggered(), 0, new string[] { interactionMessage, GetType().ToString() });
             triggered = true;
             StartInteraction(); 
         }
@@ -20,6 +23,7 @@ public abstract class InteractionComponent : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<TagSystem>().Player)
         {
+            EventManager.TriggerEvent(EventSystem.InteractionExited(), 0, new string[] { interactionMessage, GetType().ToString() });
             triggered = false;
             StopInteraction();
         }
