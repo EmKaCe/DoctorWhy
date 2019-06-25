@@ -262,4 +262,26 @@ public class EventSystem : MonoBehaviour {
     {
         return "EndConversation";
     }
+
+    /// <summary>
+    /// Called by interactionComponent (or classes that derive from interactionComponent) when interaction area is entered
+    /// int: 0;
+    /// string[] {Interaction message for player, type of interactionComponent}
+    /// </summary>
+    /// <returns></returns>
+    public static string InteractionTriggered()
+    {
+        return "InteractionTriggered";
+    }
+
+    /// <summary>
+    /// Called by interactionComponent (or classes that derive from interactionComponent) when interaction area is exited
+    /// int: 0;
+    /// string[] {Interaction message for player, type of interactionComponent}
+    /// </summary>
+    /// <returns></returns>
+    public static string InteractionExited()
+    {
+        return "InteractionExited";
+    }
 }
