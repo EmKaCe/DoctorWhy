@@ -14,14 +14,20 @@ public class PatrollingComponent : MonoBehaviour
     List<Vector3> path;
     Vector3 start;
     public bool goBackToStart;
+    public bool loop;
     // Start is called before the first frame update
     void Start()
+    {
+        CalcPath();
+    }
+
+    public void CalcPath()
     {
         path = new List<Vector3>();
         move = false;
         AStarAlgorithm a = new AStarAlgorithm(layout, map, colliders);
         path.AddRange(a.FindPath(transform.position, waypoints[0]));
-        for(int i = 0; i < waypoints.Length - 1; i++)
+        for (int i = 0; i < waypoints.Length - 1; i++)
         {
             path.AddRange(a.FindPath(waypoints[i], waypoints[i + 1]));
         }
@@ -83,6 +89,7 @@ public class PatrollingComponent : MonoBehaviour
             if (path.Count == 0)
             {
                 move = false;
+                CalcPath();
                 return new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
             goal = path[0];
