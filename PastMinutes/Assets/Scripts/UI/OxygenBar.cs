@@ -11,20 +11,18 @@ public class OxygenBar : MonoBehaviour
     public Slider oxygenBar; //Oxygen UI Slider
     public BreathingComponent breathingComponent; //Shitty breathing component
     private OxygenComponent currentOxygen; //currently used oxygen component
+    private int remainingOxygenComponents; //remaining amount of oxygen components
 
     // Start is called before the first frame update
     void Start()
     {
         currentOxygen = breathingComponent.GetCurrentlyUsedOxygenCompenent();
+        remainingOxygenComponents = breathingComponent.getCurrentSupplyCount() - 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(currentOxygen.GetOxygenLevel() == 0)
-        {
-            currentOxygen = breathingComponent.GetCurrentlyUsedOxygenCompenent();
-        }
-        oxygenBar.value = currentOxygen.GetOxygenLevel();
+        
     }
 }
