@@ -87106,6 +87106,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4315750575589434477, guid: df8218d29af048543a6dc8c04b0997f4,
+        type: 3}
+      propertyPath: itemName
+      value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315750575589434477, guid: df8218d29af048543a6dc8c04b0997f4,
+        type: 3}
+      propertyPath: weight
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6676921195685066056, guid: df8218d29af048543a6dc8c04b0997f4,
         type: 3}
       propertyPath: m_Name
@@ -87176,16 +87186,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315750575589434477, guid: df8218d29af048543a6dc8c04b0997f4,
-        type: 3}
-      propertyPath: itemName
-      value: Pistol
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315750575589434477, guid: df8218d29af048543a6dc8c04b0997f4,
-        type: 3}
-      propertyPath: weight
-      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6676921195685066057, guid: df8218d29af048543a6dc8c04b0997f4,
         type: 3}
@@ -87364,6 +87364,16 @@ PrefabInstance:
       propertyPath: colliders.Array.data[2]
       value: 
       objectReference: {fileID: 656313002}
+    - target: {fileID: 8299427089964768846, guid: a04be61996dbc4e428e2a91fad4f4d98,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299427089964768846, guid: a04be61996dbc4e428e2a91fad4f4d98,
+        type: 3}
+      propertyPath: loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8299427089964768843, guid: a04be61996dbc4e428e2a91fad4f4d98,
         type: 3}
       propertyPath: map
@@ -87404,5 +87414,11 @@ PrefabInstance:
       propertyPath: past
       value: 
       objectReference: {fileID: 71163477}
+    - target: {fileID: 8299427088860940822, guid: a04be61996dbc4e428e2a91fad4f4d98,
+        type: 3}
+      propertyPath: baseProjectile
+      value: 
+      objectReference: {fileID: 193595544128607065, guid: 968a3e72d9dd0d34396aafaa52f46caf,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a04be61996dbc4e428e2a91fad4f4d98, type: 3}

@@ -96,7 +96,6 @@ public class PatrollingComponent : MonoBehaviour
             goal.z = transform.position.z;
 
         }
-        Debug.Log("Goal: " + goal);
         return goal;
     }
 

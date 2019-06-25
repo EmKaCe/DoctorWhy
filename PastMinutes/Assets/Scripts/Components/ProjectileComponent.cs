@@ -12,6 +12,10 @@ public class ProjectileComponent : MonoBehaviour
     private float startingTime;
     private float endTime;
     public Vector2 direction;
+    public float damage;
+    [HideInInspector]
+    //Id of character that shot the bullet
+    public int ownerID;
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +35,20 @@ public class ProjectileComponent : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("hit");
+        TagSystem tag;
+        if ((tag = collision.gameObject.GetComponent<TagSystem>()) != null)
+        {
+            if (tag.Player || tag.NPC)
+            {
+                Debug.Log("Treffer");
+                EventManager.TriggerEvent(EventSystem.TakeDamage(), tag.gameObject.GetComponent<EntityComponent>().entityID, new string[] { damage.ToString(), ownerID.ToString() });
+            }
+        }
+        Destroy(gameObject);
     }
 }

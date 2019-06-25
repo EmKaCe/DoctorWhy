@@ -120,10 +120,10 @@ public class AStarAlgorithm
 
         path = Backtrack();
         path.Reverse();
-        foreach(Vector3 v in path)
-        {
-            Debug.Log(v);
-        }
+        //foreach(Vector3 v in path)
+        //{
+        //    Debug.Log(v);
+        //}
 
         return path;
     }

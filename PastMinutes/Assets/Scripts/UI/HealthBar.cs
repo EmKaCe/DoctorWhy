@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
         healthBar.value = healthComponent.GetCurrentHealth();
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            healthComponent.TakeDamage(10f, 0, 0);
+            healthComponent.TakeDamage(10f, 0);
             Debug.Log(healthComponent.GetCurrentHealth());
         }
     }

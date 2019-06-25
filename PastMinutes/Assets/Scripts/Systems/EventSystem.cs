@@ -51,7 +51,7 @@ public class EventSystem : MonoBehaviour {
     /// <summary>
     /// Entity with entityID died
     /// <para>int: entity id of entity that died</para>
-    /// <para>string: entity id of entity that caused the damage</para>
+    /// <para>string: amount of damage that was caused, entity id of entity that caused the damage</para>
     /// </summary>
     public static string PersonDied()
     {
@@ -59,9 +59,30 @@ public class EventSystem : MonoBehaviour {
     }
 
     /// <summary>
+    /// Entity with entityID took damage
+    /// <para>int: entity id of entity that took damage</para>
+    /// <para>string: amount of damage that was caused, entity id of entity that caused the damage</para>
+    /// </summary>
+    public static string DamageTaken()
+    {
+        return "DamageTaken";
+    }
+
+    /// <summary>
+    /// Entity with entityID should receive a heal
+    /// <para>int: entityID of entity that should receive heal</para>
+    /// <para>string: amount the person should be healed, entity id of entity that causes the heal</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string HealPerson()
+    {
+        return "HealPerson";
+    }
+
+    /// <summary>
     /// Entity with entityID was healed
     /// <para>int: entity id of entity that was healed</para>
-    /// <para>string[]: entity id of entity that caused the heal</para>
+    /// <para>string[]: amount the person was healed, entity id of entity that caused the heal</para>
     /// </summary>
     public static string PersonWasHealed()
     {

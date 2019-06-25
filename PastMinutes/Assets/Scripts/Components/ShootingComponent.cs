@@ -20,6 +20,8 @@ public class ShootingComponent : MonoBehaviour
     private float muzzleVelocity;
 
     private float rotationZ;
+
+    public GameObject baseProjectile;
     
 
 
@@ -98,16 +100,20 @@ public class ShootingComponent : MonoBehaviour
             mouse = Camera.main.ScreenToWorldPoint(mouse);
             Vector3 rotation = new Vector3(0, 0, rotationZ);
             //Create bullet
-            GameObject bullet = new GameObject("Projectile");
+            GameObject bullet = Instantiate(baseProjectile);
+            //GameObject bullet = new GameObject("Projectile");
             //Pos equals gunPos
             bullet.transform.position = new Vector3(gameObject.transform.position.x + gun.xOffset, gameObject.transform.position.y + gun.yOffset, -1.5f);
             //Adding Sprite
-            SpriteRenderer r = bullet.AddComponent<SpriteRenderer>();
+            SpriteRenderer r = bullet.GetComponent<SpriteRenderer>();
             r.sprite = projectile;
             //SetRotation;
             r.transform.Rotate(rotation);
             //Shoot bullet
-            ProjectileComponent p = bullet.AddComponent<ProjectileComponent>();
+            ProjectileComponent p = bullet.GetComponent<ProjectileComponent>();
+            p.ownerID = gameObject.GetComponentInParent<EntityComponent>().entityID;
+            //damage: mass times speed
+            p.damage = ammo.weight * Mathf.Pow(gun.muzzleVelocity, 2) / 2;
             p.speed = muzzleVelocity;
             p.seconds = 10;
             p.direction = new Vector2(mouse.x - transform.position.x, mouse.y - transform.position.y);

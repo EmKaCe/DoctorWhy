@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
@@ -13,12 +14,17 @@ public class HealthComponent : MonoBehaviour
         currentHealth = health;
     }
 
-    public void TakeDamage(float damage, int damageCauseID, int enemyID)
+    public void TakeDamage(float damage, int enemyID)
     {
         currentHealth -= damage;
         if(currentHealth <= 0)
         {
-            EventManager.TriggerEvent(EventSystem.PersonDied(), gameObject.GetInstanceID(), new string[] { damageCauseID.ToString() });
+            EventManager.TriggerEvent(EventSystem.PersonDied(), gameObject.GetComponent<EntityComponent>().entityID, new string[] { damage.ToString(), enemyID.ToString() });
+            gameObject.GetComponents<Collider>().Select(c => c.enabled = false);
+        }
+        else
+        {
+            EventManager.TriggerEvent(EventSystem.DamageTaken(), gameObject.GetComponent<EntityComponent>().entityID, new string[] { damage.ToString(), enemyID.ToString() });
         }
     }
 
@@ -29,7 +35,7 @@ public class HealthComponent : MonoBehaviour
         {
             currentHealth = health;
         }
-        EventManager.TriggerEvent(EventSystem.PersonWasHealed(), gameObject.GetInstanceID(), new string[] { healerID.ToString() });
+        EventManager.TriggerEvent(EventSystem.PersonWasHealed(), gameObject.GetComponent<EntityComponent>().entityID, new string[] { heal.ToString(), healerID.ToString() });
     }
 
     public float GetCurrentHealth()
