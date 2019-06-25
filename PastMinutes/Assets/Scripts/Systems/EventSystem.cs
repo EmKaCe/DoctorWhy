@@ -221,12 +221,37 @@ public class EventSystem : MonoBehaviour {
     }
 
     /// <summary>
+    /// Called when player initiates conversation
+    /// </summary>
+    /// <returns></returns>
+    public static string StartConversation()
+    {
+        return "StartConversation";
+    }
+
+    /// <summary>
     /// Called by DialogComponent when Conversation gets started
     /// </summary>
     /// <returns></returns>
     public static string BeginConversation()
     {
         return "BeginConversation";
+    }
+
+    /// <summary>
+    /// Triggered by DialogComponent. Contains string array with dialog options
+    /// (each entry like the following scheme: "index:dialog")
+    /// and with the index of the last selected answer
+    /// </summary>
+    /// <returns></returns>
+    public static string SendDialogOptions()
+    {
+        return "SendDialogOptions";
+    }
+
+    public static string GetDialogOptions()
+    {
+        return "GetDialogOptions";
     }
 
     /// <summary>
