@@ -93,6 +93,12 @@ public class AStarAlgorithm
         {
             return new List<Vector3>();
         }
+        Vector3Int e = layout.WorldToCell(endPos);
+        if (!IsWalkable(new Vector2Int(e.x, e.y), new Vector2Int(e.x, e.y), false))
+        {
+            Debug.Log("Something is blocking the path. Point: " + endPos + " can't be reached");
+            return new List<Vector3>();
+        }
         mask[0] = new Mask(-1, -1, 1.4f, true);
         mask[1] = new Mask(-1, 0, 1f, false);
         mask[2] = new Mask(-1, 1, 1.4f, true);

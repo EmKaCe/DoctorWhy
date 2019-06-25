@@ -83,12 +83,13 @@ public class PatrollingComponent : MonoBehaviour
             if (path.Count == 0)
             {
                 move = false;
-                return new Vector3();
+                return new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
             goal = path[0];
             goal.z = transform.position.z;
 
         }
+        Debug.Log("Goal: " + goal);
         return goal;
     }
 
