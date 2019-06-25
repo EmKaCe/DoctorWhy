@@ -102,12 +102,17 @@ namespace DialogTree
                 {
                     AssetDatabase.RemoveObjectFromAsset(nodes[i]);
                 }
-                AssetDatabase.DeleteAsset(AssetDatabase.GUIDToAssetPath(folderPath) + "/" + savefileName + ".asset");
+                //AssetDatabase.DeleteAsset(AssetDatabase.GUIDToAssetPath(folderPath) + "/" + savefileName + ".asset");
 
             }
-            currentSave = CreateInstance<NodeSaver>();
-            currentSave.name = savefileName;
-            AssetDatabase.CreateAsset(currentSave, AssetDatabase.GUIDToAssetPath(folderPath) + "/" + savefileName + ".asset");
+            
+            //save doesnt exist
+            if(currentSave == null || !AssetDatabase.Contains(currentSave))
+            {
+                currentSave = CreateInstance<NodeSaver>();
+                currentSave.name = savefileName;
+                AssetDatabase.CreateAsset(currentSave, AssetDatabase.GUIDToAssetPath(folderPath) + "/" + savefileName + ".asset");
+            }
 
             //Create Save
             currentSave.nodes = new List<StandardNodeSave>();
@@ -438,7 +443,7 @@ namespace DialogTree
                 nodes = new List<DialogNode>();
             }
             PrerequisiteNode b = CreateInstance<PrerequisiteNode>();
-            b.CreatePrerequisiteDialog(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, "PrerequisiteNode");
+            b.CreatePrerequisiteDialog(mousePosition, 250, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, "PrerequisiteNode");
             nodes.Add(b);
         }
 
@@ -475,7 +480,7 @@ namespace DialogTree
                 nodes = new List<DialogNode>();
             }
             ExitNode b = CreateInstance<ExitNode>();
-            b.CreateExitDialog(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, "ExitNode");
+            b.CreateExitDialog(mousePosition, 150, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, "ExitNode");
             nodes.Add(b);
         }
 
