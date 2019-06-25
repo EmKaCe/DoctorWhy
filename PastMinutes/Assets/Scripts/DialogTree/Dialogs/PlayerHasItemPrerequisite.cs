@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Linq;
 using UnityEngine;
 namespace DialogTree {
     [CreateAssetMenu(fileName = "HasItemPrerequisite", menuName = "Prerequisites/HasItemPrerequisite")]
@@ -9,12 +8,12 @@ namespace DialogTree {
         public string itemName;
 
         private InventoryComponent playerInventory;
-       
+
         // Start is called before the first frame update
         void Start()
         {
             //GetPlayer
-            playerInventory = FindObjectOfType<PlayerComponent>().gameObject.GetComponentInChildren<InventoryComponent>();
+            playerInventory = FindObjectsOfType<TagSystem>().Where(t => t.Player).First().gameObject.GetComponentInChildren<InventoryComponent>();
         }
 
         public override bool IsFullfilled()

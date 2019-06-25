@@ -417,7 +417,7 @@ namespace DialogTree
             genericMenu.AddItem(new GUIContent("Add DialogNode"), false, () => OnClickAddDialogNode(mousePosition));
             genericMenu.AddItem(new GUIContent("Add PrerequisiteNode"), false, () => OnClickAddPrerequisiteNode(mousePosition));
             genericMenu.AddItem(new GUIContent("Add ExitNode"), false, () => OnClickAddExitNode(mousePosition));
-            //genericMenu.AddItem(new GUIContent("Add Decorator"), false, () => OnClickAddDecorator(mousePosition));
+            genericMenu.AddItem(new GUIContent("Add NPC-Action"), false, () => OnClickAddNPCActionNode(mousePosition));
             //genericMenu.AddItem(new GUIContent("Add TestDialog"), false, () => OnClickAddTestDialog(mousePosition));
             genericMenu.ShowAsContext();
 
@@ -481,6 +481,17 @@ namespace DialogTree
             }
             ExitNode b = CreateInstance<ExitNode>();
             b.CreateExitDialog(mousePosition, 150, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, "ExitNode");
+            nodes.Add(b);
+        }
+
+        private void OnClickAddNPCActionNode(Vector2 mousePosition)
+        {
+            if (nodes == null)
+            {
+                nodes = new List<DialogNode>();
+            }
+            NPCActionNode b = CreateInstance<NPCActionNode>();
+            b.CreateNPCActionDialog(mousePosition, 250, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, "NPC-Action");
             nodes.Add(b);
         }
 

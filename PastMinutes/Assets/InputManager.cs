@@ -18,6 +18,7 @@ public class InputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             EventManager.TriggerEvent(EventSystem.PickUpItem(), player.GetInstanceID(), new string[] { });
+            EventManager.TriggerEvent(EventSystem.StartConversation(), player.GetInstanceID(), new string[] { });
         }
     }
 
