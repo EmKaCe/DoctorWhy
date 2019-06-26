@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Slider))]
 public class HealthBar : MonoBehaviour
 {
-    public Slider healthBar;
+    Slider healthBar;
     public HealthComponent healthComponent;
 
     // Start is called before the first frame update
     void Start()
     {
+        healthBar = gameObject.GetComponent<Slider>();
         healthBar.maxValue = healthComponent.health;
     }
 
@@ -18,10 +20,10 @@ public class HealthBar : MonoBehaviour
     void Update()
     {
         healthBar.value = healthComponent.GetCurrentHealth();
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            healthComponent.TakeDamage(10f, 0);
-            Debug.Log(healthComponent.GetCurrentHealth());
-        }
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    healthComponent.TakeDamage(10f, 0);
+        //    Debug.Log(healthComponent.GetCurrentHealth());
+        //}
     }
 }

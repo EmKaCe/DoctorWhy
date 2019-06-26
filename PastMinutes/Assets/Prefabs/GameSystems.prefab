@@ -44,6 +44,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeGun: {fileID: 0}
+--- !u!1 &2527051344482526947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2309498080310830183}
+  - component: {fileID: 2484898447065149866}
+  m_Layer: 0
+  m_Name: OxygenSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2309498080310830183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527051344482526947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7408349127318532600}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2484898447065149866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527051344482526947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5c06b29fb2e594289ac0c268be4bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4528021728359457120
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +293,7 @@ Transform:
   - {fileID: 1685397519}
   - {fileID: 5958849665099888913}
   - {fileID: 1113534673978033946}
+  - {fileID: 2309498080310830183}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

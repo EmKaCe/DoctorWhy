@@ -10,7 +10,6 @@ public class OxygenComponent : MonoBehaviour
 
     public float startingOxLevel;
     private float oxygenLevel;
-    private int displayValue;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +21,6 @@ public class OxygenComponent : MonoBehaviour
     void Update()
     {
 
-    }
-
-    public int GetOxygenDisplayValue()
-    {
-        return displayValue;
     }
 
     public float GetOxygenLevel()
@@ -52,7 +46,6 @@ public class OxygenComponent : MonoBehaviour
             oxygenLevel -= decrease;
             remains = 0;
         }
-        displayValue = (int) oxygenLevel;
     }
 
     /// <summary>
@@ -73,7 +66,6 @@ public class OxygenComponent : MonoBehaviour
             oxygenLevel += refill;
             remains = 0;
         }
-        displayValue = (int)oxygenLevel;
     }
 
 }

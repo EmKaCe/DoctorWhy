@@ -51,13 +51,13 @@ public class BreathingComponent : MonoBehaviour
         if(comp.GetOxygenLevel() > 0)
         {
             remainingSupply.Add(supplyID, comp);
-            if(currentlyUsed != -1 && comp.GetOxygenLevel() > oxygenSupply[currentlyUsed].GetOxygenLevel())
+            if(currentlyUsed == -1 || comp.GetOxygenLevel() > oxygenSupply[currentlyUsed].GetOxygenLevel())
             {
                 currentlyUsed = supplyID;
             }
             else
             {
-                currentlyUsed = supplyID;
+               // currentlyUsed = supplyID;
             }
         }
     }
@@ -121,15 +121,46 @@ public class BreathingComponent : MonoBehaviour
         return true;
     }
 
-    //Returns amount of non-empty Oxygen containers
+    /// <summary>
+    /// returns number of non empty oxygen components on character (including currently used)
+    /// </summary>
+    /// <returns></returns>
     public int getCurrentSupplyCount()
     {
         return remainingSupply.Count;
     }
 
     //Return Oxygen container from remainingSupply
-    public OxygenComponent GetCurrentlyUsedOxygenCompenent()
+    public OxygenComponent GetCurrentlyUsedOxygenComponent()
     {
         return remainingSupply[currentlyUsed];
     }
+
+    /// <summary>
+    /// returns oxygen level
+    /// </summary>
+    /// <returns></returns>
+    public float GetCurrentOxygenLevel()
+    {
+        if(currentlyUsed != -1)
+        {
+            return remainingSupply[currentlyUsed].GetOxygenLevel();
+        }
+        return 0;
+        
+    }
+
+    /// <summary>
+    /// returns beginning oxygen Level
+    /// </summary>
+    /// <returns></returns>
+    public float GetMaxOxygenLevel()
+    {
+        if (currentlyUsed != -1)
+        {
+            return remainingSupply[currentlyUsed].startingOxLevel;
+        }
+        return 100;
+    }
+
 }

@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 6676921195685066059}
   - component: {fileID: 4315750575589434477}
   - component: {fileID: 6676921195685066057}
+  - component: {fileID: 6989092020350234640}
   m_Layer: 0
-  m_Name: Item
+  m_Name: OxygenTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,9 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98fecb5cc7d76747a398a9ad53d458a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  itemDescription: 
-  weight: 0
+  itemName: OxygenComponent
+  itemDescription: Contains oxygen
+  weight: 10
   size: {x: 0, y: 0, z: 0}
   stackable: 0
   amount: 0
@@ -142,4 +143,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7131b6ca79ae9e64fbf5caead14e821d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionMessage: 
+  interactionMessage: to pick up OxygenComponent
+--- !u!114 &6989092020350234640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6676921195685066056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc832deea0cc124795ea2d2843940b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingOxLevel: 1000
