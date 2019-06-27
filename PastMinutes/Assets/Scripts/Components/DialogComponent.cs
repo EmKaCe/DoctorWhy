@@ -16,13 +16,12 @@ public class DialogComponent : InteractionComponent
     private bool visited;
     public List<Prerequisite> prerequisites;
 
-    UnityAction<int, string[]> conversationStartListener;
+    //UnityAction<int, string[]> conversationStartListener;
     UnityAction<int, string[]> conversationProgressListener;
 
     private void Awake()
     {
-        conversationStartListener = new UnityAction<int, string[]>(BeginConversation);
-        conversationProgressListener = new UnityAction<int, string[]>(GetDialog);
+        //conversationProgressListener = new UnityAction<int, string[]>(GetDialog);
     }
 
     // Start is called before the first frame update
@@ -118,7 +117,7 @@ public class DialogComponent : InteractionComponent
         return res.ToArray();
     }
 
-    public void BeginConversation(int nothing, string[] empty)
+    public void BeginConversation()
     {
         talking = true;
         Debug.Log("Begin dialog");
@@ -143,24 +142,23 @@ public class DialogComponent : InteractionComponent
         EventManager.TriggerEvent(EventSystem.EndConversation(), gameObject.GetComponentInParent<EntityComponent>().entityID, new string[] { });
     }
 
-    public override void StartInteraction()
-    {
-        Debug.Log("Trigger works");
-        EventManager.StartListening(EventSystem.StartConversation(), conversationStartListener);
-        //EventManager.StartListening(EventSystem.conver)
-    }
-
     public override void StopInteraction()
     {
-        EventManager.StopListening(EventSystem.StartConversation(), conversationStartListener);
+        base.StopInteraction();
         if (talking)
         {
             EndConversation();
         }
     }
 
-    public void OnDisable()
+
+    public override void Action(int entityId, string[] values)
     {
-        EventManager.StopListening(EventSystem.StartConversation(), conversationStartListener);
+        BeginConversation();
+    }
+
+    public override void Quit(int entityId, string[] values)
+    {
+        //do nothing
     }
 }

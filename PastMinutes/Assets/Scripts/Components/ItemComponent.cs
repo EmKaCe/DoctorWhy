@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(EntityComponent), typeof(SpriteRenderer))]
 public class ItemComponent : MonoBehaviour
 {
     public string itemName;
@@ -54,6 +55,24 @@ public class ItemComponent : MonoBehaviour
     public int GetAmount()
     {
         return amount;
+    }
+
+    public bool Equals(ItemComponent item)
+    {
+        if (itemName.Equals(item.itemName))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool Equals(string itemName)
+    {
+        if (this.itemName.Equals(itemName))
+        {
+            return true;
+        }
+        return false;
     }
 
     // Update is called once per frame

@@ -98,7 +98,7 @@ public class InventoryComponent : MonoBehaviour
     {
         foreach(ItemComponent i in inventory)
         {
-            if (i.itemName.Equals(name))
+            if (i.Equals(name))
             {
                 return true;
             }

@@ -167,13 +167,23 @@ public class EventSystem : MonoBehaviour {
     }
 
     /// <summary>
-    /// Button was pressed or AI triggered event and Item should be picked up
-    /// <para>int: entityID of person who wants to pick up item (usually player</para>
+    /// Button for interaction was pressed or npc wants to interact
+    /// <para>int: entityID of person who wants to interact with entity (usually player)</para>
     /// </summary>
     /// <returns>"PickUpItem"</returns>
-    public static string PickUpItem()
+    public static string Interact()
     {
-        return "PickUpItem";
+        return "Interact";
+    }
+
+    /// <summary>
+    /// Button for interaction was released or npc stops to interact
+    /// <para>int: entityID of person who stops to hold-interact with entity (usually player)</para>
+    /// </summary>
+    /// <returns>"PickUpItem"</returns>
+    public static string StopHoldingInteract()
+    {
+        return "StopHoldingInteract";
     }
 
     /// <summary>
@@ -239,15 +249,6 @@ public class EventSystem : MonoBehaviour {
     public static string ItemRemoved()
     {
         return "ItemRemoved";
-    }
-
-    /// <summary>
-    /// Called when player initiates conversation
-    /// </summary>
-    /// <returns></returns>
-    public static string StartConversation()
-    {
-        return "StartConversation";
     }
 
     /// <summary>

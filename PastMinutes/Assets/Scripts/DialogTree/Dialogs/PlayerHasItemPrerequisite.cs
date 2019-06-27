@@ -7,22 +7,17 @@ namespace DialogTree {
 
         public string itemName;
 
-        private InventoryComponent playerInventory;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            //GetPlayer
-            playerInventory = FindObjectsOfType<TagSystem>().Where(t => t.Player).First().gameObject.GetComponentInChildren<InventoryComponent>();
-        }
+        [HideInInspector]
+        public InventoryComponent playerInventory;
 
         public override bool IsFullfilled()
         {
+            playerInventory = FindObjectsOfType<TagSystem>().Where(t => t.Player).First().gameObject.GetComponentInChildren<InventoryComponent>();
             if (playerInventory.ContainsItem(itemName))
             {
                 return true;
             }
-                return false;
+            return false;
         }
 
     }

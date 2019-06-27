@@ -8,6 +8,7 @@ using UnityEngine;
 public class OxygenComponent : MonoBehaviour
 {
 
+    public float maxOxLevel;
     public float startingOxLevel;
     private float oxygenLevel;
 
@@ -54,10 +55,10 @@ public class OxygenComponent : MonoBehaviour
     /// <returns>returns surplus oxygen,if existing</returns>
     public void RefillOxygen(float refill, out float remains)
     {
-        float rest = oxygenLevel + refill - startingOxLevel;
+        float rest = oxygenLevel + refill - maxOxLevel;
         if (rest > 0)
         {
-            oxygenLevel = startingOxLevel;
+            oxygenLevel = maxOxLevel;
             remains = rest;
         }
         else
