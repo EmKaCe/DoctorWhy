@@ -23,12 +23,17 @@ public class BreathingComponent : MonoBehaviour
         oxygenSupply = new Dictionary<int, OxygenComponent>();
         remainingSupply = new Dictionary<int, OxygenComponent>();
         OxygenComponent[] oComp = gameObject.GetComponentsInChildren<OxygenComponent>() as OxygenComponent[];
-        foreach(OxygenComponent o in oComp)
+        foreach (OxygenComponent o in oComp)
         {
-            AddOxygenSupply(o.gameObject.GetInstanceID());
-            oxygenRemaining = true;
+            AddOxygenSupply(o.gameObject.GetComponent<EntityComponent>().entityID);
+            if(currentlyUsed != -1)
+            {
+                oxygenRemaining = true;
+            }
+            
         }
     }
+
 
     // Update is called once per frame
     void Update()
