@@ -18,6 +18,6 @@ public class RemainingOxygen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        remainingOxygenText.text = (breathingComponent.getCurrentSupplyCount() - 1).ToString();
+        remainingOxygenText.text = (breathingComponent.GetCurrentSupplyCount() - 1).ToString();
     }
 }

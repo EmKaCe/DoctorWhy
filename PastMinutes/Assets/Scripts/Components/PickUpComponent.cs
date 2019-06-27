@@ -6,31 +6,20 @@ using UnityEngine.Events;
 [RequireComponent(typeof(EntityComponent), typeof(ItemComponent))]
 public class PickUpComponent : InteractionComponent
 {
-    UnityAction<int, string[]> pickUpListener;
-
-    public override void StartInteraction()
+    public override void Action(int entityId, string[] values)
     {
-        EventManager.StartListening(EventSystem.PickUpItem(), pickUpListener);
+        PickUpItem(entityId);
     }
 
-    public override void StopInteraction()
-    {
-        EventManager.StopListening(EventSystem.PickUpItem(), pickUpListener);
-    }
-
-    private void OnDisable()
-    {
-        EventManager.StopListening(EventSystem.PickUpItem(), pickUpListener);
-    }
-
-    private void Awake()
-    {
-        pickUpListener = new UnityAction<int, string[]>(PickUpItem);
-    }
-
-    private void PickUpItem(int entityID, string[] empty2)
+    private void PickUpItem(int entityID)
     {
         Debug.Log("PickUpComponent: Item would be picked up");
         EventManager.TriggerEvent(EventSystem.AddItemToInventory(), gameObject.GetInstanceID(), new string[] {entityID.ToString() });
     }
+
+    public override void Quit(int entityId, string[] values)
+    {
+        //do nothing
+    }
+
 }

@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7131b6ca79ae9e64fbf5caead14e821d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdToInteract: 0
   interactionMessage: to pick up OxygenTank
 --- !u!114 &6989092020350234640
 MonoBehaviour:
@@ -156,4 +157,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc832deea0cc124795ea2d2843940b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxOxLevel: 1000
   startingOxLevel: 1000

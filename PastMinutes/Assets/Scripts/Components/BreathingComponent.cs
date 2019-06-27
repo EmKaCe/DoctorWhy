@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -104,7 +105,11 @@ public class BreathingComponent : MonoBehaviour
     /// <returns></returns>
     private bool FindNextOxygenSource()
     {
-        remainingSupply.Remove(currentlyUsed);
+        if(remainingSupply[currentlyUsed].GetOxygenLevel() == 0)
+        {
+            Debug.Log("container leer");
+            remainingSupply.Remove(currentlyUsed);
+        }        
         List<int> keys = new List<int>(remainingSupply.Keys);
         if(keys.Count > 0)
         {
@@ -130,7 +135,7 @@ public class BreathingComponent : MonoBehaviour
     /// returns number of non empty oxygen components on character (including currently used)
     /// </summary>
     /// <returns></returns>
-    public int getCurrentSupplyCount()
+    public int GetCurrentSupplyCount()
     {
         return remainingSupply.Count;
     }
@@ -163,9 +168,60 @@ public class BreathingComponent : MonoBehaviour
     {
         if (currentlyUsed != -1)
         {
-            return remainingSupply[currentlyUsed].startingOxLevel;
+            return remainingSupply[currentlyUsed].maxOxLevel;
         }
+        //set bar value to 100 to make sure that bar is empty
         return 100;
+    }
+
+    /// <summary>
+    /// returns currentlyUsed component if existing
+    /// otherwise an existing component with space if list is empty returns null (means player doesn't have oxygen comp or all full)
+    /// </summary>
+    /// <returns></returns>
+    private OxygenComponent GetRefillableComponent()
+    {
+        if(currentlyUsed != -1)
+        {
+            //check currently used component
+            if(remainingSupply[currentlyUsed].GetOxygenLevel() < remainingSupply[currentlyUsed].maxOxLevel)
+            {
+                return remainingSupply[currentlyUsed];
+            }
+            
+        }
+        if(oxygenSupply.Count > 0)
+        {
+            //search for first component with space
+            return oxygenSupply.Values.Where(v => v.GetOxygenLevel() < v.maxOxLevel).First();
+        }
+        return null;
+    }
+
+    public void Refill(float amount)
+    {
+        OxygenComponent comp = GetRefillableComponent();
+        if(comp != null)
+        {
+            //add component if not any longer part of remainingSupply
+            if (!remainingSupply.ContainsKey(comp.GetComponent<EntityComponent>().entityID))
+            {
+                Debug.Log("Comp added");
+                remainingSupply.Add(comp.GetComponent<EntityComponent>().entityID, comp);
+                FindNextOxygenSource();
+            }
+            comp.RefillOxygen(amount, out float remain);
+            if (remain > 0)
+            {
+                Refill(remain);
+            }
+            
+        }
+        else
+        {
+            Debug.Log("alle container voll");
+        }
+        
     }
 
 }
