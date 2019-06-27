@@ -14,12 +14,12 @@ GameObject:
   - component: {fileID: 4661756663354274784}
   - component: {fileID: 4649152010326296606}
   - component: {fileID: 4205931348691060697}
-  - component: {fileID: 8684670120086291947}
   - component: {fileID: 8497672631255261486}
   - component: {fileID: 5795300438314476754}
   - component: {fileID: 2171924814152672056}
   - component: {fileID: 1870332774275060330}
-  - component: {fileID: 1594628280646009025}
+  - component: {fileID: 4123478293537533798}
+  - component: {fileID: 7459415357016229540}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -72,8 +72,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: 0
-  Player: 1
-  NPC: 0
+  Player: 0
+  NPC: 1
   Enemy: 0
   Item: 0
 --- !u!50 &4661756663354274784
@@ -123,19 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
---- !u!114 &8684670120086291947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736977022079963220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 387d437fcc2ea264cb39c7e47589716d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oxygenUsage: 100
 --- !u!61 &8497672631255261486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -209,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7428161cffdac4c9bafbe2c35530f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1594628280646009025
+--- !u!114 &4123478293537533798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,12 +205,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1736977022079963220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82e6b05379f51044f88e2c96924fc6db, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a5b2e571a854eb4ea89a139f7f2f675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunTest: 0
-  movementSpeed: 7
-  direction: 0
+  faction: {fileID: 0}
+--- !u!114 &7459415357016229540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736977022079963220}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d7c24cbb1cee74dafa5fe30453707d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1736977022404044442
 GameObject:
   m_ObjectHideFlags: 0
