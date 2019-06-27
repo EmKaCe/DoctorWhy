@@ -21,6 +21,7 @@ public class EntityComponent : MonoBehaviour {
         {
             EntityManager.AddEntity(gameObject);
         }
+        entityID = gameObject.GetInstanceID();
 
     }
 

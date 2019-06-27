@@ -11,8 +11,7 @@ public class OxygenComponent : MonoBehaviour
     public float startingOxLevel;
     private float oxygenLevel;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         oxygenLevel = startingOxLevel;
     }
