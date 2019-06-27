@@ -65,7 +65,6 @@ public abstract class InteractionComponent : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log(gameObject.name);
         interactionListener = new UnityAction<int, string[]>(Action);
         interactionHoldListener = new UnityAction<int, string[]>(Quit);
     }

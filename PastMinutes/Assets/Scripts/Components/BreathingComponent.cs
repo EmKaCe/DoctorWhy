@@ -192,8 +192,12 @@ public class BreathingComponent : MonoBehaviour
         }
         if(oxygenSupply.Count > 0)
         {
+            IEnumerable<OxygenComponent> c;
             //search for first component with space
-            return oxygenSupply.Values.Where(v => v.GetOxygenLevel() < v.maxOxLevel).First();
+            if ((c = oxygenSupply.Values.Where(v => v.GetOxygenLevel() < v.maxOxLevel)).Count() > 0)
+            {
+                return c.First();
+            }
         }
         return null;
     }
