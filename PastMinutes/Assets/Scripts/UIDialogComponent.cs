@@ -12,6 +12,7 @@ public class UIDialogComponent : MonoBehaviour
     UnityAction<int, string[]> dialogInteractionListener;
     UnityAction<int, string[]> dialogOptionsListener;
     UnityAction<int, string[]> dialogEndListener;
+    public Image picture;
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI npcAnswer;
     public Button dialogOption;
@@ -35,6 +36,24 @@ public class UIDialogComponent : MonoBehaviour
     public void ActivateDialogView(int id, string[] charName)
     {
         scrollRect.gameObject.transform.parent.gameObject.SetActive(true);
+        //PlayerComponent player;
+        //SpriteRenderer obj;
+        //picture.sprite = obj.sprite;
+        //if(EntityManager.GetEntityComponent<SpriteRenderer>(id) != null)
+        //{
+        //    Debug.Log("Spieler");
+        //    //picture.sprite = player.GetHead();
+        //}
+        //else if(EntityManager.GetEntityComponent<SpriteRenderer>(id) != null)
+        //{
+        //    Debug.Log("Objekt");
+        //    //picture.sprite = obj.sprite;
+        //}
+        //else
+        //{
+        //    Debug.Log("nichts");
+        //    picture.sprite = null;
+        //}
         characterName.text = charName[0];
         EventManager.StartListening(EventSystem.SendDialogOptions(), dialogOptionsListener);
         EventManager.TriggerEvent(EventSystem.GetDialogOptions(), -1, charName);
@@ -68,7 +87,7 @@ public class UIDialogComponent : MonoBehaviour
                 //needed cause delegate would otherwise use the actual i to find the position, which causes an exception
                 int pos = items[i].index;
                 b.onClick.AddListener(delegate { GetNextDialog(pos); });
-                b.GetComponentInChildren<Text>().text = items[i].dialog;
+                b.GetComponentInChildren<TextMeshProUGUI>().text = items[i].dialog;
             }
         }
         

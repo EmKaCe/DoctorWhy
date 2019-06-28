@@ -44,6 +44,10 @@ public class TimeTravelComponent : MonoBehaviour
         {
             EventManager.StartListening(EventSystem.ItemAdded(), itemPickUpListener);
         }
+        else
+        {
+            EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
+        }
 
     }
 
