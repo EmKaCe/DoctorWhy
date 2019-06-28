@@ -298,7 +298,7 @@ public class EventSystem : MonoBehaviour {
 
     /// <summary>
     /// Called by interactionComponent (or classes that derive from interactionComponent) when interaction area is exited
-    /// int: 0;
+    /// int: collider entityID;
     /// string[] {Interaction message for player, type of interactionComponent}
     /// </summary>
     /// <returns></returns>
