@@ -9,6 +9,6 @@ public class ActivateObjektAction : NPCAction
     public GameObject obj;
     public override void Act()
     {
-        Instantiate(obj.gameObject).SetActive(true);
+        Instantiate(obj.gameObject).transform.position = new Vector3(9.4f, -221.75f, 0.0f);
     }
 }
