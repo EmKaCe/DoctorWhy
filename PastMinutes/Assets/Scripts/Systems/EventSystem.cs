@@ -306,4 +306,24 @@ public class EventSystem : MonoBehaviour {
     {
         return "InteractionExited";
     }
+
+    /// <summary>
+    /// Called by inputManager
+    /// <para>int and string[] are empty</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string TravelTime()
+    {
+        return "TravelTime";
+    }
+
+    /// <summary>
+    /// Called by TimeTravelComponent when time travel is engaged
+    /// <para>int and string[] are empty</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string TravelingTime()
+    {
+        return "TravelingTime";
+    }
 }

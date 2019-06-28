@@ -16,9 +16,11 @@ public abstract class InteractionComponent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GlobalStateManager.interacting == null)
+        //if (GlobalStateManager.interacting == null)
+        //{
+        //    GlobalStateManager.interacting = this;
+        if(collision.gameObject.GetComponent<TagSystem>() != null)
         {
-            GlobalStateManager.interacting = this;
             if (collision.gameObject.GetComponent<TagSystem>().Player && !triggered)
             {
                 EventManager.TriggerEvent(EventSystem.InteractionTriggered(), 0, new string[] { interactionMessage, GetType().ToString() });
@@ -26,17 +28,22 @@ public abstract class InteractionComponent : MonoBehaviour
                 StartInteraction();
             }
         }
+            
+        //}
         
     }
 
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<TagSystem>().Player && triggered)
+        if (collision.gameObject.GetComponent<TagSystem>() != null)
         {
-            EventManager.TriggerEvent(EventSystem.InteractionExited(), 0, new string[] { interactionMessage, GetType().ToString() });
-            triggered = false;
-            StopInteraction();
+            if (collision.gameObject.GetComponent<TagSystem>().Player && triggered)
+            {
+                EventManager.TriggerEvent(EventSystem.InteractionExited(), 0, new string[] { interactionMessage, GetType().ToString() });
+                triggered = false;
+                StopInteraction();
+            }
         }
     }
 
@@ -45,7 +52,6 @@ public abstract class InteractionComponent : MonoBehaviour
         EventManager.StartListening(EventSystem.Interact(), interactionListener);
         if (holdToInteract)
         {
-            Debug.Log("listening");
             EventManager.StartListening(EventSystem.StopHoldingInteract(), interactionHoldListener);
         }
         
@@ -53,10 +59,10 @@ public abstract class InteractionComponent : MonoBehaviour
 
     public virtual void StopInteraction()
     {
-        if (GlobalStateManager.interacting == this)
-        {
-            GlobalStateManager.interacting = null;
-        }
+        //if (GlobalStateManager.interacting == this)
+        //{
+        //    GlobalStateManager.interacting = null;
+        //}
         EventManager.StopListening(EventSystem.Interact(), interactionListener);
         if (holdToInteract)
         {
@@ -74,7 +80,7 @@ public abstract class InteractionComponent : MonoBehaviour
         }
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         interactionListener = new UnityAction<int, string[]>(Action);
         interactionHoldListener = new UnityAction<int, string[]>(Quit);

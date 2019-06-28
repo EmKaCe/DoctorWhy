@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -51,8 +52,7 @@ public class EventManager : MonoBehaviour {
     /// <param name="listener"></param>
     public static void StartListening(string eventName, UnityAction<int, string[]> listener)
     {
-        ThisEvent thisEvent = null;
-        if(Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        if (Instance.eventDictionary.TryGetValue(eventName, out ThisEvent thisEvent))
         {
             thisEvent.AddListener(listener);
         }
@@ -67,8 +67,7 @@ public class EventManager : MonoBehaviour {
     public static void StopListening(string eventName, UnityAction<int, string[]> listener)
     {
         if (eventManager == null) return;
-        ThisEvent thisEvent = null;
-        if(Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        if (Instance.eventDictionary.TryGetValue(eventName, out ThisEvent thisEvent))
         {
             //Debug.Log(eventName);
             thisEvent.RemoveListener(listener);
@@ -77,8 +76,7 @@ public class EventManager : MonoBehaviour {
 
     public static void TriggerEvent (string eventName, int entityID, string[] value)
     {
-        ThisEvent thisEvent = null;
-        if (Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        if (Instance.eventDictionary.TryGetValue(eventName, out ThisEvent thisEvent))
         {
             thisEvent.Invoke(entityID, value);
         }

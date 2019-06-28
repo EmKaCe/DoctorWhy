@@ -13,7 +13,6 @@ public class PickUpComponent : InteractionComponent
 
     private void PickUpItem(int entityID)
     {
-        Debug.Log("PickUpComponent: Item would be picked up");
         EventManager.TriggerEvent(EventSystem.AddItemToInventory(), gameObject.GetInstanceID(), new string[] {entityID.ToString() });
     }
 

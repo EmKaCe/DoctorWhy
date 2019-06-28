@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TimeTravelComponent : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class TimeTravelComponent : MonoBehaviour
     private bool inPast;
     private bool endStarted;
     private bool endReached;
+    [Tooltip("when active, player can travel through time")]
+    public bool active;
+    UnityAction<int, string[]> timeTravelListener;
+    UnityAction<int, string[]> itemPickUpListener;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,16 +40,16 @@ public class TimeTravelComponent : MonoBehaviour
         {
             endReached = true;
         }
+        if (!active)
+        {
+            EventManager.StartListening(EventSystem.ItemAdded(), itemPickUpListener);
+        }
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TravelTime();
-        }
         if (inPast)
         {
             //reduce timer
@@ -68,10 +73,32 @@ public class TimeTravelComponent : MonoBehaviour
         }
     }
 
-    private void TravelTime()
+    public void TravelTime(int empty, string[] empty2)
     {
-        present.SetActive(!present.activeSelf);
-        past.SetActive(!past.activeSelf);
-        inPast = past.activeSelf;
+        Debug.Log("Traveling");
+        if (active)
+        {
+            present.SetActive(!present.activeSelf);
+            past.SetActive(!past.activeSelf);
+            inPast = past.activeSelf;
+            EventManager.TriggerEvent(EventSystem.TravelingTime(), 0, new string[] { });
+        }
+        
+    }
+
+    private void Awake()
+    {
+        timeTravelListener = new UnityAction<int, string[]>(TravelTime);
+        itemPickUpListener = new UnityAction<int, string[]>(CheckParent);
+    }
+
+    public void CheckParent(int itemID, string[] entityIDandItemName)
+    {
+        if (EntityManager.GetEntityComponent<EntityComponent>(itemID).gameObject.Equals(gameObject)){
+            active = true;
+            EventManager.StopListening(EventSystem.ItemAdded(), itemPickUpListener);
+            EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
+        }
+
     }
 }

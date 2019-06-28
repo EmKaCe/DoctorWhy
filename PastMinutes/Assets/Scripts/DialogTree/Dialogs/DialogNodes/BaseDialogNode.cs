@@ -134,6 +134,7 @@ namespace DialogTree
         public override List<UIDialogItem> GetDialog(NodeSaver save, DialogNode node)
         {
             List<UIDialogItem> result = new List<UIDialogItem>();
+            result.Add(new UIDialogItem(answer, -1));
             for(int i = 0; i < dialogs.Count; i++)
             {
                 //start with i + 1 because index 0 is input of whole node

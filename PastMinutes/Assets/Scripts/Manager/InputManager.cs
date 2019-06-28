@@ -19,11 +19,16 @@ public class InputManager : MonoBehaviour
         {
             //EventManager.TriggerEvent(EventSystem.PickUpItem(), player.GetInstanceID(), new string[] { });
             //EventManager.TriggerEvent(EventSystem.StartConversation(), player.GetInstanceID(), new string[] { });
-            EventManager.TriggerEvent(EventSystem.Interact(), player.GetInstanceID(), new string[] { });
+            EventManager.TriggerEvent(EventSystem.Interact(), player.GetInstanceID(), new string[] { "" });
         }
         if (Input.GetKeyUp(KeyCode.E))
         {
             EventManager.TriggerEvent(EventSystem.StopHoldingInteract(), player.GetInstanceID(), new string[] { });
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Debug.Log("Travel");
+            EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
         }
     }
 

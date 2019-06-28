@@ -19,9 +19,10 @@ public class DialogComponent : InteractionComponent
     //UnityAction<int, string[]> conversationStartListener;
     UnityAction<int, string[]> conversationProgressListener;
 
-    private void Awake()
+    protected override void Awake()
     {
-        //conversationProgressListener = new UnityAction<int, string[]>(GetDialog);
+        base.Awake();
+        conversationProgressListener = new UnityAction<int, string[]>(GetDialog);
     }
 
     // Start is called before the first frame update
@@ -34,7 +35,6 @@ public class DialogComponent : InteractionComponent
             enabled = false;
         }
         start = dialogTree.nodes.Find(n => n.node.GetType().Equals(typeof(StartDialogNode))).node as StartDialogNode;
-        Debug.Log(start);
         List<DialogTree.StandardNodeSave> l = dialogTree.nodes.FindAll(n => n.node.GetType().Equals(typeof(PrerequisiteNode)));
         foreach(DialogTree.StandardNodeSave s in l)
         {
@@ -60,10 +60,10 @@ public class DialogComponent : InteractionComponent
         }
         List<UIDialogItem> res = currentPos.GetDialog(dialogTree, currentPos);
         //res.AddRange(standardDialog);
-        foreach (UIDialogItem re in res)
-        {
-            Debug.Log(re.index + ": " + re.dialog);
-        }
+        //foreach (UIDialogItem re in res)
+        //{
+        //    Debug.Log(re.index + ": " + re.dialog);
+        //}
         return res.ToArray();
     }
 
@@ -78,11 +78,7 @@ public class DialogComponent : InteractionComponent
         {
             dialog = GetCurrentDialog();
         }
-        string[] res = new string[dialog.Length];
-        for(int i = 0; i < dialog.Length; i++)
-        {
-            res[i] = dialog[i].index + ":" + dialog[i].dialog;
-        }
+        string[] res = UIDialogItem.ToStringArray(dialog);
         EventManager.TriggerEvent(EventSystem.SendDialogOptions(), index, res);
     }
 
@@ -109,19 +105,12 @@ public class DialogComponent : InteractionComponent
             return GetNextDialog(0);
         }
         List<UIDialogItem> res = currentPos.GetDialog(dialogTree, currentPos);
-        //res.AddRange(standardDialog);
-        foreach (UIDialogItem re in res)
-        {
-            Debug.Log(re.index + ": " + re.dialog);
-        }
         return res.ToArray();
     }
 
     public void BeginConversation()
     {
         talking = true;
-        Debug.Log("Begin dialog");
-        EventManager.TriggerEvent(EventSystem.BeginConversation(), gameObject.GetComponentInParent<EntityComponent>().entityID, new string[] { });
         if (visited)
         {
             currentPos = dialogTree.connections.Find(c => c.endNode.Equals(start) && c.outIndex == 1).startNode;
@@ -133,13 +122,17 @@ public class DialogComponent : InteractionComponent
             currentPos = dialogTree.connections.Find(c => c.endNode.Equals(start) && c.outIndex == 0).startNode;
             //currentPos = start.outPoint[0].connectedNode;
         }
+        EventManager.StartListening(EventSystem.GetDialogOptions(), conversationProgressListener);
+        EventManager.TriggerEvent(EventSystem.BeginConversation(), gameObject.GetComponentInParent<EntityComponent>().entityID, new string[] { gameObject.name });
+        
+        
     }
 
     public void EndConversation()
     {
         talking = false;
-        Debug.Log("End dialog");
         EventManager.TriggerEvent(EventSystem.EndConversation(), gameObject.GetComponentInParent<EntityComponent>().entityID, new string[] { });
+        EventManager.StopListening(EventSystem.GetDialogOptions(), conversationProgressListener);
     }
 
     public override void StopInteraction()
@@ -151,7 +144,6 @@ public class DialogComponent : InteractionComponent
         }
     }
 
-
     public override void Action(int entityId, string[] values)
     {
         BeginConversation();
@@ -161,4 +153,5 @@ public class DialogComponent : InteractionComponent
     {
         //do nothing
     }
+
 }

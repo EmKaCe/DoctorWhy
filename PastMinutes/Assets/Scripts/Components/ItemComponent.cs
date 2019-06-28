@@ -6,6 +6,7 @@ using UnityEngine;
 public class ItemComponent : MonoBehaviour
 {
     public string itemName;
+    [TextArea]
     public string itemDescription;
     public float weight;
     [Header("Size in cm:                       length             width            height")]
