@@ -62,6 +62,11 @@ public class UIDialogComponent : MonoBehaviour
 
     public void DeactivateDialogView(int i, string[] empty)
     {
+        foreach (Transform child in scrollRect.content.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        scrollRect.verticalScrollbar.value = 1;
         Debug.Log("how to end him rightly");
         EventManager.StopListening(EventSystem.SendDialogOptions(), dialogOptionsListener);
         EventManager.StopListening(EventSystem.EndConversation(), dialogEndListener);     
@@ -98,6 +103,7 @@ public class UIDialogComponent : MonoBehaviour
         foreach(Transform child in scrollRect.content.transform)
         {
             Destroy(child.gameObject);
+            scrollRect.verticalScrollbar.value = 1;
         }
         EventManager.TriggerEvent(EventSystem.GetDialogOptions(), index, new string[] { });
     }
