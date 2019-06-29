@@ -6,6 +6,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(EntityComponent), typeof(ItemComponent))]
 public class PickUpComponent : InteractionComponent
 {
+
+
     public override void Action(int entityId, string[] values)
     {
         PickUpItem(entityId);
@@ -21,4 +23,8 @@ public class PickUpComponent : InteractionComponent
         //do nothing
     }
 
+    public override void ComponentHasParent()
+    {
+        enabled = false;
+    }
 }

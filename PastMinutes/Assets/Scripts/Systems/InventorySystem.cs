@@ -29,10 +29,6 @@ public class InventorySystem : MonoBehaviour
         ItemComponent item = EntityManager.GetEntityComponent<ItemComponent>(itemEntityID) as ItemComponent;
         if (inventory.AddItem(item))
         {
-            item.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            item.gameObject.GetComponent<CircleCollider2D>().enabled = false;
-            //Add item to game object of InventoryComponent
-            item.gameObject.transform.parent = inventory.gameObject.transform;
             EventManager.TriggerEvent(EventSystem.ItemAdded(), itemEntityID, new string[] { res.ToString(), item.name });
         }
         else

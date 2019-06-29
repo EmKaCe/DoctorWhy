@@ -33,6 +33,8 @@ public abstract class InteractionComponent : MonoBehaviour
         
     }
 
+    public abstract void ComponentHasParent();
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -82,6 +84,10 @@ public abstract class InteractionComponent : MonoBehaviour
 
     protected virtual void Awake()
     {
+        if (transform.parent != null)
+        {
+            ComponentHasParent();
+        }
         interactionListener = new UnityAction<int, string[]>(Action);
         interactionHoldListener = new UnityAction<int, string[]>(Quit);
         //interactionExitedListener = new UnityAction<int, string[]>(CheckCollision);

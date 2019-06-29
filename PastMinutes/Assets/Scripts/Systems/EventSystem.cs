@@ -103,12 +103,34 @@ public class EventSystem : MonoBehaviour {
     /// <summary>
     /// Entity switched gun
     /// <para>int: entityID of entity that switched the gun</para>
-    /// <para>string[]: name of the gun</para>
+    /// <para>string[]: entityId of the gun</para>
     /// </summary>
     /// <returns>"GunSwitched"</returns>
     public static string GunSwitched()
     {
         return "GunSwitched";
+    }
+
+    /// <summary>
+    /// Called by InputManager or AI-Script to trigger gun draw
+    /// <para>int: entityID of entity that should draw gun</para>
+    /// <para>string[]: item slot, the gun is in</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string DrawGun()
+    {
+        return "DrawGun";
+    }
+
+    /// <summary>
+    /// Called by InputManager or AI-Script to trigger gun stow
+    /// <para>int: entityID of entity that should stow gun</para>
+    /// <para>string[]: empty</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string StowGun()
+    {
+        return "StowGun";
     }
 
     /// <summary>
@@ -131,6 +153,28 @@ public class EventSystem : MonoBehaviour {
     public static string AttachmentAdded()
     {
         return "AttachmentAdded";
+    }
+
+    /// <summary>
+    /// Called when Item was removed from slot
+    /// <para>int: entityID of entity that removed item from slot</para>
+    /// <para>string[]: entityID of item that was removed, name of item that was removed, slot the item was removed from</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string RemovedItemFromSlot()
+    {
+        return "RemovedItemFromSlot";
+    }
+
+    /// <summary>
+    /// Called when Item was added to slot
+    /// <para>int: entityID of entity that added item to slot</para>
+    /// <para>string[]: entityID of item that was added, name of item that was added, slot the item was added to</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string AddedItemToSlot()
+    {
+        return "AddedItemToSlot";
     }
 
     /// <summary>
