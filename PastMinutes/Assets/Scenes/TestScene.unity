@@ -10374,15 +10374,20 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7963807822782344531, guid: 48c471af6dabd8a4a97825cebd2e0b39,
+        type: 3}
+      propertyPath: m_ChildAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8089521492090643006, guid: 48c471af6dabd8a4a97825cebd2e0b39,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: -0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 8089521492090643006, guid: 48c471af6dabd8a4a97825cebd2e0b39,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000000074505806
+      value: -0.00000065378845
       objectReference: {fileID: 0}
     - target: {fileID: 8089521492090643006, guid: 48c471af6dabd8a4a97825cebd2e0b39,
         type: 3}
@@ -10459,15 +10464,20 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5634286391915328696, guid: 48c471af6dabd8a4a97825cebd2e0b39,
+        type: 3}
+      propertyPath: m_ChildScaleHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5634286391915328703, guid: 48c471af6dabd8a4a97825cebd2e0b39,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000024035573
+      value: -0.00003830716
       objectReference: {fileID: 0}
     - target: {fileID: 5634286391915328703, guid: 48c471af6dabd8a4a97825cebd2e0b39,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00001475215
+      value: -0.000014487654
       objectReference: {fileID: 0}
     - target: {fileID: 5634286391915328703, guid: 48c471af6dabd8a4a97825cebd2e0b39,
         type: 3}
@@ -30801,7 +30811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdToInteract: 0
   interactionMessage: Talk to
-  dialogTree: {fileID: 11400000, guid: 06bb1feafb56865409a5cd711978f6f6, type: 2}
+  dialogTree: {fileID: 11400000, guid: a7c2c62b013f1fc4791c1895b497815a, type: 2}
   talking: 0
   prerequisites: []
 --- !u!212 &1244043300
