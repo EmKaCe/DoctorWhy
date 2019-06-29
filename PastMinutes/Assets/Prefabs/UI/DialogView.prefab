@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 5398958990332767119}
   - component: {fileID: 5398958990332767118}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: CharacterPortraitPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1452,9 +1452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afce255df436ab248ac50ef3ac6be9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  picture: {fileID: 5398958989188396898}
   characterName: {fileID: 5398958990882479778}
-  npcAnswer: {fileID: 0}
-  dialogOption: {fileID: 6840456785814588870, guid: 7b350cb26d698ff46b2dfe7aa09559b7,
+  npcAnswer: {fileID: 7707915217409458102}
+  dialogOption: {fileID: 6614371483722803123, guid: 5ab5597725401704384fd1a0f505fd4b,
     type: 3}
 --- !u!1 &8842510190455240191
 GameObject:
