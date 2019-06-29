@@ -16,6 +16,22 @@ public class ItemComponent : MonoBehaviour
     [Header("Amount of Items on Stack. 1 if stackable is false")]
     [SerializeField]
     private int amount;
+    public ItemType category;
+
+
+    public enum ItemType
+    {
+        Standard,
+        Ammunition,
+        Consumable,
+        QuestItem,
+        Weapon,
+        Clothing,
+        Tool,
+        TimeGauntlet,
+
+
+    }
 
 
     // Start is called before the first frame update
@@ -76,9 +92,4 @@ public class ItemComponent : MonoBehaviour
         return false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

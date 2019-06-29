@@ -17,6 +17,8 @@ public class ShootingSystem : MonoBehaviour
     private UnityAction<int, string[]> attachmentChangedListener;
     private UnityAction<int, string[]> triggerPulledListener;
     private UnityAction<int, string[]> reloadGunListener;
+    private UnityAction<int, string[]> drawGunListener;
+    private UnityAction<int, string[]> stowGunListener;
 
 
     // Start is called before the first frame update
@@ -36,6 +38,8 @@ public class ShootingSystem : MonoBehaviour
         attachmentRemovedListener = new UnityAction<int, string[]>(RemoveAttachment);
         triggerPulledListener = new UnityAction<int, string[]>(PullTrigger);
         reloadGunListener = new UnityAction<int, string[]>(Reload);
+        drawGunListener = new UnityAction<int, string[]>(DrawGun);
+        stowGunListener = new UnityAction<int, string[]>(StowGun);
     }
 
     private void OnEnable()
@@ -46,6 +50,9 @@ public class ShootingSystem : MonoBehaviour
         EventManager.StartListening(EventSystem.AttachmentChanged(), attachmentChangedListener);
         EventManager.StartListening(EventSystem.AttachmentRemoved(), attachmentRemovedListener);
         EventManager.StartListening(EventSystem.TriggerPulled(), triggerPulledListener);
+        EventManager.StartListening(EventSystem.Reload(), reloadGunListener);
+        EventManager.StartListening(EventSystem.DrawGun(), drawGunListener);
+        EventManager.StartListening(EventSystem.StowGun(), stowGunListener);
     }
 
     private void OnDisable()
@@ -56,21 +63,28 @@ public class ShootingSystem : MonoBehaviour
         EventManager.StopListening(EventSystem.AttachmentChanged(), attachmentChangedListener);
         EventManager.StopListening(EventSystem.AttachmentRemoved(), attachmentRemovedListener);
         EventManager.StopListening(EventSystem.TriggerPulled(), triggerPulledListener);
+        EventManager.StopListening(EventSystem.Reload(), reloadGunListener);
+        EventManager.StopListening(EventSystem.DrawGun(), drawGunListener);
+        EventManager.StopListening(EventSystem.StowGun(), stowGunListener);
     }
 
-    private void PullTrigger(int entityID, string[] gun)
+    private void PullTrigger(int entityID, string[] empty)
     {
-        throw new NotImplementedException();
+        ShootingComponent activeGun = GetActiveGun(entityID);
+        if (activeGun != null)
+        {
+            activeGun.Shoot();
+        }
     }
 
     private void RemoveAttachment(int entityID, string[] gun)
     {
-        throw new NotImplementedException();
+
     }
 
     private void ChangeAttachment(int entityID, string[] gun)
     {
-        throw new NotImplementedException();
+
     }
 
     private void AddAttachment(int entityID, string[] gun)
@@ -80,7 +94,42 @@ public class ShootingSystem : MonoBehaviour
 
     private void SwitchGun(int entityID, string[] gun)
     {
-        throw new NotImplementedException();
+        ShootingComponent activeGun = GetActiveGun(entityID);
+        SwitchGun(activeGun, EntityManager.GetEntityComponent<ShootingComponent>(int.Parse(gun[0])) as ShootingComponent);
+    }
+
+    private void SwitchGun(ShootingComponent currentlyActive, ShootingComponent goal)
+    {
+        if (currentlyActive != null)
+        {
+            currentlyActive.SetActiveGun(false);
+            currentlyActive.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }       
+        goal.SetActiveGun(true);
+        goal.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+
+    }
+
+    public void DrawGun(int entityID, string[] slot)
+    {
+        ShootingComponent activeGun = GetActiveGun(entityID);
+        ShootingComponent otherGun = (EntityManager.GetEntityComponent<InventoryComponent>(entityID) as InventoryComponent).GetItemInSlot(int.Parse(slot[0])).gameObject.GetComponent<ShootingComponent>();
+        if(activeGun != otherGun)
+        {
+            SwitchGun(activeGun, otherGun);
+        }
+       
+    }
+
+    public void StowGun(int entityID, string[] empty)
+    {
+
+        ShootingComponent[] comps = EntityManager.GetEntityComponent<EntityComponent>(entityID).gameObject.GetComponentsInChildren<ShootingComponent>();
+        foreach(ShootingComponent s in comps)
+        {
+            s.SetActiveGun(false);
+            s.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     private void InitializeComponent(int entityID, string[] nothing)
@@ -95,14 +144,14 @@ public class ShootingSystem : MonoBehaviour
         ShootingComponent activeGun = GetActiveGun(entityID);
         if(activeGun != null)
         {
-           // activeGun.Reload(GetAmmunition(entityID, activeGun.GetAmmoType(), activeGun.));
+            activeGun.Reload(GetAmmunition(entityID, activeGun.GetAmmoType(), activeGun.GetMissingAmmo()));
         }
     }
 
-    //public int GetAmmunition(int entityID, PartFindingSystem.AmmoType ammoType, int neededAmount)
-    //{
-    //    EntityManager.GetEntityComponent<InventoryComponent>(entityID).GetAmmunition(ammoType, neededAmount);
-    //}
+    public int GetAmmunition(int entityID, PartFindingSystem.AmmoType ammoType, int neededAmount)
+    {
+        return (EntityManager.GetEntityComponent<InventoryComponent>(entityID) as InventoryComponent).GetAmmunition(ammoType, neededAmount);
+    }
 
     /// <summary>
     /// Returns active shooting component;
@@ -111,7 +160,22 @@ public class ShootingSystem : MonoBehaviour
     /// <returns></returns>
     private ShootingComponent GetActiveGun(int entityID)
     {
-        return  EntityManager.GetEntityComponent<EntityComponent>(entityID).gameObject.GetComponentsInChildren<ShootingComponent>().Where(s => s.IsActiveGun()).First();
+        ShootingComponent[] comps = EntityManager.GetEntityComponent<EntityComponent>(entityID).gameObject.GetComponentsInChildren<ShootingComponent>();
+        //if (EntityManager.GetEntityComponent<EntityComponent>(entityID).gameObject.GetComponentsInChildren<ShootingComponent>().Where(s => s.IsActiveGun()) is List<ShootingComponent> res)
+        //{
+        //    return res[0];
+        //}
+        if(comps != null)
+        {
+            foreach(ShootingComponent s in comps)
+            {
+                if (s.IsActiveGun())
+                {
+                    return s;
+                }
+            }
+        }
+        return null;
     }
 
     // Update is called once per frame

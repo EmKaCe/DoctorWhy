@@ -5,14 +5,14 @@ using UnityEngine;
 /// <summary>
 /// Gets attached to gun sprite
 /// </summary>
+[RequireComponent(typeof(EntityComponent))]
 public class ShootingComponent : MonoBehaviour
 {
 
-    private bool activeGun;
+    public bool activeGun;
     private string projectileSpritesheet;
     private Sprite projectile;
     public bool autoFire;
-    private bool shooting;
     private GunComponent gun;
     private MagazineComponent mag;
     private AmmunitionComponent ammo;
@@ -28,7 +28,7 @@ public class ShootingComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventManager.TriggerEvent(EventSystem.InitializingShootingComponent(), gameObject.GetComponentInParent<EntityComponent>().gameObject.GetInstanceID(), new string[] { "0" });
+        EventManager.TriggerEvent(EventSystem.InitializingShootingComponent(), gameObject.GetComponent<EntityComponent>().entityID, new string[] { "0" });
         projectile = Resources.Load<Sprite>("Items/" + projectileSpritesheet);
         //work in progress: take gun component for projectile information
         gun = gameObject.GetComponent<GunComponent>() as GunComponent;       
@@ -43,8 +43,11 @@ public class ShootingComponent : MonoBehaviour
                 projectile = ammo.projectile;
             }
         }
-        
 
+        if (!activeGun)
+        {
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
 
 
     }
@@ -55,33 +58,34 @@ public class ShootingComponent : MonoBehaviour
         if (activeGun)
         {
             rotationZ = CalculateRotation(Input.mousePosition, transform.position);
-            //transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotationZ));
-            if (autoFire)
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    //start coroutine
-                    shooting = true;
-                }
-                if (Input.GetMouseButtonUp(0))
-                {
-                    //stop coroutine
-                    shooting = false;
-                }
-                if (shooting)
-                {
-                    Shoot();
-                }
-            }
-            else
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    Shoot();
-                }
-            }
-
         }
+        //transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotationZ));
+        //if (autoFire)
+        //{
+        //    if (Input.GetMouseButtonDown(0))
+        //    {
+        //        //start coroutine
+        //        shooting = true;
+        //    }
+        //    if (Input.GetMouseButtonUp(0))
+        //    {
+        //        //stop coroutine
+        //        shooting = false;
+        //    }
+        //    if (shooting)
+        //    {
+        //        Shoot();
+        //    }
+        //}
+        //else
+        //{
+        //    if (Input.GetMouseButtonDown(0))
+        //    {
+        //        Shoot();
+        //    }
+        //}
+
+
 
 
     }
@@ -157,5 +161,10 @@ public class ShootingComponent : MonoBehaviour
     public PartFindingSystem.AmmoType GetAmmoType()
     {
         return ammo.ammoType;
+    }
+
+    public int GetMissingAmmo()
+    {
+        return mag.capacity - mag.amountOfAmunition;
     }
 }

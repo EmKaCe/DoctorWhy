@@ -146,6 +146,7 @@ public class DialogComponent : InteractionComponent
 
     public override void Action(int entityId, string[] values)
     {
+        EventManager.TriggerEvent(EventSystem.StowGun(), entityId, new string[] { });
         BeginConversation();
     }
 
@@ -154,4 +155,8 @@ public class DialogComponent : InteractionComponent
         //do nothing
     }
 
+    public override void ComponentHasParent()
+    {
+        
+    }
 }

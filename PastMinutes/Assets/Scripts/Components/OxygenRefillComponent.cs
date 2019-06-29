@@ -62,4 +62,9 @@ public class OxygenRefillComponent : InteractionComponent
     {
         refill = false;
     }
+
+    public override void ComponentHasParent()
+    {
+        return;
+    }
 }
