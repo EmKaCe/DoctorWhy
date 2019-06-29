@@ -90,10 +90,19 @@ public class ShootingSystem : MonoBehaviour
         
     }
 
-    public void Reload(int entityID, string[] nothing)
+    public void Reload(int entityID, string[] empty)
     {
-
+        ShootingComponent activeGun = GetActiveGun(entityID);
+        if(activeGun != null)
+        {
+           // activeGun.Reload(GetAmmunition(entityID, activeGun.GetAmmoType(), activeGun.));
+        }
     }
+
+    //public int GetAmmunition(int entityID, PartFindingSystem.AmmoType ammoType, int neededAmount)
+    //{
+    //    EntityManager.GetEntityComponent<InventoryComponent>(entityID).GetAmmunition(ammoType, neededAmount);
+    //}
 
     /// <summary>
     /// Returns active shooting component;

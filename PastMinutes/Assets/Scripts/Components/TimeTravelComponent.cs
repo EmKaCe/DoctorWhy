@@ -19,7 +19,8 @@ public class TimeTravelComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(present == null || past == null)
+        EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
+        if (present == null || past == null)
         {
             Debug.Log("TimeTravelComponent needs a present and past object");
         }
@@ -44,7 +45,7 @@ public class TimeTravelComponent : MonoBehaviour
         {
             EventManager.StartListening(EventSystem.ItemAdded(), itemPickUpListener);
         }
-        EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
+        
     }
 
     // Update is called once per frame
@@ -96,7 +97,7 @@ public class TimeTravelComponent : MonoBehaviour
         if (EntityManager.GetEntityComponent<EntityComponent>(itemID).gameObject.Equals(gameObject)){
             active = true;
             EventManager.StopListening(EventSystem.ItemAdded(), itemPickUpListener);
-            EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
+            //EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
         }
 
     }

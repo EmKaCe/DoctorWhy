@@ -148,4 +148,14 @@ public class ShootingComponent : MonoBehaviour
     {
         projectileSpritesheet = spritesheet;
     }
+
+    public void Reload(int remainingBullets)
+    {
+        mag.Reload(remainingBullets);
+    }
+
+    public PartFindingSystem.AmmoType GetAmmoType()
+    {
+        return ammo.ammoType;
+    }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,5 +30,10 @@ public class MagazineComponent : AttachmentComponent
     public override void OnDetachment()
     {
         throw new System.NotImplementedException();
+    }
+
+    internal void Reload(int remainingBullets)
+    {
+        amountOfAmunition += remainingBullets;
     }
 }

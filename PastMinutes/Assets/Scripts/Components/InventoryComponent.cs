@@ -105,4 +105,6 @@ public class InventoryComponent : MonoBehaviour
         }
         return false;
     }
+
+    
 }
