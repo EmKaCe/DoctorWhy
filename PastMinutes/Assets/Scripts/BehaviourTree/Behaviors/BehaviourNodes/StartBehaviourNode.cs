@@ -31,4 +31,9 @@ public class StartBehaviourNode : BehaviourNode
     {
         
     }
+
+    public override void Run()
+    {
+        throw new NotImplementedException();
+    }
 }

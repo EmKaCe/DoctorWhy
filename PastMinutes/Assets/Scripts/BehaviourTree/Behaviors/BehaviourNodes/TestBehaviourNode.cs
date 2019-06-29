@@ -27,5 +27,8 @@ public class TestBehaviourNode : BehaviourNode
         return testBehaviour.GetType().ToString();
     }
 
-
+    public override void Run()
+    {
+        throw new NotImplementedException();
+    }
 }

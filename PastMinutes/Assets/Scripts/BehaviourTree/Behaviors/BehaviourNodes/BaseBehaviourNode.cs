@@ -6,7 +6,6 @@ using UnityEditor;
 using UnityEngine;
 using static BaseBehaviour;
 
-[CreateAssetMenu(menuName ="Test")]
 public class BaseBehaviourNode : BehaviourNode
 {
 
@@ -66,5 +65,8 @@ public class BaseBehaviourNode : BehaviourNode
         rectContent.position += delta;
     }
 
-
+    public override void Run()
+    {
+        throw new NotImplementedException();
+    }
 }
