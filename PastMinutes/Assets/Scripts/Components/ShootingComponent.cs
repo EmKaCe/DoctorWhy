@@ -8,7 +8,7 @@ using UnityEngine;
 public class ShootingComponent : MonoBehaviour
 {
 
-    private bool activeGun = true;
+    private bool activeGun;
     private string projectileSpritesheet;
     private Sprite projectile;
     public bool autoFire;
@@ -137,6 +137,11 @@ public class ShootingComponent : MonoBehaviour
     public void SetActiveGun(bool gun)
     {
         activeGun = gun;
+    }
+
+    public bool IsActiveGun()
+    {
+        return activeGun;
     }
 
     public void SetProjectileSpritesheet(string spritesheet)

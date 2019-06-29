@@ -3400,6 +3400,11 @@ PrefabInstance:
       propertyPath: m_ChildAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6485967077071030970, guid: 6a775b2b856329a4088d53a2f62024fc,
+        type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8842510190796837713, guid: 6a775b2b856329a4088d53a2f62024fc,
         type: 3}
       propertyPath: m_ChildAlignment

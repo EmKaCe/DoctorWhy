@@ -326,4 +326,13 @@ public class EventSystem : MonoBehaviour {
     {
         return "TravelingTime";
     }
+
+    /// <summary>
+    /// Called by InputManager or AI-Script to trigger reload
+    /// </summary>
+    /// <returns></returns>
+    public static string Reload()
+    {
+        return "Reload";
+    }
 }

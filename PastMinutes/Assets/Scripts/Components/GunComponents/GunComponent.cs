@@ -56,6 +56,10 @@ public class GunComponent : MonoBehaviour
                 {
                     muzzle = attachment as MuzzleAttachmentComponent;
                 }
+                else
+                {
+                    return false;
+                }
                 return true;
             }
         }      

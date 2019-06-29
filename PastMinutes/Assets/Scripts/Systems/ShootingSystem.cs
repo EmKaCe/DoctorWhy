@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,8 +16,7 @@ public class ShootingSystem : MonoBehaviour
     private UnityAction<int, string[]> attachmentRemovedListener;
     private UnityAction<int, string[]> attachmentChangedListener;
     private UnityAction<int, string[]> triggerPulledListener;
-
-    public GunComponent activeGun;
+    private UnityAction<int, string[]> reloadGunListener;
 
 
     // Start is called before the first frame update
@@ -35,6 +35,7 @@ public class ShootingSystem : MonoBehaviour
         attachmentChangedListener = new UnityAction<int, string[]>(ChangeAttachment);
         attachmentRemovedListener = new UnityAction<int, string[]>(RemoveAttachment);
         triggerPulledListener = new UnityAction<int, string[]>(PullTrigger);
+        reloadGunListener = new UnityAction<int, string[]>(Reload);
     }
 
     private void OnEnable()
@@ -89,11 +90,19 @@ public class ShootingSystem : MonoBehaviour
         
     }
 
-    private GunComponent GetActiveGun(int entityID)
+    public void Reload(int entityID, string[] nothing)
     {
-        //Maybe with IEnumerator?
-        //EventManager.TriggerEvent(EventSystem.GetActiveGun(), entityID, new string[] { "0" });
-        return activeGun;
+
+    }
+
+    /// <summary>
+    /// Returns active shooting component;
+    /// </summary>
+    /// <param name="entityID"></param>
+    /// <returns></returns>
+    private ShootingComponent GetActiveGun(int entityID)
+    {
+        return  EntityManager.GetEntityComponent<EntityComponent>(entityID).gameObject.GetComponentsInChildren<ShootingComponent>().Where(s => s.IsActiveGun()).First();
     }
 
     // Update is called once per frame

@@ -44,11 +44,7 @@ public class TimeTravelComponent : MonoBehaviour
         {
             EventManager.StartListening(EventSystem.ItemAdded(), itemPickUpListener);
         }
-        else
-        {
-            EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
-        }
-
+        EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
     }
 
     // Update is called once per frame
@@ -79,7 +75,6 @@ public class TimeTravelComponent : MonoBehaviour
 
     public void TravelTime(int empty, string[] empty2)
     {
-        Debug.Log("Traveling");
         if (active)
         {
             present.SetActive(!present.activeSelf);

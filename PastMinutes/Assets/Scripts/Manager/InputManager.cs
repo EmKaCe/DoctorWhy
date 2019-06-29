@@ -30,6 +30,10 @@ public class InputManager : MonoBehaviour
             Debug.Log("Travel");
             EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            EventManager.TriggerEvent(EventSystem.Reload(), player.GetInstanceID(), new string[] { });
+        }
     }
 
 }
