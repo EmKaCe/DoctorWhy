@@ -15,6 +15,8 @@ public class EmptyNode : BehaviourNode
         throw new NotImplementedException();
     }
 
+
+
     public override void Run()
     {
         throw new NotImplementedException();
