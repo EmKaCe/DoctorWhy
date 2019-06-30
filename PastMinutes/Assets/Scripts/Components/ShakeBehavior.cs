@@ -26,7 +26,7 @@ public class ShakeBehavior : MonoBehaviour
 
     void Start()
     {
-        EventManager.StartListening(EventSystem.CameraShake(), winGameListener);
+        EventManager.StartListening(EventSystem.CameraShake(), shakeListener);
     }
 
     // Update is called once per frame
@@ -58,7 +58,7 @@ public class ShakeBehavior : MonoBehaviour
         initialPosition = transform.localPosition;
     }
 
-    public void TriggerShake()
+    public void TriggerShake(int empty , string[] empty2)
     {
         shakeDuration = 6.0f;
     }
