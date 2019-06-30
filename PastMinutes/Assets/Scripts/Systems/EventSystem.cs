@@ -43,9 +43,9 @@ public class EventSystem : MonoBehaviour {
     /// Called when timer reaches zero
     /// </summary>
     /// <returns></returns>
-    public static string EndWorld()
+    public static string ForceReset()
     {
-        return "EndWorld";
+        return "ForceReset";
     }
 
     public static string WinGame()
@@ -53,9 +53,9 @@ public class EventSystem : MonoBehaviour {
         return "WinGame";
     }
 
-    public static string StartWorldEnd()
+    public static string FalseWin()
     {
-        return "StartWorldEnd";
+        return "FalseWin";
     }
 
     /// <summary>

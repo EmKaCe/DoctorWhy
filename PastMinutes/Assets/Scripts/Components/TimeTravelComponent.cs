@@ -61,14 +61,8 @@ public class TimeTravelComponent : MonoBehaviour
             else if(secondsToEnd <= 0 && !endReached)
             {
                 endReached = true;
-                Debug.Log("Die Welt ist untergegangen");
-                EventManager.TriggerEvent(EventSystem.EndWorld(), 0, new string[] { });
-            }
-            if (secondsToEnd <= startEnd && !endStarted)
-            {
-                endStarted = true;
-                Debug.Log("Tanz für mich terraformer, tanz!");
-                EventManager.TriggerEvent(EventSystem.StartWorldEnd(), 0, new string[] { });
+                Debug.Log("Zeit abgelaufen");
+                EventManager.TriggerEvent(EventSystem.ForceReset(), 0, new string[] { });
             }
             
         }

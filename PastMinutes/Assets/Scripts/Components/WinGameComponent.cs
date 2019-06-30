@@ -10,8 +10,12 @@ public class WinGameComponent : MonoBehaviour
     UnityAction<int, string[]> forceResetListener;
     private Animator tanim;
     private bool win;
+    private bool forceReset;
+    private bool falseWin;
     public GameObject terrafomer;
-    public GameObject AI;
+    public GameObject WinAI;
+    public GameObject FalseWinAI;
+    public GameObject ForceResetAI;
     public GameObject endScreen;
     private float end;
     private float readDialog;
@@ -19,11 +23,14 @@ public class WinGameComponent : MonoBehaviour
     public GameObject Past;
     private bool triggerDialog=false;
     public GameObject UI;
-    public GameObject camera;
+
+    private string AIName = "Spaceship AI";
     // Start is called before the first frame update
     void Start()
     {
         win = false;
+        forceReset = false;
+        falseWin = false;
         tanim = terrafomer.GetComponent<Animator>();
         if (tanim == null)
         {
@@ -31,19 +38,21 @@ public class WinGameComponent : MonoBehaviour
         }
 
         EventManager.StartListening(EventSystem.WinGame(), winGameListener);
-        EventManager.StartListening(EventSystem.WinGame(), falseWinListener);
-        EventManager.StartListening(EventSystem.WinGame(), forceResetListener);
+        EventManager.StartListening(EventSystem.FalseWin(), falseWinListener);
+        EventManager.StartListening(EventSystem.ForceReset(), forceResetListener);
     }
     private void Awake()
     {
         winGameListener = new UnityAction<int, string[]>(Win);
+        falseWinListener = new UnityAction<int, string[]>(FalseWin);
+        forceResetListener = new UnityAction<int, string[]>(ForceReset);
     }
     // Update is called once per frame
     void Update()
     {
         if (win) //event WinGame has been called somewhere (NPCAction WinGame in Dialog TarraformingDialog)
         {
-            tanim.Play("terraforming");
+            tanim.Play("win terraforming");
             EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
             //play for 5 seconds. 
 
@@ -58,7 +67,7 @@ public class WinGameComponent : MonoBehaviour
                 if (!triggerDialog) {
                     triggerDialog = true;
                     EventManager.TriggerEvent(EventSystem.BeginConversation(),
-                    AI.GetComponentInParent<EntityComponent>().entityID, new string[] { AI.name });
+                    WinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
                 }
 
                 if (Time.time >=readDialog) {
@@ -76,7 +85,41 @@ public class WinGameComponent : MonoBehaviour
         else
         {
             tanim.Play("notterrafomring");
-            Debug.Log("not won yet");
+            //we havent won yet, check for falseWin
+            if (falseWin) //Dr Shila tricked us
+            {
+                tanim.Play("false win terraforming");
+                Present.SetActive(true);
+                Past.SetActive(false);
+                EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
+                if (Time.time >= end) //we've waited for 5 seconds
+                {
+                    Present.SetActive(false);
+                    Past.SetActive(true);
+                    EventManager.TriggerEvent(EventSystem.BeginConversation(),
+                    FalseWinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
+                    falseWin = false;
+                }
+
+            }
+            else
+            { //check for ForceReset
+                if (forceReset)
+                {
+                    tanim.Play("false win terraforming");
+                    Present.SetActive(true);
+                    Past.SetActive(false);
+                    EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
+                    if (Time.time >= end) //we've waited for 5 seconds
+                    {
+                        Present.SetActive(false);
+                        Past.SetActive(true);
+                        EventManager.TriggerEvent(EventSystem.BeginConversation(),
+                        ForceResetAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
+                        forceReset = false;
+                    }
+                }
+            }
         }
     }
     
@@ -88,5 +131,15 @@ public class WinGameComponent : MonoBehaviour
         win = true;
 
         //anim.Play("notterraforming");
+    }
+    public void ForceReset(int empty, string[] empty2)
+    {
+        end = Time.time + 5.0f;
+        forceReset = true;
+    }
+    public void FalseWin(int empty, string[] empty2)
+    {
+        end = Time.time + 5.0f;
+        falseWin = true;
     }
 }
