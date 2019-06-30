@@ -46,7 +46,9 @@ public class WinGameComponent : MonoBehaviour
         winGameListener = new UnityAction<int, string[]>(Win);
         falseWinListener = new UnityAction<int, string[]>(FalseWin);
         forceResetListener = new UnityAction<int, string[]>(ForceReset);
+        
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -68,8 +70,7 @@ public class WinGameComponent : MonoBehaviour
                 //don't keep looping even though we've already won.
                 if (!triggerDialog) {
                     triggerDialog = true;
-                    EventManager.TriggerEvent(EventSystem.BeginConversation(),
-                    WinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
+                    EventManager.TriggerEvent(EventSystem.TriggerDialog(),WinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { WinAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
                 }
 
                 if (Time.time >=readDialog) {
@@ -95,8 +96,7 @@ public class WinGameComponent : MonoBehaviour
                 if (Time.time >= end) //we've waited for 5 seconds
                 {
                     EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
-                    EventManager.TriggerEvent(EventSystem.BeginConversation(),
-                    FalseWinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
+                    EventManager.TriggerEvent(EventSystem.TriggerDialog(),FalseWinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { FalseWinAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
                     Debug.Log("triggering FalseWinAi");
                     falseWin = false;
                     tanim.Play("notterrafomring");
@@ -114,8 +114,7 @@ public class WinGameComponent : MonoBehaviour
                     if (Time.time >= end) //we've waited for 5 seconds
                     {
                         EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
-                        EventManager.TriggerEvent(EventSystem.BeginConversation(),
-                        ForceResetAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
+                        EventManager.TriggerEvent(EventSystem.TriggerDialog(),ForceResetAI.GetComponentInParent<EntityComponent>().entityID, new string[] { FalseWinAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
                         forceReset = false;
                         Debug.Log("force Reset over");
                         tanim.Play("notterrafomring");
