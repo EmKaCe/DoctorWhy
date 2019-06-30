@@ -17,9 +17,13 @@ public class TimeTravelComponent : MonoBehaviour
     UnityAction<int, string[]> itemPickUpListener;
     UnityAction<int, string[]> winGameListener;
     UnityAction<int, string[]> falseWinListener;
+    private float loop=1;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
         timeInPast = 10.0f;
         secondsToEnd = timeInPast;
         EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
@@ -47,6 +51,8 @@ public class TimeTravelComponent : MonoBehaviour
         block -= Time.deltaTime;
 
 
+        //Emre set secondsToEnd as Time till catastrophe In UI
+
         if (inPast)
         {
             //reduce timer
@@ -60,6 +66,9 @@ public class TimeTravelComponent : MonoBehaviour
                 Debug.Log("Zeit abgelaufen");
                 EventManager.TriggerEvent(EventSystem.ForceReset(), 0, new string[] { });
                 secondsToEnd = timeInPast+4.7f;
+                loop++;
+
+                //Emre setloop in UI
             }
 
         }
@@ -102,6 +111,9 @@ public class TimeTravelComponent : MonoBehaviour
     {
         block = 4.7f;
         secondsToEnd = timeInPast + 5.0f;
+        loop++;
+
+        //Emre setloopIn UI
     }
 
     public void CheckParent(int itemID, string[] entityIDandItemName)
