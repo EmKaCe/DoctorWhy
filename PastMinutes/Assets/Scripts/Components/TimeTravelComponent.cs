@@ -19,20 +19,21 @@ public class TimeTravelComponent : MonoBehaviour
     UnityAction<int, string[]> itemPickUpListener;
     UnityAction<int, string[]> winGameListener;
     UnityAction<int, string[]> falseWinListener;
-    private float loop=1;
+    private float loop=0;
     public TextMeshProUGUI currentTimeLoopTextBox;
     public TextMeshProUGUI catastropheTextBox;
-
+    private bool ForceTriggered = false;
+    private bool win = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        timeInPast = 10.0f;
+        currentTimeLoopTextBox.text = loop.ToString();
+        timeInPast = 60.0f;
         secondsToEnd = timeInPast;
         EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
         EventManager.StartListening(EventSystem.WinGame(), winGameListener);
-        EventManager.StartListening(EventSystem.ForceReset(), falseWinListener);
+        EventManager.StartListening(EventSystem.FalseWin(), falseWinListener);
 
         if (present == null || past == null)
         {
@@ -50,33 +51,44 @@ public class TimeTravelComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //Debug.Log("in past" + inPast);
-        //Debug.Log("time left:" + secondsToEnd);
+        Debug.Log("time left:" + secondsToEnd);
         block -= Time.deltaTime;
 
 
         //Emre set secondsToEnd as Time till catastrophe In UI
-        catastropheTextBox.text = secondsToEnd.ToString();
+        catastropheTextBox.text = ((int)secondsToEnd).ToString();
         //Done
 
         if (inPast)
         {
             //reduce timer
-            if(secondsToEnd > 0.0f)
+            if(secondsToEnd > 0.0f&&!win)
             {
                 Debug.Log("time left:"+ secondsToEnd);
                 secondsToEnd -= Time.deltaTime;
             }
             else if(secondsToEnd<=0.0f) {
-                block = 5.0f;
-                Debug.Log("Zeit abgelaufen");
-                EventManager.TriggerEvent(EventSystem.ForceReset(), 0, new string[] { });
-                secondsToEnd = timeInPast+4.7f;
-                loop++;
-
-                //Emre setloop in UI
-                currentTimeLoopTextBox.text = loop.ToString();
+                if (!ForceTriggered) {
+                    ForceTriggered = true;
+                    Debug.Log("Zeit abgelaufen");
+                    block = 4.7f;
+                    EventManager.TriggerEvent(EventSystem.ForceReset(), 0, new string[] { });
+                }
+                
                 //Done
+                secondsToEnd -= Time.deltaTime;
+                if (secondsToEnd <= -5.0f)
+                {
+                    ForceTriggered = false;
+                    //TravelTime(0, new string[] { });
+                    secondsToEnd = timeInPast;
+                    loop++;
+
+                    //Emre setloop in UI
+                    currentTimeLoopTextBox.text = loop.ToString();
+                }
             }
 
         }
@@ -114,11 +126,13 @@ public class TimeTravelComponent : MonoBehaviour
     public void BlockInfinite (int empty, string[] empty2)
     {
         block = 20f;
+        //secondsToEnd = 0.1f;
+        win = true;
     }
     public void FalseWin(int empty, string[] empty2)
     {
         block = 4.7f;
-        secondsToEnd = timeInPast + 5.0f;
+        secondsToEnd = timeInPast+5.0f;
         loop++;
 
         //Emre setloopIn UI

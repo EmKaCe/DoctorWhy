@@ -10,7 +10,7 @@ public class ShakeBehavior : MonoBehaviour
     private Transform transform;
 
     // Desired duration of the shake effect
-    private float shakeDuration = 0f;
+    private float shakeDuration = 5.0f;
 
     // A measure of magnitude for the shake. Tweak based on your preference
     private float shakeMagnitude = 0.7f;
@@ -60,6 +60,7 @@ public class ShakeBehavior : MonoBehaviour
 
     public void TriggerShake(int empty , string[] empty2)
     {
+        Debug.Log("shake it");
         shakeDuration = 6.0f;
     }
 }

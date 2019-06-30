@@ -62,8 +62,6 @@ public class WinGameComponent : MonoBehaviour
 
             if (Time.time >= end) //we've waited for 5 seconds
             {
-                //Present.SetActive(false);
-                //Past.SetActive(true);
                 //keep from going forward in time
                 tanim.Play("notterrafomring");
                
@@ -93,8 +91,6 @@ public class WinGameComponent : MonoBehaviour
             {
                 Debug.Log("falseWinRoutine");
                 tanim.Play("terraforming");
-                //Present.SetActive(true);
-                //Past.SetActive(false);
                 EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
                 if (Time.time >= end) //we've waited for 5 seconds
                 {
@@ -111,7 +107,7 @@ public class WinGameComponent : MonoBehaviour
             { //check for ForceReset
                 if (forceReset)
                 {
-                    Debug.Log("forceReset" + forceReset);
+                    //Debug.Log("forceReset" + forceReset);
                     Debug.Log("forceResetRoutine");
                     tanim.Play("terraforming");
                     EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
@@ -128,7 +124,6 @@ public class WinGameComponent : MonoBehaviour
                 else
                 {
                     tanim.Play("notterrafomring");
-                    Debug.Log("No time Event");
                 }
             }
         }
@@ -136,16 +131,16 @@ public class WinGameComponent : MonoBehaviour
     
     public void Win(int empty, string[] empty2)
     {
-        readDialog = Time.time + 30.0f;
+        readDialog = Time.time + 10.0f;
         end = Time.time + 5.0f;
-        Debug.Log("started Win Event");
+        //Debug.Log("started Win Event");
         win = true;
 
         //anim.Play("notterraforming");
     }
     public void ForceReset(int empty, string[] empty2)
     {
-        Debug.Log("ForceReset got called");
+        //Debug.Log("ForceReset got called");
         end = Time.time + 5.0f;
         forceReset = true;
     }
