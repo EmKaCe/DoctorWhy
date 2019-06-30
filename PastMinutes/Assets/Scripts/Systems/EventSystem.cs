@@ -29,6 +29,11 @@ public class EventSystem : MonoBehaviour {
     /// <para>int: entity id of object that takes damage</para>
     /// <para>string[]: damage as float, entityID of entity that caused damage</para>
     /// </summary>
+    /// 
+    public static string CameraShake()
+    {
+        return "CameraShake";
+    }
     public static string TakeDamage()
     {
         return "TakeDamage";
@@ -41,6 +46,11 @@ public class EventSystem : MonoBehaviour {
     public static string EndWorld()
     {
         return "EndWorld";
+    }
+
+    public static string WinGame()
+    {
+        return "WinGame";
     }
 
     public static string StartWorldEnd()
