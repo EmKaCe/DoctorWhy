@@ -190,7 +190,24 @@ namespace DialogTree
             {
                 SaveNodeTree(true);
             }
+            if (GUI.Button(new Rect(4, 34, 55, 30), "ResetPosition"))
+            {
+                ResetNodePosition();
+            }
 
+        }
+
+        private void ResetNodePosition()
+        {
+            if(nodes.Count >= 1)
+            {
+                Vector2 offset = nodes[0].rect.position;
+                for (int i = 0; i < nodes.Count; i++)
+                {
+                    nodes[i].Drag(-offset);
+                }
+            }
+            
         }
 
         private void LoadNodeTree()

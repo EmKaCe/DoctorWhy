@@ -177,4 +177,19 @@ public abstract class BehaviourNode : ScriptableObject
         }
     }
 
+    /// <summary>
+    /// Called by children to update parent about their state after Cycle
+    /// </summary>
+    /// <param name="state"></param>
+    /// <param name="childNode"></param>
+    public abstract void SetChildState(State state, BehaviourNode childNode);
+
+    public void SendParentCurrentState(BaseBehaviour.State state)
+    {
+        if (parent != null)
+        {
+            parent.SetChildState(state, this);
+        }
+    }
+
 }

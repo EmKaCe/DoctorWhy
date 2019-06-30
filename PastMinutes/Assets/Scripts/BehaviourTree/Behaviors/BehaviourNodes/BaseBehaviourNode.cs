@@ -71,4 +71,9 @@ public class BaseBehaviourNode : BehaviourNode
     {
         throw new NotImplementedException();
     }
+
+    public override void SetChildState(State state, BehaviourNode childNode)
+    {
+        throw new NotImplementedException();
+    }
 }

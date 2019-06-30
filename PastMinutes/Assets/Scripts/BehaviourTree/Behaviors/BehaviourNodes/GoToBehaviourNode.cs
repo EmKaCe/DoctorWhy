@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "GoToNode", menuName = "BehaviourTree/GoToNode")]
 public class GoToBehaviourNode : BehaviourNode
 {
 
@@ -34,15 +35,37 @@ public class GoToBehaviourNode : BehaviourNode
     {
         //Get position -> lerp to it
         blackboard.positions.TryGetValue(positionKey, out Vector3 position);
-        Vector3.MoveTowards(npc.transform.position, position, movementSpeed * Time.deltaTime);
-
+        npc.transform.position = Vector3.MoveTowards(npc.transform.position, position, movementSpeed * Time.deltaTime);
+        if (npc.transform.position == position)
+        {
+            state = BaseBehaviour.State.running;
+            SendParentCurrentState(BaseBehaviour.State.running);
+        }
+        else
+        {
+            state = BaseBehaviour.State.success;
+            SendParentCurrentState(BaseBehaviour.State.success);
+        }
     }
+
+    
 
     public override void Initialize(GameObject npc)
     {
         base.Initialize(npc);
         this.npc = npc;
-        blackboard = Resources.Load<Blackboard>("Behaviours/Blackboard");
+        blackboard = npc.GetComponent<BehaviourComponent>().blackboard;
+        blackboard.positions.Add(positionKey, new Vector3(1, 0, 0));
         //movementSpeed = npc.GetComponent<AIComponent>()
+    }
+
+    private void OnDisable()
+    {
+        npc = null;
+    }
+
+    public override void SetChildState(BaseBehaviour.State state, BehaviourNode childNode)
+    {
+        throw new NotImplementedException();
     }
 }

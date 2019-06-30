@@ -36,4 +36,9 @@ public class StartBehaviourNode : BehaviourNode
     {
         throw new NotImplementedException();
     }
+
+    public override void SetChildState(BaseBehaviour.State state, BehaviourNode childNode)
+    {
+        throw new NotImplementedException();
+    }
 }

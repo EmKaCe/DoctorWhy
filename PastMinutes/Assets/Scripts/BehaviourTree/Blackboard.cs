@@ -6,4 +6,9 @@ using UnityEngine;
 public class Blackboard : ScriptableObject
 {
     public Dictionary<string, Vector3> positions;
+
+    public void Initialize()
+    {
+        positions = new Dictionary<string, Vector3>();
+    }
 }
