@@ -8,7 +8,7 @@ public class StartEndAction : NPCAction
 {
     public override void Act() {
         Debug.Log("Shila: Tanz für mich terraformer, tanz!");
-        EventManager.TriggerEvent(EventSystem.StartWorldEnd(), 0, new string[] { });
+        EventManager.TriggerEvent(EventSystem.FalseWin(), 0, new string[] { });
     }
     
 }

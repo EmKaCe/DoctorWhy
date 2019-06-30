@@ -29,6 +29,11 @@ public class EventSystem : MonoBehaviour {
     /// <para>int: entity id of object that takes damage</para>
     /// <para>string[]: damage as float, entityID of entity that caused damage</para>
     /// </summary>
+    /// 
+    public static string CameraShake()
+    {
+        return "CameraShake";
+    }
     public static string TakeDamage()
     {
         return "TakeDamage";
@@ -38,14 +43,19 @@ public class EventSystem : MonoBehaviour {
     /// Called when timer reaches zero
     /// </summary>
     /// <returns></returns>
-    public static string EndWorld()
+    public static string ForceReset()
     {
-        return "EndWorld";
+        return "ForceReset";
     }
 
-    public static string StartWorldEnd()
+    public static string WinGame()
     {
-        return "StartWorldEnd";
+        return "WinGame";
+    }
+
+    public static string FalseWin()
+    {
+        return "FalseWin";
     }
 
     /// <summary>
