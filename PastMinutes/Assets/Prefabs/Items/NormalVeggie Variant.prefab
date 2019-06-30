@@ -67,15 +67,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3145897606684817246, guid: d30da5f52d98dcc4bad9f300a2bde7e5,
-        type: 3}
-      propertyPath: m_Radius
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5541091168811787896, guid: d30da5f52d98dcc4bad9f300a2bde7e5,
         type: 3}
       propertyPath: itemName
       value: NormalVeggie
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145897606684817244, guid: d30da5f52d98dcc4bad9f300a2bde7e5,
+        type: 3}
+      propertyPath: interactionMessage
+      value: Press e to pick up Zombie Veggie
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145897606684817246, guid: d30da5f52d98dcc4bad9f300a2bde7e5,
+        type: 3}
+      propertyPath: m_Radius
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d30da5f52d98dcc4bad9f300a2bde7e5, type: 3}

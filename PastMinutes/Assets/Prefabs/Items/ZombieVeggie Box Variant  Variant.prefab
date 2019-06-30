@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdToInteract: 0
-  interactionMessage: 
+  interactionMessage: Press e to pick up Zombie Veggie
 --- !u!114 &4079158793310269984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +245,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'ZombieVeggie Box Variant '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5364011971708364969, guid: 0003179a138ed8544b53642216672fb1,
+        type: 3}
+      propertyPath: interactionMessage
+      value: Press e to pick up Zombie Veggie
       objectReference: {fileID: 0}
     - target: {fileID: 5364011971708364971, guid: 0003179a138ed8544b53642216672fb1,
         type: 3}

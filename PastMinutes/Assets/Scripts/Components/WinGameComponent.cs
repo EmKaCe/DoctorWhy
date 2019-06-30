@@ -52,14 +52,18 @@ public class WinGameComponent : MonoBehaviour
     {
         if (win) //event WinGame has been called somewhere (NPCAction WinGame in Dialog TarraformingDialog)
         {
-            tanim.Play("win terraforming");
-            EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
-            //play for 5 seconds. 
+            if (Time.time < end)
+            {
+                Debug.Log("WinRoutine");
+                tanim.Play("terraforming");
+                EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
+                //play for 5 seconds. 
+            }
 
             if (Time.time >= end) //we've waited for 5 seconds
             {
-                Present.SetActive(false);
-                Past.SetActive(true);
+                //Present.SetActive(false);
+                //Past.SetActive(true);
                 //keep from going forward in time
                 tanim.Play("notterrafomring");
                
@@ -84,21 +88,22 @@ public class WinGameComponent : MonoBehaviour
         }
         else
         {
-            tanim.Play("notterrafomring");
             //we havent won yet, check for falseWin
             if (falseWin) //Dr Shila tricked us
             {
-                tanim.Play("false win terraforming");
-                Present.SetActive(true);
-                Past.SetActive(false);
+                Debug.Log("falseWinRoutine");
+                tanim.Play("terraforming");
+                //Present.SetActive(true);
+                //Past.SetActive(false);
                 EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
                 if (Time.time >= end) //we've waited for 5 seconds
                 {
-                    Present.SetActive(false);
-                    Past.SetActive(true);
+                    EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
                     EventManager.TriggerEvent(EventSystem.BeginConversation(),
                     FalseWinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
+                    Debug.Log("triggering FalseWinAi");
                     falseWin = false;
+                    tanim.Play("notterrafomring");
                 }
 
             }
@@ -106,18 +111,24 @@ public class WinGameComponent : MonoBehaviour
             { //check for ForceReset
                 if (forceReset)
                 {
-                    tanim.Play("false win terraforming");
-                    Present.SetActive(true);
-                    Past.SetActive(false);
+                    Debug.Log("forceReset" + forceReset);
+                    Debug.Log("forceResetRoutine");
+                    tanim.Play("terraforming");
                     EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
                     if (Time.time >= end) //we've waited for 5 seconds
                     {
-                        Present.SetActive(false);
-                        Past.SetActive(true);
+                        EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
                         EventManager.TriggerEvent(EventSystem.BeginConversation(),
                         ForceResetAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
                         forceReset = false;
+                        Debug.Log("force Reset over");
+                        tanim.Play("notterrafomring");
                     }
+                }
+                else
+                {
+                    tanim.Play("notterrafomring");
+                    Debug.Log("No time Event");
                 }
             }
         }
@@ -134,6 +145,7 @@ public class WinGameComponent : MonoBehaviour
     }
     public void ForceReset(int empty, string[] empty2)
     {
+        Debug.Log("ForceReset got called");
         end = Time.time + 5.0f;
         forceReset = true;
     }
