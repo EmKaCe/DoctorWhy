@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class TimeTravelComponent : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class TimeTravelComponent : MonoBehaviour
     UnityAction<int, string[]> winGameListener;
     UnityAction<int, string[]> falseWinListener;
     private float loop=1;
+    public TextMeshProUGUI currentTimeLoopTextBox;
+    public TextMeshProUGUI catastropheTextBox;
 
 
     // Start is called before the first frame update
@@ -52,6 +56,8 @@ public class TimeTravelComponent : MonoBehaviour
 
 
         //Emre set secondsToEnd as Time till catastrophe In UI
+        catastropheTextBox.text = secondsToEnd.ToString();
+        //Done
 
         if (inPast)
         {
@@ -69,6 +75,8 @@ public class TimeTravelComponent : MonoBehaviour
                 loop++;
 
                 //Emre setloop in UI
+                currentTimeLoopTextBox.text = loop.ToString();
+                //Done
             }
 
         }
@@ -114,6 +122,8 @@ public class TimeTravelComponent : MonoBehaviour
         loop++;
 
         //Emre setloopIn UI
+        currentTimeLoopTextBox.text = loop.ToString();
+        //Done
     }
 
     public void CheckParent(int itemID, string[] entityIDandItemName)
