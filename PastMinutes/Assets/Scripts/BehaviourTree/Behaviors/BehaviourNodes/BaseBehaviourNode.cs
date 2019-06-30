@@ -11,15 +11,15 @@ public class BaseBehaviourNode : BehaviourNode
 
     public float test;
     public BaseBehaviour behaviour;
-    public Rect rectContent;
+    
 
     private SerializedProperty serializedBehaviour;
 
     private Vector2 pos;
 
-    public void CreateBaseBehaviour(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints)
+    public void CreateBaseBehaviour(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
     {
-        base.CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints);
+        base.CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints, nodeName);
         pos = position;
         rectContent = new Rect(position.x + offset, position.y + rowHeight, width - (2 * offset), height - rowHeight);
         serializedBehaviour = new SerializedObject(this).FindProperty("behaviour");
@@ -63,8 +63,6 @@ public class BaseBehaviourNode : BehaviourNode
     public override void Drag(Vector2 delta)
     {
         base.Drag(delta);
-        rectTitle.position += delta;
-        rectContent.position += delta;
     }
 
     public override void Run()
@@ -73,6 +71,11 @@ public class BaseBehaviourNode : BehaviourNode
     }
 
     public override void SetChildState(State state, BehaviourNode childNode)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void Init()
     {
         throw new NotImplementedException();
     }

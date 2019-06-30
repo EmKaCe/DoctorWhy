@@ -18,11 +18,14 @@ public class DialogComponent : InteractionComponent
 
     //UnityAction<int, string[]> conversationStartListener;
     UnityAction<int, string[]> conversationProgressListener;
+    UnityAction<int, string[]> triggerDialogListener;
+
 
     protected override void Awake()
     {
         base.Awake();
         conversationProgressListener = new UnityAction<int, string[]>(GetDialog);
+        triggerDialogListener = new UnityAction<int, string[]>(TriggerDialog);
     }
 
     // Start is called before the first frame update
@@ -44,7 +47,7 @@ public class DialogComponent : InteractionComponent
         //List<UIDialogItem> standard = standardDialogNode.GetDialog();
         //standard.ForEach(d => d.option = UIDialogItem.DialogOption.standardNode);
         //standardDialog = standard.ToArray();
-
+        EventManager.StartListening(EventSystem.TriggerDialog(), triggerDialogListener);
     }
 
     public UIDialogItem[] GetCurrentDialog()
@@ -158,5 +161,14 @@ public class DialogComponent : InteractionComponent
     public override void ComponentHasParent()
     {
         
+    }
+
+    public void TriggerDialog(int entityID, string[] id)
+    {
+        int.TryParse(id[0], out int ownID);
+        if(ownID == gameObject.GetComponent<EntityComponent>().entityID)
+        {
+            Action(entityID, id);
+        }
     }
 }

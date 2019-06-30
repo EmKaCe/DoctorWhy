@@ -69,6 +69,17 @@ public class EventSystem : MonoBehaviour {
     }
 
     /// <summary>
+    /// Used to trigger dialogs via script
+    /// <para>int: entityID of dialog starter</para>
+    /// <para>string[]: entityID of dialog owner, name of dialog owner</para>
+    /// </summary>
+    /// <returns></returns>
+    public static string TriggerDialog()
+    {
+        return "TriggerDialog";
+    }
+
+    /// <summary>
     /// Entity with entityID should receive a heal
     /// <para>int: entityID of entity that should receive heal</para>
     /// <para>string: amount the person should be healed, entity id of entity that causes the heal</para>
