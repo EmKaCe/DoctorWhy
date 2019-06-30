@@ -13,6 +13,8 @@ public abstract class BehaviourNode : ScriptableObject
     [HideInInspector]
     public Rect rectTitle;
     [HideInInspector]
+    public Rect rectStandardTitle;
+    [HideInInspector]
     public string title;
     [HideInInspector]
     public bool isDragged;
@@ -36,7 +38,17 @@ public abstract class BehaviourNode : ScriptableObject
     public BehaviourNode[] children;
     public BehaviourNode[] parents;
     public State state;
-    
+
+    [Tooltip("only public for easier bughunting")]
+    public GameObject npc;
+    [Tooltip("only public for easier bughunting")]
+    public Blackboard blackboard;
+
+    public Rect rectContent;
+
+    [HideInInspector]
+    public string nodeName;
+
 
     //[HideInInspector]
     //public BehaviourConnectionPoint inPoint;
@@ -57,11 +69,13 @@ public abstract class BehaviourNode : ScriptableObject
     public int inPoints;
     public int outPoints;
 
-    public void CreateBehaviourNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints)
+    public void CreateBehaviourNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
     {
+        this.nodeName = nodeName;
         children = new BehaviourNode[outPoints];
         rect = new Rect(position.x, position.y, width, height);
-        rectTitle = new Rect(position.x + offset, position.y + titleOffset, width - 2 * offset, rowHeight);
+        rectStandardTitle = new Rect(position.x + offset, position.y + titleOffset, (width - 2 * offset) / 2, rowHeight);
+        rectTitle = new Rect(position.x + offset + rectStandardTitle.width, position.y + titleOffset, (width - 2 * offset) / 2, rowHeight);
         style = nodeStyle;
         this.inPoints = inPoints;
         this.outPoints = outPoints;
@@ -87,11 +101,16 @@ public abstract class BehaviourNode : ScriptableObject
     public virtual void Drag(Vector2 delta)
     {
         rect.position += delta;
+        rectContent.position += delta;
+        rectStandardTitle.position += delta;
+        rectTitle.position += delta;
     }
 
     public virtual void Draw()
     {
         GUI.Box(rect, title, style);
+        GUI.Label(rectStandardTitle, nodeName);
+        title = GUI.TextField(rectTitle, title);
         foreach (BehaviourConnectionPoint i in inPoint)
         {
             i.Draw();
@@ -166,12 +185,16 @@ public abstract class BehaviourNode : ScriptableObject
     public abstract void Run();
 
     /// <summary>
-    /// Call to initialize BehaviourTree
+    /// Call to initialize whole BehaviourTree
     /// </summary>
     /// <param name="npc"></param>
     public virtual void Initialize(GameObject npc)
     {
-        foreach(BehaviourNode child in children)
+        Debug.Log("Initialize " + nodeName);
+        state = State.inactive;
+        this.npc = npc;
+        blackboard = npc.GetComponent<BehaviourComponent>().blackboard;
+        foreach (BehaviourNode child in children)
         {
             child.Initialize(npc);
         }
@@ -184,12 +207,18 @@ public abstract class BehaviourNode : ScriptableObject
     /// <param name="childNode"></param>
     public abstract void SetChildState(State state, BehaviourNode childNode);
 
-    public void SendParentCurrentState(BaseBehaviour.State state)
+    public void SendParentCurrentState(State state)
     {
+        this.state = state;
         if (parent != null)
         {
             parent.SetChildState(state, this);
         }
     }
+
+    /// <summary>
+    /// Initialize behaviour before new execute
+    /// </summary>
+    public abstract void Init();
 
 }

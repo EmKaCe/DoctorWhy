@@ -31,4 +31,9 @@ public class EmptyNode : BehaviourNode
     {
         title = "EmptyNode";
     }
+
+    public override void Init()
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -27,6 +27,10 @@ public class BehaviourTreeEditor : EditorWindow
 
     public static NodeSaver nodeSaver;
 
+    public static StartBehaviourNode currentSave;
+
+    [HideInInspector]
+    public string savefileName;
 
     [MenuItem("Window/BehaviourTree")]
     private static void OpenWindow()
@@ -65,11 +69,11 @@ public class BehaviourTreeEditor : EditorWindow
 
         #endregion
 
-        if ((nodeSaver = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset", typeof(Object)) as NodeSaver) == null)
-        {
-            nodeSaver = ScriptableObject.CreateInstance<NodeSaver>();
-            AssetDatabase.CreateAsset(nodeSaver, AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset");
-        }
+        //if ((nodeSaver = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset", typeof(Object)) as NodeSaver) == null)
+        //{
+        //    nodeSaver = ScriptableObject.CreateInstance<NodeSaver>();
+        //    AssetDatabase.CreateAsset(nodeSaver, AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset");
+        //}
 
 
     }
@@ -114,94 +118,233 @@ public class BehaviourTreeEditor : EditorWindow
         if (GUI.changed) Repaint();
     }
 
-    private void DrawLoader()
+    private void LoadNodeTree()
     {
-        //Load
-        if(GUI.Button(new Rect(0, 0, 50, 30), "Load"))
+        //Name empty
+        if (savefileName.Equals(""))
         {
-            nodes = new List<BehaviourNode>();
-            connections = new List<BehaviourConnection>();
-
-            foreach(StandardNodeSave save in nodeSaver.nodes)
-            {
-
-                save.node.inPoint = new BehaviourConnectionPoint[save.node.inPoints];
-                save.node.outPoint = new BehaviourConnectionPoint[save.node.outPoints];
-                for (int i = 0; i < save.node.inPoint.Length; i++)
-                {
-                    save.node.inPoint[i] = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, i, save.node.inPoint.Length);
-                }
-                for(int o = 0; o < save.node.outPoint.Length; o++)
-                {
-                    save.node.outPoint[o] = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, o, save.node.outPoint.Length); ;
-                }
-                save.node.OnRemoveNode = OnClickRemoveNode;
-                nodes.Add(save.node);
-            }
-            foreach(ConnectionSave connection in nodeSaver.connections)
-            {
-                connection.startNode.inPoint[connection.inIndex].connectedNode = connection.endNode;
-                connection.endNode.outPoint[connection.outIndex].connectedNode = connection.startNode;
-                connections.Add(new BehaviourConnection(connection.startNode.inPoint[connection.inIndex], connection.endNode.outPoint[connection.outIndex], OnClickRemoveConnection));
-            }
-            
-            
-        
+            Debug.Log("Please enter the name of a DialogTree");
+            return;
         }
-        //Save
-        
-        if(GUI.Button(new Rect(50, 0, 50, 30), "Save"))
+        //Save with that name not existing
+        if ((currentSave = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(folderPath) + "/" + savefileName + ".asset", typeof(Object)) as StartBehaviourNode) == null)
         {
-            nodeSaver.path = AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset";
-            nodeSaver.nodes = new List<StandardNodeSave>();
+            //NodeTree doesn't exist
+            //Diplay Message
+            Debug.Log("BehaviourTree " + savefileName + ".asset at " + AssetDatabase.GUIDToAssetPath(folderPath) + " doesn't exist.");
+            return;
+        }
+        //else
+        nodes = new List<BehaviourNode>();
+        connections = new List<BehaviourConnection>();
+        Object[] n = AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GUIDToAssetPath(folderPath) + "/" + savefileName + ".asset");
+        foreach(BehaviourNode s in n)
+        {
+            nodes.Add(s as BehaviourNode);
+        }
+        //nodes.AddRange(AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GUIDToAssetPath(folderPath) + "/" + savefileName + ".asset") as BehaviourNode[]);
+        for(int i = 0; i < nodes.Count; i++)
+        {
+            nodes[i].inPoint = new BehaviourConnectionPoint[nodes[i].inPoints];
+            nodes[i].outPoint = new BehaviourConnectionPoint[nodes[i].outPoints];
+            InitConnectionPoints(nodes[i]);            
+        }
+        for(int i = 0; i < nodes.Count; i++)
+        {
+            nodes[i].OnRemoveNode = OnClickRemoveNode;
+            InitConnections(nodes[i]);
+        }
+    }
+
+    public void InitConnectionPoints(BehaviourNode node)
+    {
+        for(int i = 0; i < node.inPoints; i++)
+        {
+            node.inPoint[i] = new BehaviourConnectionPoint(node, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, i, node.inPoints);
+        }
+        for(int i = 0; i < node.outPoints; i++)
+        {
+            node.outPoint[i] = new BehaviourConnectionPoint(node, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, i, node.outPoints);
+        }
+    }
+
+    public void InitConnections(BehaviourNode node)
+    {
+        //Only for out points, parent deals with inPoints
+        for(int i = 0; i < node.outPoints; i++)
+        {
+            if(node.children[i] != null)
+            {
+                node.outPoint[i].connectedNode = node.children[i];
+                node.outPoint[i].connectedNode.inPoint[0].connectedNode = node;
+                //each node has only one parent
+                connections.Add(new BehaviourConnection(node.children[i].inPoint[0], node.outPoint[i], OnClickRemoveConnection));
+            }
+        }
+    }
+
+    public void SaveNodeTree(bool saveAs)
+    {
+        if (saveAs)
+        {
+            return;
+        }
+        //User loaded a existing tree
+        if (currentSave != null)
+        {
             for (int i = 0; i < nodes.Count; i++)
             {
-                SaveBehaviourNode(nodes[i]);
+                AssetDatabase.RemoveObjectFromAsset(nodes[i]);
             }
-            nodeSaver.connections = new List<ConnectionSave>();
-            for (int i = 0; i < connections.Count; i++)
-            {
-                SaveBehaviourConnections(connections[i]);
-            }
-            AssetDatabase.SaveAssets();
+            //AssetDatabase.DeleteAsset(AssetDatabase.GUIDToAssetPath(folderPath) + "/" + savefileName + ".asset");
+
         }
+
+        //save doesnt exist
+        if (currentSave == null || !AssetDatabase.Contains(currentSave))
+        {
+            currentSave = CreateInstance<StartBehaviourNode>();
+            currentSave.name = savefileName;
+            AssetDatabase.CreateAsset(currentSave, AssetDatabase.GUIDToAssetPath(folderPath) + "/" + savefileName + ".asset");
+        }
+
+        foreach(BehaviourNode node in nodes)
+        {
+            AssetDatabase.AddObjectToAsset(node, currentSave);
+        }
+        AssetDatabase.SaveAssets();
     }
 
-    private void SaveBehaviourNode(BehaviourNode node)
-    {       
-        StandardNodeSave saveNode = CreateInstance<StandardNodeSave>();
-        saveNode.node = node;
-        saveNode.inPoint = new List<ConnectionPointSave>();
-        saveNode.outPoint = new List<ConnectionPointSave>();
-        AssetDatabase.AddObjectToAsset(saveNode, nodeSaver);
-        foreach (BehaviourConnectionPoint i in node.inPoint)
-        {
-            ConnectionPointSave saveIn = CreateInstance<ConnectionPointSave>();
-            saveIn.Init(i);
-            saveNode.inPoint.Add(saveIn);
-            AssetDatabase.AddObjectToAsset(saveIn, saveNode);
-        }
-        foreach(BehaviourConnectionPoint o in node.outPoint)
-        {
-            ConnectionPointSave saveOut = CreateInstance<ConnectionPointSave>();
-            saveOut.Init(o);
-            saveNode.outPoint.Add(saveOut);
-            AssetDatabase.AddObjectToAsset(saveOut, saveNode);
-        }
-        nodeSaver.nodes.Add(saveNode);
-        
-        
-    }
-
-    private void SaveBehaviourConnections(BehaviourConnection connection)
+    public void ResetNodePosition()
     {
-        Debug.Log("Connection: " + connection.inPoint.ToString());
-        Debug.Log("Connection: " + connection.outPoint.node.ToString());
-        ConnectionSave cSave = CreateInstance<ConnectionSave>();
-        cSave.Init(connection);
-        nodeSaver.connections.Add(cSave);
-        AssetDatabase.AddObjectToAsset(cSave, nodeSaver);
+        if (nodes.Count >= 1)
+        {
+            Vector2 offset = nodes[0].rect.position;
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                nodes[i].Drag(-offset);
+            }
+        }
     }
+
+    private void DrawLoader()
+    {
+        savefileName = GUI.TextArea(new Rect(168, 9, 350, 20), savefileName);
+        //Load
+        if (GUI.Button(new Rect(0, 0, 50, 30), "Load"))
+        {
+            LoadNodeTree();
+
+        }
+        if (GUI.Button(new Rect(57, 4, 50, 30), "Save"))
+        {
+            SaveNodeTree(false);
+        }
+        if (GUI.Button(new Rect(110, 4, 55, 30), "SaveAs"))
+        {
+            SaveNodeTree(true);
+        }
+        if (GUI.Button(new Rect(4, 34, 55, 30), "ResetPosition"))
+        {
+            ResetNodePosition();
+        }
+
+
+
+
+
+
+
+
+
+
+
+        ////Load
+        //if (GUI.Button(new Rect(0, 0, 50, 30), "Load"))
+        //{
+        //    nodes = new List<BehaviourNode>();
+        //    connections = new List<BehaviourConnection>();
+
+        //    foreach(StandardNodeSave save in nodeSaver.nodes)
+        //    {
+
+        //        save.node.inPoint = new BehaviourConnectionPoint[save.node.inPoints];
+        //        save.node.outPoint = new BehaviourConnectionPoint[save.node.outPoints];
+        //        for (int i = 0; i < save.node.inPoint.Length; i++)
+        //        {
+        //            save.node.inPoint[i] = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, i, save.node.inPoint.Length);
+        //        }
+        //        for(int o = 0; o < save.node.outPoint.Length; o++)
+        //        {
+        //            save.node.outPoint[o] = new BehaviourConnectionPoint(save.node, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, o, save.node.outPoint.Length); ;
+        //        }
+        //        save.node.OnRemoveNode = OnClickRemoveNode;
+        //        nodes.Add(save.node);
+        //    }
+        //    foreach(ConnectionSave connection in nodeSaver.connections)
+        //    {
+        //        connection.startNode.inPoint[connection.inIndex].connectedNode = connection.endNode;
+        //        connection.endNode.outPoint[connection.outIndex].connectedNode = connection.startNode;
+        //        connections.Add(new BehaviourConnection(connection.startNode.inPoint[connection.inIndex], connection.endNode.outPoint[connection.outIndex], OnClickRemoveConnection));
+        //    }
+            
+            
+        
+        //}
+        ////Save
+        
+        //if(GUI.Button(new Rect(50, 0, 50, 30), "Save"))
+        //{
+        //    nodeSaver.path = AssetDatabase.GUIDToAssetPath(folderPath) + "/Nodes.asset";
+        //    nodeSaver.nodes = new List<StandardNodeSave>();
+        //    for (int i = 0; i < nodes.Count; i++)
+        //    {
+        //        SaveBehaviourNode(nodes[i]);
+        //    }
+        //    nodeSaver.connections = new List<ConnectionSave>();
+        //    for (int i = 0; i < connections.Count; i++)
+        //    {
+        //        SaveBehaviourConnections(connections[i]);
+        //    }
+        //    AssetDatabase.SaveAssets();
+        //}
+    }
+
+    //private void SaveBehaviourNode(BehaviourNode node)
+    //{       
+    //    StandardNodeSave saveNode = CreateInstance<StandardNodeSave>();
+    //    saveNode.node = node;
+    //    saveNode.inPoint = new List<ConnectionPointSave>();
+    //    saveNode.outPoint = new List<ConnectionPointSave>();
+    //    AssetDatabase.AddObjectToAsset(saveNode, nodeSaver);
+    //    foreach (BehaviourConnectionPoint i in node.inPoint)
+    //    {
+    //        ConnectionPointSave saveIn = CreateInstance<ConnectionPointSave>();
+    //        saveIn.Init(i);
+    //        saveNode.inPoint.Add(saveIn);
+    //        AssetDatabase.AddObjectToAsset(saveIn, saveNode);
+    //    }
+    //    foreach(BehaviourConnectionPoint o in node.outPoint)
+    //    {
+    //        ConnectionPointSave saveOut = CreateInstance<ConnectionPointSave>();
+    //        saveOut.Init(o);
+    //        saveNode.outPoint.Add(saveOut);
+    //        AssetDatabase.AddObjectToAsset(saveOut, saveNode);
+    //    }
+    //    nodeSaver.nodes.Add(saveNode);
+        
+        
+    //}
+
+    //private void SaveBehaviourConnections(BehaviourConnection connection)
+    //{
+    //    Debug.Log("Connection: " + connection.inPoint.ToString());
+    //    Debug.Log("Connection: " + connection.outPoint.node.ToString());
+    //    ConnectionSave cSave = CreateInstance<ConnectionSave>();
+    //    cSave.Init(connection);
+    //    nodeSaver.connections.Add(cSave);
+    //    AssetDatabase.AddObjectToAsset(cSave, nodeSaver);
+    //}
 
     private void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
     {
@@ -329,11 +472,15 @@ public class BehaviourTreeEditor : EditorWindow
     private void ProcessContextMenu(Vector2 mousePosition)
     {
         GenericMenu genericMenu = new GenericMenu();
+        genericMenu.AddItem(new GUIContent("Add BehaviourStartNode"), false, () => OnClickAddStartBehaviourNode(mousePosition));
         genericMenu.AddItem(new GUIContent("Add BehaviourNode"), false, () => OnClickAddBehaviourNode(mousePosition));
         genericMenu.AddItem(new GUIContent("Add Selector"), false, () => OnClickAddSelector(mousePosition));
         genericMenu.AddItem(new GUIContent("Add Sequence"), false, () => OnClickAddSequence(mousePosition));
-        genericMenu.AddItem(new GUIContent("Add Decorator"), false, () => OnClickAddDecorator(mousePosition));
-        genericMenu.AddItem(new GUIContent("Add TestBehaviour"), false, () => OnClickAddTestBehaviour(mousePosition));
+        
+        genericMenu.AddItem(new GUIContent("Iterator"), false, () => OnClickAddIterator(mousePosition));
+        genericMenu.AddItem(new GUIContent("Inverter"), false, () => OnClickAddInverter(mousePosition));
+        genericMenu.AddItem(new GUIContent("Add EnemyNear"), false, () => OnClickAddEnemyNear(mousePosition));
+        genericMenu.AddItem(new GUIContent("Add GoToNode"), false, () => OnClickAddGoToNode(mousePosition));
         genericMenu.ShowAsContext();
         
     }
@@ -358,9 +505,7 @@ public class BehaviourTreeEditor : EditorWindow
             nodes = new List<BehaviourNode>();
         }
         BaseBehaviourNode b = ScriptableObject.CreateInstance<BaseBehaviourNode>();     
-        b.CreateBaseBehaviour(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 1);
-
-        AssetDatabase.AddObjectToAsset(b, nodeSaver);
+        b.CreateBaseBehaviour(mousePosition, 250, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 1, "BaseBehaviour");
         nodes.Add(b);
 
         AssetDatabase.SaveAssets();
@@ -372,6 +517,9 @@ public class BehaviourTreeEditor : EditorWindow
         {
             nodes = new List<BehaviourNode>();
         }
+        Selector s = CreateInstance<Selector>();
+        s.CreateSelectorNode(mousePosition, 250, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 2, "Selector");
+        nodes.Add(s);
     }
 
     private void OnClickAddSequence(Vector2 mousePosition)
@@ -380,24 +528,63 @@ public class BehaviourTreeEditor : EditorWindow
         {
             nodes = new List<BehaviourNode>();
         }
+        Sequence s = CreateInstance<Sequence>();
+        s.CreateSequenceNode(mousePosition, 250, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 2, "Sequence");
+        nodes.Add(s);
     }
 
-    private void OnClickAddDecorator(Vector2 mousePosition)
+        private void OnClickAddStartBehaviourNode(Vector2 mousePosition)
     {
         if (nodes == null)
         {
             nodes = new List<BehaviourNode>();
         }
+        StartBehaviourNode s = CreateInstance<StartBehaviourNode>();
+        s.CreateStartBehaviour(mousePosition, 250, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 0, 1, "BehaviourStart");
+        nodes.Add(s);
     }
 
-    private void OnClickAddTestBehaviour(Vector2 mousePosition)
+    private void OnClickAddIterator(Vector2 mousePosition)
     {
         if (nodes == null)
         {
             nodes = new List<BehaviourNode>();
         }
-        TestBehaviourNode t = ScriptableObject.CreateInstance<TestBehaviourNode>();
-        GameObject g = new GameObject();
+        Iterator t = CreateInstance<Iterator>();
+        t.CreateIteratorNode(mousePosition, 150, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 1, "Iterator");
+        nodes.Add(t);
+    }
+
+    private void OnClickAddEnemyNear(Vector2 mousePosition)
+    {
+        if (nodes == null)
+        {
+            nodes = new List<BehaviourNode>();
+        }
+        EnemyNear t = CreateInstance<EnemyNear>();
+        t.CreateEnemyNearNode(mousePosition, 175, 175, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 0, "EnemyNear");
+        nodes.Add(t);
+    }
+
+    private void OnClickAddGoToNode(Vector2 mousePosition)
+    {
+        if (nodes == null)
+        {
+            nodes = new List<BehaviourNode>();
+        }
+        GoToBehaviourNode t = CreateInstance<GoToBehaviourNode>();
+        t.CreateGoToBehaviourNode(mousePosition, 150, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 0, "GoTo");
+        nodes.Add(t);
+    }
+
+    private void OnClickAddInverter(Vector2 mousePosition)
+    {
+        if (nodes == null)
+        {
+            nodes = new List<BehaviourNode>();
+        }
+        Inverter t = CreateInstance<Inverter>();
+        t.CreateInverterNode(mousePosition, 150, 175, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 1, "Inverter");
         nodes.Add(t);
     }
 
@@ -463,7 +650,8 @@ public class BehaviourTreeEditor : EditorWindow
             }
             foreach(BehaviourConnection connect in connectionsToRemove)
             {
-                connections.Remove(connect);
+                // connections.Remove(connect);
+                OnClickRemoveConnection(connect);
             }
             connectionsToRemove = null;
 
@@ -476,6 +664,7 @@ public class BehaviourTreeEditor : EditorWindow
 
     private void OnClickRemoveConnection(BehaviourConnection connection)
     {
+        connection.outPoint.node.children[connection.outPoint.index] = null;
         connection.inPoint.connectedNode = null;
         connection.inPoint.node.parent = null;
         connection.outPoint.connectedNode = null;
@@ -491,6 +680,7 @@ public class BehaviourTreeEditor : EditorWindow
         selectedInPoint.node.parent = selectedOutPoint.node;
         selectedInPoint.connectedNode = selectedOutPoint.node;
         selectedOutPoint.connectedNode = selectedInPoint.node;
+        selectedOutPoint.node.children[selectedOutPoint.index] = selectedInPoint.node;
         BehaviourConnection beCon = new BehaviourConnection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection);
         connections.Add(beCon);
     }

@@ -7,8 +7,6 @@ using UnityEngine;
 namespace DialogTree
 {
 
-
-
     public class DialogTreeEditor : EditorWindow
     {
 

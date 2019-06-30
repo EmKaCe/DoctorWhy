@@ -120,6 +120,7 @@ public class AStarAlgorithm
 
         path = Backtrack();
         path.Reverse();
+        path[path.Count - 1] = endPos;
         //foreach(Vector3 v in path)
         //{
         //    Debug.Log(v);
@@ -131,51 +132,56 @@ public class AStarAlgorithm
     public void FindPath(Coord end)
     {
         Waypoint start = FindClosestTile();
-        openList.Remove(start);
-        closedList.Add(start);
-        for(int i = 0; i < 8; i++)
+        if(start != null)
         {
-            Waypoint p = new Waypoint(new Coord(start.position.x + mask[i].x, start.position.y + mask[i].y), start.g + mask[i].weight, 0, start.position);
-            //return if end is reached
-            if (p.position.Equals(end))
+            openList.Remove(start);
+            closedList.Add(start);
+            for (int i = 0; i < 8; i++)
             {
-                closedList.Add(p);
-                return;
-            }
-            float z = tilemap.GetComponent<Transform>().position.z;
-
-            //Calc H in case that p isn't in openList or is replacing old one
-            p.h = CalcH(p.position, end);
-            if (IsWalkable(new Vector2Int(p.position.x, p.position.y), new Vector2Int(start.position.x, start.position.y), mask[i].diagonal))
-            {
-                if (closedList.Contains(p))
+                Waypoint p = new Waypoint(new Coord(start.position.x + mask[i].x, start.position.y + mask[i].y), start.g + mask[i].weight, 0, start.position);
+                //return if end is reached
+                if (p.position.Equals(end))
                 {
-
+                    closedList.Add(p);
+                    return;
                 }
-                else if (openList.Contains(p))
+                float z = tilemap.GetComponent<Transform>().position.z;
+
+                //Calc H in case that p isn't in openList or is replacing old one
+                p.h = CalcH(p.position, end);
+                if (IsWalkable(new Vector2Int(p.position.x, p.position.y), new Vector2Int(start.position.x, start.position.y), mask[i].diagonal))
                 {
-                    Waypoint oldP = openList.Find(w => w.Equals(p));
-                    float distance = CalcF(p);
-                    if(distance < CalcF(oldP))
+                    if (closedList.Contains(p))
                     {
-                        openList.Remove(oldP);
+
+                    }
+                    else if (openList.Contains(p))
+                    {
+                        Waypoint oldP = openList.Find(w => w.Equals(p));
+                        float distance = CalcF(p);
+                        if (distance < CalcF(oldP))
+                        {
+                            openList.Remove(oldP);
+                            openList.Add(p);
+                        }
+                    }
+                    else
+                    {
                         openList.Add(p);
                     }
                 }
-                else
-                {
-                    openList.Add(p);
-                }
             }
+            FindPath(end);
         }
-        FindPath(end);
-
-        
+        else
+        {
+            Debug.Log("Position can't be reached");
+        }
     }
 
     private Waypoint FindClosestTile()
     {
-        Waypoint waypoint = new Waypoint(new Coord(0, 0), 10000, 10000, new Coord(0,1));
+        Waypoint waypoint = null;
         float distance = 10000;
         foreach (Waypoint w in openList)
         {
@@ -262,6 +268,34 @@ public class AStarAlgorithm
            // path.Add(layout.CellToWorld(new Vector3Int(wp.position.x, wp.position.y, 0)));
         }
         return path;
+    }
+
+    public List<Vector3> CheckPath(List<Vector3> oldPath, List<Vector3> newPath)
+    {
+        if(oldPath.Count >= newPath.Count)
+        {
+            return oldPath;
+        }
+        return newPath;
+
+
+
+        //if(oldPath.Count < 5)
+        //{
+        //    if(oldPath.Count > 1)
+        //    {
+        //        Debug.Log("old");
+        //        return oldPath;
+        //    }
+            
+        //}
+        //if(oldPath[1] == newPath[2])
+        //{
+        //    Debug.Log("new");
+        //    return newPath;
+        //}
+        //Debug.Log("new");
+        //return newPath;
     }
 
 }
