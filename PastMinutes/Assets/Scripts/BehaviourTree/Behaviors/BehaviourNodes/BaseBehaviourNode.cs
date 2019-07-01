@@ -13,8 +13,6 @@ public class BaseBehaviourNode : BehaviourNode
     public BaseBehaviour behaviour;
     
 
-    private SerializedProperty serializedBehaviour;
-
     private Vector2 pos;
 
     public void CreateBaseBehaviour(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
@@ -22,7 +20,6 @@ public class BaseBehaviourNode : BehaviourNode
         base.CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints, nodeName);
         pos = position;
         rectContent = new Rect(position.x + offset, position.y + rowHeight, width - (2 * offset), height - rowHeight);
-        serializedBehaviour = new SerializedObject(this).FindProperty("behaviour");
     }
 
 
