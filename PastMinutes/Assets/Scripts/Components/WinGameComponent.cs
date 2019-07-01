@@ -23,6 +23,7 @@ public class WinGameComponent : MonoBehaviour
     public GameObject Past;
     private bool triggerDialog=false;
     public GameObject UI;
+    public GameObject Player;
 
     private string AIName = "Spaceship AI";
     // Start is called before the first frame update
@@ -96,6 +97,7 @@ public class WinGameComponent : MonoBehaviour
                 if (Time.time >= end) //we've waited for 5 seconds
                 {
                     EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
+                    resetPlayerPosition();
                     EventManager.TriggerEvent(EventSystem.TriggerDialog(),FalseWinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { FalseWinAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
                     Debug.Log("triggering FalseWinAi");
                     falseWin = false;
@@ -114,7 +116,9 @@ public class WinGameComponent : MonoBehaviour
                     if (Time.time >= end) //we've waited for 5 seconds
                     {
                         EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
-                        EventManager.TriggerEvent(EventSystem.TriggerDialog(),ForceResetAI.GetComponentInParent<EntityComponent>().entityID, new string[] { FalseWinAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
+                        resetPlayerPosition();
+
+                        EventManager.TriggerEvent(EventSystem.TriggerDialog(),ForceResetAI.GetComponentInParent<EntityComponent>().entityID, new string[] { ForceResetAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
                         forceReset = false;
                         Debug.Log("force Reset over");
                         tanim.Play("notterrafomring");
@@ -130,7 +134,7 @@ public class WinGameComponent : MonoBehaviour
     
     public void Win(int empty, string[] empty2)
     {
-        readDialog = Time.time + 10.0f;
+        readDialog = Time.time + 20.0f;
         end = Time.time + 5.0f;
         //Debug.Log("started Win Event");
         win = true;
@@ -147,5 +151,10 @@ public class WinGameComponent : MonoBehaviour
     {
         end = Time.time + 5.0f;
         falseWin = true;
+    }
+
+    public void resetPlayerPosition()
+    {
+        Player.transform.position = new Vector3(-74.57f, -146.75f, -1.5f);
     }
 }

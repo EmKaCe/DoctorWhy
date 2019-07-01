@@ -91,8 +91,9 @@ public class TimeTravelComponent : MonoBehaviour
                     Debug.Log("Zeit abgelaufen");
                     block = 4.7f;
                     EventManager.TriggerEvent(EventSystem.ForceReset(), 0, new string[] { });
+
                 }
-                
+
                 //Done
                 secondsToEnd -= Time.deltaTime;
                 if (secondsToEnd <= -5.0f)

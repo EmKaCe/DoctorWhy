@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class FirstDialogComponent : MonoBehaviour
 {
     public GameObject StartAI;
+    public GameObject Past;
     private bool called = false;
     // Start is called before the first frame update
     void Start()
