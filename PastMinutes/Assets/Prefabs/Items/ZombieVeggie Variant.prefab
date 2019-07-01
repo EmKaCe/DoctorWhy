@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7686922096661811681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578769492270829412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac2d162df50d4f48b9ea743237ded36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdToInteract: 0
+  interactionMessage: 
+  dialogTree: {fileID: 11400000, guid: 5037a96be61118a4b8c8494e7b049e6d, type: 2}
+  talking: 0
+  prerequisites: []
 --- !u!1001 &4793320418904504377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 3145897606684817245, guid: d30da5f52d98dcc4bad9f300a2bde7e5,
         type: 3}
       propertyPath: m_Name
-      value: ZombieVeggie
+      value: ZombieVeggie Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3145897606684817240, guid: d30da5f52d98dcc4bad9f300a2bde7e5,
         type: 3}
@@ -72,5 +89,16 @@ PrefabInstance:
       propertyPath: itemName
       value: ZombieVeggie
       objectReference: {fileID: 0}
+    - target: {fileID: 3145897606684817244, guid: d30da5f52d98dcc4bad9f300a2bde7e5,
+        type: 3}
+      propertyPath: interactionMessage
+      value: Press e to Pick up Zombie Veggie
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d30da5f52d98dcc4bad9f300a2bde7e5, type: 3}
+--- !u!1 &7578769492270829412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3145897606684817245, guid: d30da5f52d98dcc4bad9f300a2bde7e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4793320418904504377}
+  m_PrefabAsset: {fileID: 0}

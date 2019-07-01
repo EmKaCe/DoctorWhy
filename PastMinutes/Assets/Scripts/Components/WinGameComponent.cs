@@ -23,6 +23,7 @@ public class WinGameComponent : MonoBehaviour
     public GameObject Past;
     private bool triggerDialog=false;
     public GameObject UI;
+    public GameObject Player;
 
     private string AIName = "Spaceship AI";
     // Start is called before the first frame update
@@ -46,28 +47,31 @@ public class WinGameComponent : MonoBehaviour
         winGameListener = new UnityAction<int, string[]>(Win);
         falseWinListener = new UnityAction<int, string[]>(FalseWin);
         forceResetListener = new UnityAction<int, string[]>(ForceReset);
+        
     }
+
     // Update is called once per frame
     void Update()
     {
         if (win) //event WinGame has been called somewhere (NPCAction WinGame in Dialog TarraformingDialog)
         {
-            tanim.Play("win terraforming");
-            EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
-            //play for 5 seconds. 
+            if (Time.time < end)
+            {
+                Debug.Log("WinRoutine");
+                tanim.Play("terraforming");
+                EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
+                //play for 5 seconds. 
+            }
 
             if (Time.time >= end) //we've waited for 5 seconds
             {
-                Present.SetActive(false);
-                Past.SetActive(true);
                 //keep from going forward in time
                 tanim.Play("notterrafomring");
                
                 //don't keep looping even though we've already won.
                 if (!triggerDialog) {
                     triggerDialog = true;
-                    EventManager.TriggerEvent(EventSystem.BeginConversation(),
-                    WinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
+                    EventManager.TriggerEvent(EventSystem.TriggerDialog(),WinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { WinAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
                 }
 
                 if (Time.time >=readDialog) {
@@ -84,21 +88,20 @@ public class WinGameComponent : MonoBehaviour
         }
         else
         {
-            tanim.Play("notterrafomring");
             //we havent won yet, check for falseWin
             if (falseWin) //Dr Shila tricked us
             {
-                tanim.Play("false win terraforming");
-                Present.SetActive(true);
-                Past.SetActive(false);
+                Debug.Log("falseWinRoutine");
+                tanim.Play("terraforming");
                 EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
                 if (Time.time >= end) //we've waited for 5 seconds
                 {
-                    Present.SetActive(false);
-                    Past.SetActive(true);
-                    EventManager.TriggerEvent(EventSystem.BeginConversation(),
-                    FalseWinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
+                    EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
+                    resetPlayerPosition();
+                    EventManager.TriggerEvent(EventSystem.TriggerDialog(),FalseWinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { FalseWinAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
+                    Debug.Log("triggering FalseWinAi");
                     falseWin = false;
+                    tanim.Play("notterrafomring");
                 }
 
             }
@@ -106,18 +109,24 @@ public class WinGameComponent : MonoBehaviour
             { //check for ForceReset
                 if (forceReset)
                 {
-                    tanim.Play("false win terraforming");
-                    Present.SetActive(true);
-                    Past.SetActive(false);
+                    //Debug.Log("forceReset" + forceReset);
+                    Debug.Log("forceResetRoutine");
+                    tanim.Play("terraforming");
                     EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
                     if (Time.time >= end) //we've waited for 5 seconds
                     {
-                        Present.SetActive(false);
-                        Past.SetActive(true);
-                        EventManager.TriggerEvent(EventSystem.BeginConversation(),
-                        ForceResetAI.GetComponentInParent<EntityComponent>().entityID, new string[] { AIName });
+                        EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
+                        resetPlayerPosition();
+
+                        EventManager.TriggerEvent(EventSystem.TriggerDialog(),ForceResetAI.GetComponentInParent<EntityComponent>().entityID, new string[] { ForceResetAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
                         forceReset = false;
+                        Debug.Log("force Reset over");
+                        tanim.Play("notterrafomring");
                     }
+                }
+                else
+                {
+                    tanim.Play("notterrafomring");
                 }
             }
         }
@@ -125,15 +134,16 @@ public class WinGameComponent : MonoBehaviour
     
     public void Win(int empty, string[] empty2)
     {
-        readDialog = Time.time + 30.0f;
+        readDialog = Time.time + 20.0f;
         end = Time.time + 5.0f;
-        Debug.Log("started Win Event");
+        //Debug.Log("started Win Event");
         win = true;
 
         //anim.Play("notterraforming");
     }
     public void ForceReset(int empty, string[] empty2)
     {
+        //Debug.Log("ForceReset got called");
         end = Time.time + 5.0f;
         forceReset = true;
     }
@@ -141,5 +151,10 @@ public class WinGameComponent : MonoBehaviour
     {
         end = Time.time + 5.0f;
         falseWin = true;
+    }
+
+    public void resetPlayerPosition()
+    {
+        Player.transform.position = new Vector3(-74.57f, -146.75f, -1.5f);
     }
 }

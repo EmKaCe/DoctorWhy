@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6904446439859741444}
   - component: {fileID: 4079158793310269984}
   - component: {fileID: 7092022480137619542}
+  - component: {fileID: -2104214612243454354}
   m_Layer: 0
   m_Name: ZombieVeggie Box Variant  Variant
   m_TagString: Untagged
@@ -132,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdToInteract: 0
-  interactionMessage: 
+  interactionMessage: Press e to pick up Zombie Veggie
 --- !u!114 &4079158793310269984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +180,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26.64483, y: 26.51708}
   m_EdgeRadius: 0
+--- !u!114 &-2104214612243454354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904446439859741445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac2d162df50d4f48b9ea743237ded36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdToInteract: 0
+  interactionMessage: 
+  dialogTree: {fileID: 11400000, guid: 5037a96be61118a4b8c8494e7b049e6d, type: 2}
+  talking: 0
+  prerequisites: []
 --- !u!1001 &1558607224791780269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -245,6 +263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'ZombieVeggie Box Variant '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5364011971708364969, guid: 0003179a138ed8544b53642216672fb1,
+        type: 3}
+      propertyPath: interactionMessage
+      value: Press e to pick up Zombie Veggie
       objectReference: {fileID: 0}
     - target: {fileID: 5364011971708364971, guid: 0003179a138ed8544b53642216672fb1,
         type: 3}

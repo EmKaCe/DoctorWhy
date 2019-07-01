@@ -30,6 +30,7 @@ public class EventSystem : MonoBehaviour {
     /// <para>string[]: damage as float, entityID of entity that caused damage</para>
     /// </summary>
     /// 
+
     public static string CameraShake()
     {
         return "CameraShake";
