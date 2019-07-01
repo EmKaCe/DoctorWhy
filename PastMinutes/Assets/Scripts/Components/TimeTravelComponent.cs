@@ -13,17 +13,16 @@ public class TimeTravelComponent : MonoBehaviour
     private float timeInPast; //total possible time in the time loop 
     private float secondsToEnd; //time left till ForceReset
     private bool inPast;
-    private float block=0.0f;
+    private float block = 0.0f;
     [Tooltip("when active, player can travel through time")]
     public bool active;
     UnityAction<int, string[]> timeTravelListener;
     UnityAction<int, string[]> itemPickUpListener;
     UnityAction<int, string[]> winGameListener;
     UnityAction<int, string[]> falseWinListener;
-    private float loop=0;
+    private float loop = 0;
     public TextMeshProUGUI currentTimeLoopTextBox;
-    public TextMeshProUGUI catastropheTextTextBox;
-    public TextMeshProUGUI catastropheValueTextBox;
+    public TextMeshProUGUI catastropheTextBox;
     private bool ForceTriggered = false;
     private bool win = false;
 
@@ -47,46 +46,30 @@ public class TimeTravelComponent : MonoBehaviour
         {
             EventManager.StartListening(EventSystem.ItemAdded(), itemPickUpListener);
         }
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        //Debug.Log("in past" + inPast);
+        Debug.Log(gameObject.name);
+        Debug.Log("in past" + inPast);
         Debug.Log("time left:" + secondsToEnd);
         block -= Time.deltaTime;
-
-
-        if(inPast)
-        {
-            if(!catastropheTextTextBox.IsActive())
-            {
-                catastropheTextTextBox.gameObject.SetActive(true);
-                catastropheValueTextBox.gameObject.SetActive(true);
-            }
-            catastropheValueTextBox.text = Math.Round((Decimal)secondsToEnd, 1, MidpointRounding.AwayFromZero).ToString();
-        }
-        else
-        {
-            if(catastropheTextTextBox.IsActive())
-            {
-                catastropheTextTextBox.gameObject.SetActive(false);
-                catastropheValueTextBox.gameObject.SetActive(false);
-            }
-        }
+        catastropheTextBox.text = ((int)secondsToEnd).ToString();
 
         if (inPast)
         {
             //reduce timer
-            if(secondsToEnd > 0.0f&&!win)
+            if (secondsToEnd > 0.0f && !win)
             {
-                Debug.Log("time left:"+ secondsToEnd);
+                Debug.Log("time left:" + secondsToEnd);
                 secondsToEnd -= Time.deltaTime;
             }
-            else if(secondsToEnd<=0.0f) {
-                if (!ForceTriggered) {
+            else if (secondsToEnd <= 0.0f)
+            {
+                if (!ForceTriggered)
+                {
                     ForceTriggered = true;
                     Debug.Log("Zeit abgelaufen");
                     block = 4.7f;
@@ -109,7 +92,7 @@ public class TimeTravelComponent : MonoBehaviour
             }
 
         }
-        
+
     }
 
     public void TravelTime(int empty, string[] empty2)
@@ -129,7 +112,7 @@ public class TimeTravelComponent : MonoBehaviour
                 Debug.Log("blocked travel attempt");
             }
         }
-        
+
     }
 
     private void Awake()
@@ -138,9 +121,9 @@ public class TimeTravelComponent : MonoBehaviour
         itemPickUpListener = new UnityAction<int, string[]>(CheckParent);
         winGameListener = new UnityAction<int, string[]>(BlockInfinite);
         falseWinListener = new UnityAction<int, string[]>(FalseWin);
-        
+
     }
-    public void BlockInfinite (int empty, string[] empty2)
+    public void BlockInfinite(int empty, string[] empty2)
     {
         block = 20f;
         //secondsToEnd = 0.1f;
@@ -149,7 +132,7 @@ public class TimeTravelComponent : MonoBehaviour
     public void FalseWin(int empty, string[] empty2)
     {
         block = 4.7f;
-        secondsToEnd = timeInPast+5.0f;
+        secondsToEnd = timeInPast + 5.0f;
         loop++;
 
         //Emre setloopIn UI
@@ -159,7 +142,8 @@ public class TimeTravelComponent : MonoBehaviour
 
     public void CheckParent(int itemID, string[] entityIDandItemName)
     {
-        if (EntityManager.GetEntityComponent<EntityComponent>(itemID).gameObject.Equals(gameObject)){
+        if (EntityManager.GetEntityComponent<EntityComponent>(itemID).gameObject.Equals(gameObject))
+        {
             active = true;
             EventManager.StopListening(EventSystem.ItemAdded(), itemPickUpListener);
             //EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
