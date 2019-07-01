@@ -20,11 +20,13 @@ public class TimeTravelComponent : MonoBehaviour
     UnityAction<int, string[]> itemPickUpListener;
     UnityAction<int, string[]> winGameListener;
     UnityAction<int, string[]> falseWinListener;
+    UnityAction<int, string[]> freezeListener;
+    UnityAction<int, string[]> thawListener;
     private float loop = 0;
     public TextMeshProUGUI currentTimeLoopTextBox;
     public TextMeshProUGUI catastropheTextBox;
     private bool ForceTriggered = false;
-    private bool win = false;
+    private bool freeze = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,8 @@ public class TimeTravelComponent : MonoBehaviour
         EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
         EventManager.StartListening(EventSystem.WinGame(), winGameListener);
         EventManager.StartListening(EventSystem.FalseWin(), falseWinListener);
+        EventManager.StartListening(EventSystem.FreezeTimer(), freezeListener);
+        EventManager.StartListening(EventSystem.ThawTimer(), thawListener);
 
         if (present == null || past == null)
         {
@@ -61,7 +65,7 @@ public class TimeTravelComponent : MonoBehaviour
         if (inPast)
         {
             //reduce timer
-            if (secondsToEnd > 0.0f && !win)
+            if (secondsToEnd > 0.0f && !freeze)
             {
                 Debug.Log("time left:" + secondsToEnd);
                 secondsToEnd -= Time.deltaTime;
@@ -97,7 +101,7 @@ public class TimeTravelComponent : MonoBehaviour
 
     public void TravelTime(int empty, string[] empty2)
     {
-        if (active)
+        if (active&&!freeze)
         {
             if (block <= 0.0f)
             {
@@ -121,13 +125,15 @@ public class TimeTravelComponent : MonoBehaviour
         itemPickUpListener = new UnityAction<int, string[]>(CheckParent);
         winGameListener = new UnityAction<int, string[]>(BlockInfinite);
         falseWinListener = new UnityAction<int, string[]>(FalseWin);
+        freezeListener = new UnityAction<int, string[]>(Freeze);
+        thawListener = new UnityAction<int, string[]>(Thaw);
 
     }
     public void BlockInfinite(int empty, string[] empty2)
     {
         block = 20f;
         //secondsToEnd = 0.1f;
-        win = true;
+        freeze = true;
     }
     public void FalseWin(int empty, string[] empty2)
     {
@@ -149,5 +155,13 @@ public class TimeTravelComponent : MonoBehaviour
             //EventManager.StartListening(EventSystem.TravelTime(), timeTravelListener);
         }
 
+    }
+    public void Freeze(int empty, string[] empty2)
+    {
+        freeze = true;
+    }
+    public void Thaw(int empty, string[] empty2)
+    {
+        freeze = false;
     }
 }

@@ -71,6 +71,7 @@ public class WinGameComponent : MonoBehaviour
                 //don't keep looping even though we've already won.
                 if (!triggerDialog) {
                     triggerDialog = true;
+                    EventManager.TriggerEvent(EventSystem.EndDialog(), 0,  new string[] {});
                     EventManager.TriggerEvent(EventSystem.TriggerDialog(),WinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { WinAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
                 }
 
@@ -96,6 +97,7 @@ public class WinGameComponent : MonoBehaviour
                 EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
                 if (Time.time >= end) //we've waited for 5 seconds
                 {
+                    EventManager.TriggerEvent(EventSystem.EndDialog(), 0, new string[] { });
                     EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
                     resetPlayerPosition();
                     EventManager.TriggerEvent(EventSystem.TriggerDialog(),FalseWinAI.GetComponentInParent<EntityComponent>().entityID, new string[] { FalseWinAI.GetComponentInParent<EntityComponent>().entityID+"", AIName });
@@ -115,6 +117,7 @@ public class WinGameComponent : MonoBehaviour
                     EventManager.TriggerEvent(EventSystem.CameraShake(), 0, new string[] { });
                     if (Time.time >= end) //we've waited for 5 seconds
                     {
+                        EventManager.TriggerEvent(EventSystem.EndDialog(), 0, new string[] { });
                         EventManager.TriggerEvent(EventSystem.TravelTime(), 0, new string[] { });
                         resetPlayerPosition();
 

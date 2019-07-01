@@ -19,6 +19,7 @@ public class DialogComponent : InteractionComponent
     //UnityAction<int, string[]> conversationStartListener;
     UnityAction<int, string[]> conversationProgressListener;
     UnityAction<int, string[]> triggerDialogListener;
+    UnityAction<int, string[]> endDialogListener;
 
 
     protected override void Awake()
@@ -26,6 +27,7 @@ public class DialogComponent : InteractionComponent
         base.Awake();
         conversationProgressListener = new UnityAction<int, string[]>(GetDialog);
         triggerDialogListener = new UnityAction<int, string[]>(TriggerDialog);
+        endDialogListener = new UnityAction<int, string[]>(Quit);
     }
 
     // Start is called before the first frame update
@@ -48,6 +50,7 @@ public class DialogComponent : InteractionComponent
         //standard.ForEach(d => d.option = UIDialogItem.DialogOption.standardNode);
         //standardDialog = standard.ToArray();
         EventManager.StartListening(EventSystem.TriggerDialog(), triggerDialogListener);
+        EventManager.StartListening(EventSystem.EndDialog(), endDialogListener);
     }
 
     public UIDialogItem[] GetCurrentDialog()
@@ -134,6 +137,7 @@ public class DialogComponent : InteractionComponent
     public void EndConversation()
     {
         talking = false;
+        EventManager.TriggerEvent(EventSystem.ThawTimer(), 0, new string[] { });
         EventManager.TriggerEvent(EventSystem.EndConversation(), gameObject.GetComponentInParent<EntityComponent>().entityID, new string[] { });
         EventManager.StopListening(EventSystem.GetDialogOptions(), conversationProgressListener);
     }
@@ -150,12 +154,13 @@ public class DialogComponent : InteractionComponent
     public override void Action(int entityId, string[] values)
     {
         EventManager.TriggerEvent(EventSystem.StowGun(), entityId, new string[] { });
+        EventManager.TriggerEvent(EventSystem.FreezeTimer(), 0, new string[] { });
         BeginConversation();
     }
 
     public override void Quit(int entityId, string[] values)
     {
-        //do nothing
+        StopInteraction();
     }
 
     public override void ComponentHasParent()

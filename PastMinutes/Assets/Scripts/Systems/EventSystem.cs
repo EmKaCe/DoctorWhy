@@ -31,6 +31,15 @@ public class EventSystem : MonoBehaviour {
     /// </summary>
     /// 
 
+    public static string FreezeTimer()
+    {
+        return "FreezeTimer";
+    }
+
+    public static string ThawTimer()
+    {
+        return "ThawTimer";
+    }
     public static string CameraShake()
     {
         return "CameraShake";
@@ -88,6 +97,11 @@ public class EventSystem : MonoBehaviour {
     public static string TriggerDialog()
     {
         return "TriggerDialog";
+    }
+
+    public static string EndDialog()
+    {
+        return "EndDialog";
     }
 
     /// <summary>
