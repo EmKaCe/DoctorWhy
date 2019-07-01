@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerComponent : MonoBehaviour
 {
     public string standardSpriteSheet;
+    public float damage;
+    public float timeBetweenAttacks;
+    public float meleeRange;
 
 
     public Sprite GetHead()

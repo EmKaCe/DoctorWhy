@@ -11,13 +11,23 @@ public class Blackboard : ScriptableObject
     public GridLayout layout;
     public Tilemap map;
     public List<Tilemap> collider;
+    public Dictionary<string, Patrol> patrolRoutes;
+    public Dictionary<string, int> enemies;
+    public Dictionary<string, float> distances;
+    /// <summary>
+    /// should something be updated every tick
+    /// </summary>
+    public Dictionary<string, bool> tickUpdate;
 
     public void Initialize()
     {
         
         positions = new Dictionary<string, Vector3>();
         waypoints = new Dictionary<string, List<Vector3>>();
-        Debug.Log("bae");
+        patrolRoutes = new Dictionary<string, Patrol>();
+        enemies = new Dictionary<string, int>();
+        distances = new Dictionary<string, float>();
+        tickUpdate = new Dictionary<string, bool>();
 
     }
 }

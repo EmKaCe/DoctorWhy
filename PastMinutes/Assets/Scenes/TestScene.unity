@@ -410,6 +410,7 @@ MonoBehaviour:
   blackboard: {fileID: 11400000, guid: f29621be92fbeba40a89b67e5d221cbc, type: 2}
   viewDistance: 0
   movementSpeed: 0
+  patrol: {fileID: 0}
 --- !u!4 &49582507
 Transform:
   m_ObjectHideFlags: 0
@@ -29095,7 +29096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258f567e362c09b40af95d892a8b4783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startNode: {fileID: 11400000, guid: 261952efaec52ce4895748ed21022133, type: 2}
+  startNode: {fileID: 11400000, guid: 3280a4adbf0de7545bbca3497e57ca3e, type: 2}
   layout: {fileID: 787748121}
   map: {fileID: 1937668254}
   collision:
@@ -29105,6 +29106,7 @@ MonoBehaviour:
   blackboard: {fileID: 11400000, guid: f29621be92fbeba40a89b67e5d221cbc, type: 2}
   viewDistance: 8
   movementSpeed: 5
+  patrol: {fileID: 11400000, guid: 39ffaa0d049941543a7c4e11d2ef995f, type: 2}
 --- !u!114 &995710635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35389,6 +35391,21 @@ PrefabInstance:
         type: 3}
       propertyPath: standardSpriteSheet
       value: zombieSpritesheet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152010326296606, guid: 2abd2c605e835ba4b9c55e652ecf510c,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152010326296606, guid: 2abd2c605e835ba4b9c55e652ecf510c,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649152010326296606, guid: 2abd2c605e835ba4b9c55e652ecf510c,
+        type: 3}
+      propertyPath: meleeRange
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9213745710047445045, guid: 2abd2c605e835ba4b9c55e652ecf510c,
         type: 3}

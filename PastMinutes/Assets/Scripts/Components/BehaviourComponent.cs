@@ -14,6 +14,8 @@ public class BehaviourComponent : MonoBehaviour
     public Blackboard blackboard;
     public float viewDistance;
     public float movementSpeed;
+    public Patrol patrol;
+    private string id;
     void Start()
     {
         blackboard.Initialize();
@@ -24,11 +26,18 @@ public class BehaviourComponent : MonoBehaviour
             new Vector3(29, -10, 0),
             new Vector3(30, 1, 0)
         };
+        id = gameObject.GetInstanceID().ToString();
         blackboard.waypoints.Add("Waypoint", waypoints);
         blackboard.map = map;
         blackboard.layout = layout;
         blackboard.collider = collision;
+        blackboard.patrolRoutes.Add("Waypoint" + id, patrol);
+        blackboard.distances.Add("Visual" + id, viewDistance);
+        blackboard.tickUpdate.Add("Enemy" + id, true);
+        blackboard.tickUpdate.Add("Patrol" + id, false);
+        blackboard.distances.Add("Melee" + id, gameObject.GetComponent<PlayerComponent>().meleeRange);
         startNode.Initialize(gameObject);
+        
     }
 
     // Update is called once per frame
@@ -36,6 +45,11 @@ public class BehaviourComponent : MonoBehaviour
     {
         startNode.Init();
         startNode.Run();
+    }
+
+    public string GetID()
+    {
+        return id;
     }
 
 }

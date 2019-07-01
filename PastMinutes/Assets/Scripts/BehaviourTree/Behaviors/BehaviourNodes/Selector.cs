@@ -15,7 +15,17 @@ public class Selector : BehaviourNode
         rectContent = new Rect(position.x + offset, position.y + 2 * rowHeight, width - (2 * offset), height - rowHeight);
     }
 
+    public override void Draw()
+    {
+        base.Draw();
+        GUILayout.BeginArea(rectContent);
+        if (GUILayout.Button("Add", GUILayout.Width(50)))
+        {
+            AddExitPoint();
+        }
 
+        GUILayout.EndArea();
+    }
 
     public override string GetBehaviourType()
     {
@@ -24,8 +34,16 @@ public class Selector : BehaviourNode
 
     public override void Run()
     {
-        if(currentPos < outPoints)
+       // Debug.Log(currentPos);
+        
+     //   Debug.Log("Selector: CurPos: " + currentPos);
+        if (currentPos < outPoints)
         {
+            if (!(children[currentPos].state == BaseBehaviour.State.running))
+            {
+          //      Debug.Log("Selector initialized child");
+                children[currentPos].Init();
+            }
             children[currentPos].Run();
         }
         else
@@ -41,15 +59,31 @@ public class Selector : BehaviourNode
     {
         if(state == BaseBehaviour.State.failure)
         {
+            
             currentPos++;
-            return;
+          //  Debug.Log("Selector advance" + currentPos);
+            if (currentPos < outPoints)
+            {
+                this.state = BaseBehaviour.State.running;
+            }
+            else
+            {
+             //   Debug.Log("Selector I got too many");
+                this.state = BaseBehaviour.State.failure;
+                SendParentCurrentState(this.state);
+                return;
+            }
         }
         else if (state == BaseBehaviour.State.success)
         {
             currentPos = 0;
+            this.state = BaseBehaviour.State.success;
         }
-        this.state = state;
-        SendParentCurrentState(state);
+        else
+        {
+            this.state = state;
+        }
+        SendParentCurrentState(this.state);
     }
 
     public override void Initialize(GameObject npc)
@@ -60,6 +94,56 @@ public class Selector : BehaviourNode
 
     public override void Init()
     {
-        throw new NotImplementedException();
+     //   Debug.Log("Selector gets intitialized");
+        currentPos = 0;
+    }
+
+    public void AddExitPoint()
+    {
+        AddChild();
+        //children.Add(null);
+        AddConnectionPoint(BehaviourConnectionPointType.Out);
+    }
+
+    public void AddChild()
+    {
+        BehaviourNode[] newChildren = new BehaviourNode[children.Length + 1];
+        for (int i = 0; i < children.Length; i++)
+        {
+            newChildren[i] = children[i];
+        }
+        children = newChildren;
+
+    }
+
+    public void AddConnectionPoint(BehaviourConnectionPointType type)
+    {
+        BehaviourConnectionPoint[] newPoints;
+        if (type == BehaviourConnectionPointType.In)
+        {
+            newPoints = new BehaviourConnectionPoint[inPoints + 1];
+            //Copy array
+            for (int i = 0; i < inPoints; i++)
+            {
+                newPoints[i] = inPoint[i];
+                newPoints[i].count++;
+            }
+            newPoints[inPoints] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, inPoints, inPoints + 1);
+            inPoint = newPoints;
+            inPoints++;
+        }
+        else if (type == BehaviourConnectionPointType.Out)
+        {
+            newPoints = new BehaviourConnectionPoint[outPoints + 1];
+            //Copy array
+            for (int i = 0; i < outPoints; i++)
+            {
+                newPoints[i] = outPoint[i];
+                newPoints[i].count++;
+            }
+            newPoints[outPoints] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, outPoints, outPoints + 1);
+            outPoint = newPoints;
+            outPoints++;
+        }
     }
 }

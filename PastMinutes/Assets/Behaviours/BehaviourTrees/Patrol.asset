@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 307
-    y: 344
+    x: 275
+    y: 331
     width: 150
     height: 150
   rectTitle:
     serializedVersion: 2
-    x: 382
-    y: 354
+    x: 350
+    y: 341
     width: 65
     height: 20
   rectStandardTitle:
     serializedVersion: 2
-    x: 317
-    y: 354
+    x: 285
+    y: 341
     width: 65
     height: 20
   title: 
@@ -240,13 +240,13 @@ MonoBehaviour:
   children:
   - {fileID: 4531524774234339040}
   parents: []
-  state: 0
+  state: 1
   npc: {fileID: 0}
   blackboard: {fileID: 11400000, guid: f29621be92fbeba40a89b67e5d221cbc, type: 2}
   rectContent:
     serializedVersion: 2
-    x: 317
-    y: 384
+    x: 285
+    y: 371
     width: 130
     height: 130
   nodeName: Iterator
@@ -254,6 +254,7 @@ MonoBehaviour:
   inPoints: 1
   outPoints: 1
   waypointKey: Waypoint
+  patrolPath: {fileID: 11400000, guid: 39ffaa0d049941543a7c4e11d2ef995f, type: 2}
 --- !u!114 &-1980651703498706546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,20 +269,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 219
-    y: 118
+    x: 181
+    y: 111
     width: 250
     height: 150
   rectTitle:
     serializedVersion: 2
-    x: 344
-    y: 128
+    x: 306
+    y: 121
     width: 115
     height: 20
   rectStandardTitle:
     serializedVersion: 2
-    x: 229
-    y: 128
+    x: 191
+    y: 121
     width: 115
     height: 20
   title: Patrol
@@ -494,13 +495,13 @@ MonoBehaviour:
   children:
   - {fileID: -2897673814859801461}
   parents: []
-  state: 0
+  state: 1
   npc: {fileID: 0}
   blackboard: {fileID: 11400000, guid: f29621be92fbeba40a89b67e5d221cbc, type: 2}
   rectContent:
     serializedVersion: 2
-    x: 229
-    y: 158
+    x: 191
+    y: 151
     width: 230
     height: 130
   nodeName: BehaviourStart
@@ -521,20 +522,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 0
-    y: 0
+    x: 5
+    y: -1
     width: 0
     height: 0
   rectTitle:
     serializedVersion: 2
-    x: 0
-    y: 0
+    x: 5
+    y: -1
     width: 0
     height: 0
   rectStandardTitle:
     serializedVersion: 2
-    x: 0
-    y: 0
+    x: 5
+    y: -1
     width: 0
     height: 0
   title: 
@@ -749,8 +750,8 @@ MonoBehaviour:
   blackboard: {fileID: 11400000, guid: f29621be92fbeba40a89b67e5d221cbc, type: 2}
   rectContent:
     serializedVersion: 2
-    x: 0
-    y: 0
+    x: 5
+    y: -1
     width: 0
     height: 0
   nodeName: 
@@ -771,20 +772,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 292
-    y: 544
+    x: 280
+    y: 554
     width: 150
     height: 150
   rectTitle:
     serializedVersion: 2
-    x: 367
-    y: 554
+    x: 355
+    y: 564
     width: 65
     height: 20
   rectStandardTitle:
     serializedVersion: 2
-    x: 302
-    y: 554
+    x: 290
+    y: 564
     width: 65
     height: 20
   title: 
@@ -1001,13 +1002,13 @@ MonoBehaviour:
   blackboard: {fileID: 11400000, guid: f29621be92fbeba40a89b67e5d221cbc, type: 2}
   rectContent:
     serializedVersion: 2
-    x: 302
-    y: 584
+    x: 290
+    y: 594
     width: 130
     height: 130
   nodeName: GoTo
   parent: {fileID: -2897673814859801461}
   inPoints: 1
   outPoints: 0
-  positionKey: Pathpoint270222702227022270222702227022270220000
+  positionKey: Pathpoint
   movementSpeed: 5

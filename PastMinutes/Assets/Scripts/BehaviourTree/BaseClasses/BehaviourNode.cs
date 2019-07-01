@@ -33,11 +33,18 @@ public abstract class BehaviourNode : ScriptableObject
     [HideInInspector]
     public BehaviourConnectionPoint[] outPoint;
 
+    public Action<BehaviourConnectionPoint> OnClickInPoint;
+    public Action<BehaviourConnectionPoint> OnClickOutPoint;
+
+    public GUIStyle inPointStyle;
+    public GUIStyle outPointStyle;
+
 
     //New part
     public BehaviourNode[] children;
     public BehaviourNode[] parents;
     public State state;
+    public string npcID;
 
     [Tooltip("only public for easier bughunting")]
     public GameObject npc;
@@ -83,17 +90,21 @@ public abstract class BehaviourNode : ScriptableObject
         outPoint = new BehaviourConnectionPoint[outPoints];
         for(int i = 0; i < inPoint.Length; i++)
         {
-            inPoint[i] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, i, inPoint.Length);
+            inPoint[i] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, i, inPoints);
         }
         for(int i = 0; i < outPoint.Length; i++)
         {
-            outPoint[i] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, i, inPoint.Length);
+            outPoint[i] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, i, outPoints);
         }
         //inPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint);
         //outPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         defaultNodeStyle = nodeStyle;
         selectedNodeStyle = selectedStyle;
         OnRemoveNode = OnClickRemoveNode;
+        this.OnClickInPoint = OnClickInPoint;
+        this.OnClickOutPoint = OnClickOutPoint;
+        this.inPointStyle = inPointStyle;
+        this.outPointStyle = outPointStyle;
     }
 
 
@@ -108,7 +119,7 @@ public abstract class BehaviourNode : ScriptableObject
 
     public virtual void Draw()
     {
-        GUI.Box(rect, title, style);
+        GUI.Box(rect, "", style);
         GUI.Label(rectStandardTitle, nodeName);
         title = GUI.TextField(rectTitle, title);
         foreach (BehaviourConnectionPoint i in inPoint)
@@ -190,10 +201,10 @@ public abstract class BehaviourNode : ScriptableObject
     /// <param name="npc"></param>
     public virtual void Initialize(GameObject npc)
     {
-        Debug.Log("Initialize " + nodeName);
         state = State.inactive;
         this.npc = npc;
         blackboard = npc.GetComponent<BehaviourComponent>().blackboard;
+        npcID = npc.GetComponent<BehaviourComponent>().GetID();
         foreach (BehaviourNode child in children)
         {
             child.Initialize(npc);

@@ -30,6 +30,8 @@ public class BehaviourConnectionPoint
     [HideInInspector]
     public int count;
 
+    public float offset;
+
     public BehaviourConnectionPoint(BehaviourNode node, BehaviourConnectionPointType type, GUIStyle style, Action<BehaviourConnectionPoint> OnClickConnectionPoint, int index, int count)
     {
         this.node = node;
@@ -39,12 +41,14 @@ public class BehaviourConnectionPoint
         rect = new Rect(0, 0, 20f, 10f);
         this.index = index;
         this.count = count;
+        offset = 8f;
     }
 
 
     public void Draw()
     {
-        rect.x = node.rect.x + ((node.rect.width - 16f) / (count + 1) * (index + 1)) + 8f - (rect.width / 2);
+        
+        rect.x = node.rect.x + (((node.rect.width - (rect.width * count)) / (count + 1) * (index + 1)) + (index * rect.width));
 
         switch (type)
         {

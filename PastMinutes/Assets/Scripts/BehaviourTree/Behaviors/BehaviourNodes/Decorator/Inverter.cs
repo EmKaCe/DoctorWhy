@@ -24,11 +24,15 @@ public class Inverter : Decorator
 
     public override void Init()
     {
-        throw new System.NotImplementedException();
+        state = BaseBehaviour.State.inactive;
     }
 
     public override void Run()
     {
+        if (!(children[0].state == BaseBehaviour.State.running))
+        {
+            children[0].Init();
+        }
         children[0].Run();
     }
 
@@ -41,6 +45,14 @@ public class Inverter : Decorator
         else if(state == BaseBehaviour.State.success)
         {
             SendParentCurrentState(BaseBehaviour.State.failure);
+        }
+        else if(state == BaseBehaviour.State.running)
+        {
+            SendParentCurrentState(BaseBehaviour.State.running);
+        }
+        else
+        {
+            Debug.Log("Inverter got Inactive as result");
         }
     }
 

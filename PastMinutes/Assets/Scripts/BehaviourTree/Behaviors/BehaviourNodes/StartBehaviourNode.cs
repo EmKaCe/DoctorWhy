@@ -30,15 +30,17 @@ public class StartBehaviourNode : BehaviourNode
 
     public override void Run()
     {
-        if(children[0].state == BaseBehaviour.State.success && children[0].state == BaseBehaviour.State.failure)
+       // Debug.Log("StartNode: child " + children[0].state.ToString());
+        if(children[0].state == BaseBehaviour.State.success || children[0].state == BaseBehaviour.State.failure)
         {
-
+            //children[0].Init();
+            children[0].Run();
         }
         else
         {
             if (children[0].state != BaseBehaviour.State.running)
             {
-                
+             //   Debug.Log("Init");
                 children[0].Init();
             }
             children[0].Run();

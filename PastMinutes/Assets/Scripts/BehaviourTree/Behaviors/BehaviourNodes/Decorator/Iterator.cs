@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Iterator : Decorator
@@ -8,6 +9,11 @@ public class Iterator : Decorator
 
     List<Vector3> waypoints;
     public string waypointKey;
+    public Patrol patrolPath;
+    string pathpointKey;
+    string compositePathpointKey;
+    string compositeWaypointKey;
+    bool looped;
     
 
     public void CreateIteratorNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
@@ -19,6 +25,12 @@ public class Iterator : Decorator
     public override void Draw()
     {
         base.Draw();
+        GUILayout.BeginArea(rectContent);
+        EditorGUIUtility.labelWidth = 100;
+        waypointKey = EditorGUILayout.TextField("WaypointKey", waypointKey);
+        pathpointKey = EditorGUILayout.TextField("PathpointKey", pathpointKey);
+
+        GUILayout.EndArea();
     }
 
     public override string GetBehaviourType()
@@ -28,35 +40,35 @@ public class Iterator : Decorator
 
     public override void Init()
     {
+        bool test = blackboard.patrolRoutes.TryGetValue(compositeWaypointKey,out patrolPath);
+        //Debug.Log("patrol: " + test);
         state = BaseBehaviour.State.inactive;
-        if (waypointKey.Equals(""))
+        if(looped && !patrolPath.loop)
         {
-            waypointKey = "Waypoint";
+            SendParentCurrentState(BaseBehaviour.State.success);
+            state = BaseBehaviour.State.success;
+            return;
         }
-        blackboard.waypoints.TryGetValue(waypointKey, out waypoints);
+        waypoints = patrolPath.GetWaypoints();
+       // blackboard.waypoints.TryGetValue(waypointKey, out waypoints);
         if (waypoints.Count == 0)
         {
             SendParentCurrentState(BaseBehaviour.State.failure);
             return;
         }
-        if (blackboard.positions.ContainsKey("Pathpoint"))
+        if (blackboard.positions.ContainsKey(compositePathpointKey))
         {
-            blackboard.positions["Pathpoint"] = waypoints[0];
+            blackboard.positions[compositePathpointKey] = waypoints[0];
         }
         else
         {
-            blackboard.positions.Add("Pathpoint", waypoints[0]);
+            blackboard.positions.Add(compositePathpointKey, waypoints[0]);
         }
-        
-        
-
-
-
-
     }
 
     public override void Run()
     {
+       // Debug.Log("Iterator: " + waypointKey + " WP: " + waypoints.Count);
         if(waypoints.Count > 0)
         {
             if (children[0].state != BaseBehaviour.State.running)
@@ -65,13 +77,21 @@ public class Iterator : Decorator
             }
             children[0].Run();
         }
+        else
+        {
+            SendParentCurrentState(BaseBehaviour.State.failure);
+        }
         
     }
 
     public override void Initialize(GameObject npc)
     {
         base.Initialize(npc);
+        looped = false;
+        state = BaseBehaviour.State.inactive;
         waypoints = new List<Vector3>();
+        compositePathpointKey = pathpointKey + npcID;
+        compositeWaypointKey = waypointKey + npcID;
 
 
     }
@@ -80,10 +100,14 @@ public class Iterator : Decorator
     {
         if(state == BaseBehaviour.State.running)
         {
+            this.state = BaseBehaviour.State.running;
+          //  Debug.Log("Iterator return " + this.state.ToString());
             SendParentCurrentState(BaseBehaviour.State.running);
         }
         else if(state == BaseBehaviour.State.failure)
         {
+            this.state = BaseBehaviour.State.failure;
+          //  Debug.Log("Iterator return " + this.state.ToString());
             SendParentCurrentState(BaseBehaviour.State.failure);
         }
         else if(state == BaseBehaviour.State.success)
@@ -92,14 +116,18 @@ public class Iterator : Decorator
             
             if(waypoints.Count > 1)
             {
+                this.state = BaseBehaviour.State.running;
                 waypoints.RemoveAt(0);
                 //put new point in blackboard
-                blackboard.positions["Pathpoint"] = waypoints[0];
+                blackboard.positions[compositePathpointKey] = waypoints[0];
+                SendParentCurrentState(this.state);
                 //children[0].Init();
             }
             else
             {
-                state = BaseBehaviour.State.success;
+                looped = true;
+                this.state = BaseBehaviour.State.success;
+            //    Debug.Log("Iterator return " + this.state.ToString());
                 SendParentCurrentState(BaseBehaviour.State.success);
             }
         }
