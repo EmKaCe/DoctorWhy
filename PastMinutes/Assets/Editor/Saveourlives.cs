@@ -8,6 +8,7 @@ public class Saveourlives : MonoBehaviour
 {
     public NodeSaver[] nodes;
     public StartBehaviourNode[] behaviour;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -215,19 +216,27 @@ public class Saveourlives : MonoBehaviour
         
     }
 
-    public static void FixIt(string name)
+    public static void FixIt()
     {
-        Object[] nodes = AssetDatabase.LoadAllAssetsAtPath("Assets/Dialogs/DialogTrees/" + name + ".asset");
-        Debug.Log(nodes.Length);
-        int baseDialog = 0, startDialog = 0, pre = 0, npc = 0, exit = 0, dial = 0, beh = 0, connection = 0, sel = 0, seq = 0, con = 0, goTo = 0, star = 0, it = 0, inv = 0, ene = 0, att = 0;
-        int total = 0;
-        foreach (Object o in nodes)
+        string[] names = new string[] {"action", "AIDialog","BrokenTerraformerDialog","BuildladderDialog", "DrNevtonDialog", "DrShroomDialog", "EntranceScientistDialog", "FalseEndDialog","FarmerDialog","ForceResetDialog", "HelpfulScientistDialog", "LabCoatPickUpDialog", "LaserDisableDialog", "PickUpDrRNoteDialog", "PickUpTimeGauntletDialog" , "ScientistDialog", "ScientistZombieDialog",  "ShroomDialog", "SusieDialog",  "TerraformerDialog", "TimeScientistDialog", "VeggieDialog", "WinGameDialog", "ZombieDialog", "ZombiePartDialogPickup"};
+        foreach (string name in names)
         {
-            //Object[] save = AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(node));
-            //Debug.Log(save.Length);
-            //total += save.Length;
-            //foreach (Object o in save)
-            //{
+
+
+            Object[] nodes = AssetDatabase.LoadAllAssetsAtPath("Assets/Dialogs/DialogTrees/" + name + ".asset");
+            if(nodes.Length == 0)
+            {
+                Debug.Log(name + "does not exist");
+            }
+            int baseDialog = 0, startDialog = 0, pre = 0, npc = 0, exit = 0, dial = 0, beh = 0, connection = 0, sel = 0, seq = 0, con = 0, goTo = 0, star = 0, it = 0, inv = 0, ene = 0, att = 0;
+            int total = 0;
+            foreach (Object o in nodes)
+            {
+                //Object[] save = AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(node));
+                //Debug.Log(save.Length);
+                //total += save.Length;
+                //foreach (Object o in save)
+                //{
 
                 if (o.GetType().Equals(typeof(ConnectionPointSave)))
                 {
@@ -296,6 +305,7 @@ public class Saveourlives : MonoBehaviour
                 }
                 AssetDatabase.SaveAssets();
             }
+        }
         //}
         //Object behaviour
         //foreach (StartBehaviourNode start in behaviour)
@@ -396,15 +406,15 @@ public class Saveourlives : MonoBehaviour
         //        AssetDatabase.SaveAssets();
         //    }
         //}
-        Debug.Log("Done");
-        Debug.Log("ConnectionNode: " + connection);
-        Debug.Log("BaseDialogNodes: " + baseDialog);
-        Debug.Log("StartDialogNode: " + startDialog);
-        Debug.Log("Prerequisite: " + pre);
-        Debug.Log("NPCAction: " + npc);
-        Debug.Log("ExitNode: " + exit);
-        Debug.Log("DialogNode: " + dial);
-        Debug.Log(connection + baseDialog + startDialog + pre + npc + exit + dial + " of " + total.ToString());
+        //Debug.Log("Done");
+        //Debug.Log("ConnectionNode: " + connection);
+        //Debug.Log("BaseDialogNodes: " + baseDialog);
+        //Debug.Log("StartDialogNode: " + startDialog);
+        //Debug.Log("Prerequisite: " + pre);
+        //Debug.Log("NPCAction: " + npc);
+        //Debug.Log("ExitNode: " + exit);
+        //Debug.Log("DialogNode: " + dial);
+        //Debug.Log(connection + baseDialog + startDialog + pre + npc + exit + dial + " of " + total.ToString());
         //Debug.Log("BaseBehaviourNode: " + beh);
         //Debug.Log("ConditionalNode: " + con);
         //Debug.Log("StartNode: " + star);

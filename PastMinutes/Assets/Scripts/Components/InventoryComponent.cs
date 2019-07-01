@@ -188,7 +188,11 @@ public class InventoryComponent : MonoBehaviour
             itemSlots[slot] = item;
             if(0 < slot && slot < 3)
             {
+                Debug.Log("waffe");
+                
                 item.transform.parent = transform.parent.Find("Arms").transform;
+                item.transform.localPosition = new Vector3(0.53f, 0, 0.7f);
+
             }
             EventManager.TriggerEvent(EventSystem.AddedItemToSlot(), gameObject.GetComponentInParent<EntityComponent>().entityID, new string[]{ item.gameObject.GetComponent<EntityComponent>().entityID.ToString(),
                                                                                                                                                  item.itemName, slot.ToString()});

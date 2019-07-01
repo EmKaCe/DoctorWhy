@@ -43,12 +43,17 @@ public class ProjectileComponent : MonoBehaviour
         TagSystem tag;
         if ((tag = collision.gameObject.GetComponent<TagSystem>()) != null)
         {
-            if (tag.Player || tag.NPC)
+            if(tag.gameObject.GetComponent<EntityComponent>().entityID != ownerID)
             {
-                Debug.Log("Treffer");
-                EventManager.TriggerEvent(EventSystem.TakeDamage(), tag.gameObject.GetComponent<EntityComponent>().entityID, new string[] { damage.ToString(), ownerID.ToString() });
+                if (tag.NPC)
+                {
+                    Debug.Log("Treffer");
+                    EventManager.TriggerEvent(EventSystem.TakeDamage(), tag.gameObject.GetComponent<EntityComponent>().entityID, new string[] { damage.ToString(), ownerID.ToString() });
+                }
+                Destroy(gameObject);
             }
+            
         }
-        Destroy(gameObject);
+        
     }
 }

@@ -52,9 +52,9 @@ public class TimeTravelComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(gameObject.name);
-        Debug.Log("in past" + inPast);
-        Debug.Log("time left:" + secondsToEnd);
+        //Debug.Log(gameObject.name);
+        //Debug.Log("in past" + inPast);
+        //Debug.Log("time left:" + secondsToEnd);
         block -= Time.deltaTime;
         catastropheTextBox.text = ((int)secondsToEnd).ToString();
 
