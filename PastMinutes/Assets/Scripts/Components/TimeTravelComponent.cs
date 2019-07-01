@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -21,7 +22,8 @@ public class TimeTravelComponent : MonoBehaviour
     UnityAction<int, string[]> falseWinListener;
     private float loop=0;
     public TextMeshProUGUI currentTimeLoopTextBox;
-    public TextMeshProUGUI catastropheTextBox;
+    public TextMeshProUGUI catastropheTextTextBox;
+    public TextMeshProUGUI catastropheValueTextBox;
     private bool ForceTriggered = false;
     private bool win = false;
 
@@ -57,9 +59,23 @@ public class TimeTravelComponent : MonoBehaviour
         block -= Time.deltaTime;
 
 
-        //Emre set secondsToEnd as Time till catastrophe In UI
-        catastropheTextBox.text = ((int)secondsToEnd).ToString();
-        //Done
+        if(inPast)
+        {
+            if(!catastropheTextTextBox.IsActive())
+            {
+                catastropheTextTextBox.gameObject.SetActive(true);
+                catastropheValueTextBox.gameObject.SetActive(true);
+            }
+            catastropheValueTextBox.text = Math.Round((Decimal)secondsToEnd, 1, MidpointRounding.AwayFromZero).ToString();
+        }
+        else
+        {
+            if(catastropheTextTextBox.IsActive())
+            {
+                catastropheTextTextBox.gameObject.SetActive(false);
+                catastropheValueTextBox.gameObject.SetActive(false);
+            }
+        }
 
         if (inPast)
         {
