@@ -91,6 +91,7 @@ namespace DialogTree
         {
             if (saveAs)
             {
+                Saveourlives.FixIt(savefileName);
                 return;
             }
             //User loaded a existing tree

@@ -29,11 +29,8 @@ namespace DialogTree
         [HideInInspector]
         public bool isSelected;
 #if UNITY_EDITOR
-        [HideInInspector]
         public GUIStyle style;
-        [HideInInspector]
         public GUIStyle defaultNodeStyle;
-        [HideInInspector]
         public GUIStyle selectedNodeStyle;
 #endif
         [HideInInspector]
