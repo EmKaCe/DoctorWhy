@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
-using static BaseBehaviour;
 
 namespace DialogTree
 {
@@ -30,7 +29,7 @@ namespace DialogTree
         public string answer;
 
         private Vector2 scrollPos;
-
+#if UNITY_EDITOR
         public void CreateBaseDialog(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<DialogConnectionPoint> OnClickInPoint, Action<DialogConnectionPoint> OnClickOutPoint, Action<DialogNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
         {
             base.CreateDialogNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints, nodeName);
@@ -43,7 +42,6 @@ namespace DialogTree
                 ""
             };
         }
-
 
         public override void Draw()
         {
@@ -86,6 +84,7 @@ namespace DialogTree
 
 
         }
+      
 
         public void AddDialog()
         {
@@ -130,7 +129,7 @@ namespace DialogTree
             base.Drag(delta);
             rectAnswer.position += delta;
         }
-
+#endif
         public override List<UIDialogItem> GetDialog(NodeSaver save, DialogNode node)
         {
             List<UIDialogItem> result = new List<UIDialogItem>();

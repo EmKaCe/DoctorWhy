@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using static BaseBehaviour;
 
@@ -14,7 +16,7 @@ public class BaseBehaviourNode : BehaviourNode
     
 
     private Vector2 pos;
-
+#if UNITY_EDITOR
     public void CreateBaseBehaviour(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
     {
         base.CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints, nodeName);
@@ -23,10 +25,7 @@ public class BaseBehaviourNode : BehaviourNode
     }
 
 
-    public override string GetBehaviourType()
-    {
-        return behaviour.GetType().ToString();
-    }
+    
     
 
 
@@ -46,10 +45,6 @@ public class BaseBehaviourNode : BehaviourNode
 
         test = EditorGUILayout.FloatField("TestValue", test);
         GUILayout.EndArea();
-
-
-
-
     }
 
     private void DrawWindow(int windowID)
@@ -60,6 +55,12 @@ public class BaseBehaviourNode : BehaviourNode
     public override void Drag(Vector2 delta)
     {
         base.Drag(delta);
+    }
+#endif
+
+    public override string GetBehaviourType()
+    {
+        return behaviour.GetType().ToString();
     }
 
     public override void Run()

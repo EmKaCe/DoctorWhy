@@ -23,10 +23,10 @@ namespace DialogTree
 
         [HideInInspector]
         public DialogNode connectedNode;
-
+#if UNITY_EDITOR
         [HideInInspector]
         public GUIStyle style;
-
+#endif
         [HideInInspector]
         public Action<DialogConnectionPoint> OnClickConnectionPoint;
 
@@ -38,7 +38,7 @@ namespace DialogTree
         /// 
         /// </summary>
         private int contentCount;
-
+#if UNITY_EDITOR
         public DialogConnectionPoint(DialogNode node, DialogConnectionPointType type, GUIStyle style, Action<DialogConnectionPoint> OnClickConnectionPoint, int index, int count)
         {
             this.node = node;
@@ -91,6 +91,6 @@ namespace DialogTree
             }
         }
 
-
+#endif
     }
 }

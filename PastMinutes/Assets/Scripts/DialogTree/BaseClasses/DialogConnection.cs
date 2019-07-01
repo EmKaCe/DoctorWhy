@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace DialogTree
@@ -16,7 +18,7 @@ namespace DialogTree
         public DialogConnectionPoint outPoint;
         public Action<DialogConnection> OnClickRemoveConnection;
 
-
+#if UNITY_EDITOR
         public DialogConnection(DialogConnectionPoint inPoint, DialogConnectionPoint outPoint, Action<DialogConnection> OnClickRemoveConnection)
         {
             this.inPoint = inPoint;
@@ -41,6 +43,7 @@ namespace DialogTree
             }
 
         }
+#endif
     }
 
 }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace DialogTree
@@ -9,6 +11,7 @@ namespace DialogTree
 
     public class ExitNode : DialogNode
     {
+#if UNITY_EDITOR
         public void CreateExitDialog(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<DialogConnectionPoint> OnClickInPoint, Action<DialogConnectionPoint> OnClickOutPoint, Action<DialogNode> OnClickRemoveNode, string nodeName)
         {
             base.CreateDialogNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, 1, 0, nodeName);
@@ -25,15 +28,17 @@ namespace DialogTree
 
         }
 
+        public override void Drag(Vector2 delta)
+        {
+            base.Drag(delta);
+        }
+#endif
         public override List<UIDialogItem> GetDialog(NodeSaver save, DialogNode node)
         {
             return new List<UIDialogItem>();
         }
 
-        public override void Drag(Vector2 delta)
-        {
-            base.Drag(delta);
-        }
+        
     }
 
 }

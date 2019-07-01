@@ -11,10 +11,12 @@ namespace DialogTree
     {
         public Rect rect;
         public DialogConnectionPointType type;
+
         public GUIStyle style;
+
         public int index;
         public int count;
-
+#if UNITY_EDITOR
         public void Init(DialogConnectionPoint point)
         {
             rect = new Rect(point.rect.x, point.rect.y, point.rect.width, point.rect.height);
@@ -24,5 +26,7 @@ namespace DialogTree
             count = point.count;
 
         }
+#endif
     }
+
 }

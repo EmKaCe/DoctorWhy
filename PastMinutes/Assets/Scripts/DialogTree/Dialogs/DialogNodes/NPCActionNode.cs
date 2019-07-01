@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 namespace DialogTree
 {
@@ -10,7 +12,7 @@ namespace DialogTree
     {
 
         public NPCAction action;
-
+#if UNITY_EDITOR
 
         public void CreateNPCActionDialog(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<DialogConnectionPoint> OnClickInPoint, Action<DialogConnectionPoint> OnClickOutPoint, Action<DialogNode> OnClickRemoveNode, string nodeName)
         {
@@ -36,7 +38,7 @@ namespace DialogTree
             base.Drag(delta);
         }
 
-
+#endif
         public override List<UIDialogItem> GetDialog(NodeSaver save, DialogNode node)
         {
             return new List<UIDialogItem>();

@@ -18,10 +18,10 @@ public class BehaviourConnectionPoint
 
     [HideInInspector]
     public BehaviourNode connectedNode;
-
+#if UNITY_EDITOR
     [HideInInspector]
     public GUIStyle style;
-
+#endif
     [HideInInspector]
     public Action<BehaviourConnectionPoint> OnClickConnectionPoint;
 
@@ -31,12 +31,14 @@ public class BehaviourConnectionPoint
     public int count;
 
     public float offset;
-
+#if UNITY_EDITOR
     public BehaviourConnectionPoint(BehaviourNode node, BehaviourConnectionPointType type, GUIStyle style, Action<BehaviourConnectionPoint> OnClickConnectionPoint, int index, int count)
     {
         this.node = node;
         this.type = type;
+
         this.style = style;
+
         this.OnClickConnectionPoint = OnClickConnectionPoint;
         rect = new Rect(0, 0, 20f, 10f);
         this.index = index;
@@ -80,5 +82,5 @@ public class BehaviourConnectionPoint
         }
     }
 
-
+#endif
 }

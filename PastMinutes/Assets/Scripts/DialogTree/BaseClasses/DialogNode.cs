@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace DialogTree
@@ -26,14 +28,14 @@ namespace DialogTree
         public bool isDragged;
         [HideInInspector]
         public bool isSelected;
-
+#if UNITY_EDITOR
         [HideInInspector]
         public GUIStyle style;
         [HideInInspector]
         public GUIStyle defaultNodeStyle;
         [HideInInspector]
         public GUIStyle selectedNodeStyle;
-
+#endif
         [HideInInspector]
         public DialogConnectionPoint[] inPoint;
         [HideInInspector]
@@ -43,10 +45,10 @@ namespace DialogTree
 
         public Action<DialogConnectionPoint> OnClickInPoint;
         public Action<DialogConnectionPoint> OnClickOutPoint;
-
+#if UNITY_EDITOR
         public GUIStyle inPointStyle;
         public GUIStyle outPointStyle;
-
+#endif
         public List<DialogNode> parents;
 
         [HideInInspector]
@@ -66,7 +68,7 @@ namespace DialogTree
 
 
 
-
+#if UNITY_EDITOR
         public void CreateDialogNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<DialogConnectionPoint> OnClickInPoint, Action<DialogConnectionPoint> OnClickOutPoint, Action<DialogNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
         {
             this.nodeName = nodeName;
@@ -180,7 +182,7 @@ namespace DialogTree
             OnRemoveNode?.Invoke(this);
         }
 
-
+#endif
         public abstract List<UIDialogItem> GetDialog(NodeSaver save, DialogNode node);
 
 

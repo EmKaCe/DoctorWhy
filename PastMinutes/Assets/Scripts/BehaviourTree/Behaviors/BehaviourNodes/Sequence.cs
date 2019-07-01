@@ -7,7 +7,7 @@ public class Sequence : BehaviourNode
 {
 
     protected int currentNode;
-
+#if UNITY_EDITOR
     public void CreateSequenceNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
     {
         CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints, nodeName);
@@ -26,6 +26,56 @@ public class Sequence : BehaviourNode
         GUILayout.EndArea();
     }
 
+    public void AddExitPoint()
+    {
+        AddChild();
+        //children.Add(null);
+        AddConnectionPoint(BehaviourConnectionPointType.Out);
+    }
+
+    public void AddChild()
+    {
+        BehaviourNode[] newChildren = new BehaviourNode[children.Length + 1];
+        for (int i = 0; i < children.Length; i++)
+        {
+            newChildren[i] = children[i];
+        }
+        children = newChildren;
+
+    }
+
+    public void AddConnectionPoint(BehaviourConnectionPointType type)
+    {
+        BehaviourConnectionPoint[] newPoints;
+        if (type == BehaviourConnectionPointType.In)
+        {
+            newPoints = new BehaviourConnectionPoint[inPoints + 1];
+            //Copy array
+            for (int i = 0; i < inPoints; i++)
+            {
+                newPoints[i] = inPoint[i];
+                newPoints[i].count++;
+            }
+            newPoints[inPoints] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, inPoints, inPoints + 1);
+            inPoint = newPoints;
+            inPoints++;
+        }
+        else if (type == BehaviourConnectionPointType.Out)
+        {
+            newPoints = new BehaviourConnectionPoint[outPoints + 1];
+            //Copy array
+            for (int i = 0; i < outPoints; i++)
+            {
+                newPoints[i] = outPoint[i];
+                newPoints[i].count++;
+            }
+            newPoints[outPoints] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, outPoints, outPoints + 1);
+            outPoint = newPoints;
+            outPoints++;
+        }
+    }
+
+#endif
     public override void Initialize(GameObject npc)
     {
         base.Initialize(npc);
@@ -86,52 +136,5 @@ public class Sequence : BehaviourNode
         currentNode = 0;
     }
 
-    public void AddExitPoint()
-    {
-        AddChild();
-        //children.Add(null);
-        AddConnectionPoint(BehaviourConnectionPointType.Out);
-    }
-
-    public void AddChild()
-    {
-        BehaviourNode[] newChildren = new BehaviourNode[children.Length + 1];
-        for(int i = 0; i < children.Length; i++)
-        {
-            newChildren[i] = children[i];
-        }
-        children = newChildren;
-
-    }
-
-    public void AddConnectionPoint(BehaviourConnectionPointType type)
-    {
-        BehaviourConnectionPoint[] newPoints;
-        if (type == BehaviourConnectionPointType.In)
-        {
-            newPoints = new BehaviourConnectionPoint[inPoints + 1];
-            //Copy array
-            for (int i = 0; i < inPoints; i++)
-            {
-                newPoints[i] = inPoint[i];
-                newPoints[i].count++;
-            }
-            newPoints[inPoints] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint, inPoints, inPoints + 1);
-            inPoint = newPoints;
-            inPoints++;
-        }
-        else if (type == BehaviourConnectionPointType.Out)
-        {
-            newPoints = new BehaviourConnectionPoint[outPoints + 1];
-            //Copy array
-            for (int i = 0; i < outPoints; i++)
-            {
-                newPoints[i] = outPoint[i];
-                newPoints[i].count++;
-            }
-            newPoints[outPoints] = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint, outPoints, outPoints + 1);
-            outPoint = newPoints;
-            outPoints++;
-        }
-    }
+    
 }

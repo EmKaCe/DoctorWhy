@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 public class GoToBehaviourNode : BehaviourNode
@@ -20,7 +22,7 @@ public class GoToBehaviourNode : BehaviourNode
     string compositeTickUpdateKey;
     string compositePositionKey;
     bool tickUpdate;
-
+#if UNITY_EDITOR
     public void CreateGoToBehaviourNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
     {
         CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints, nodeName);
@@ -40,7 +42,7 @@ public class GoToBehaviourNode : BehaviourNode
 
         GUILayout.EndArea();
     }
-
+#endif
 
     public override string GetBehaviourType()
     {

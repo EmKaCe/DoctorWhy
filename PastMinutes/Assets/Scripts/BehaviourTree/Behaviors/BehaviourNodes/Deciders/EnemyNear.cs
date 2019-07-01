@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 [CreateAssetMenu(fileName ="EnemyNearNode", menuName = "BehaviourTree/EnemyNearNode")]
@@ -17,7 +19,7 @@ public class EnemyNear : BehaviourNode
     string positionKey;
     string compositePositionKey;
     int id;
-
+#if UNITY_EDITOR
     public void CreateEnemyNearNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
     {
         CreateBehaviourNode(position, width, height, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPoints, outPoints, nodeName);
@@ -25,18 +27,7 @@ public class EnemyNear : BehaviourNode
     }
 
 
-    public override string GetBehaviourType()
-    {
-        return "EnemyNear";
-    }
-
-    public override void Init()
-    {
-        Debug.Log("EnemyNear init");
-
-        ownFaction = npc.GetComponent<FactionComponent>().GetFaction();
-        blackboard.distances.TryGetValue(distanceCompoundKey, out distance);
-    }
+    
 
     public override void Draw()
     {
@@ -48,7 +39,7 @@ public class EnemyNear : BehaviourNode
         positionKey = EditorGUILayout.TextField("PositionKey", positionKey);
         GUILayout.EndArea();
     }
-
+#endif
     public override void Run()
     {
         Debug.Log("EnemyNear " + distanceKey);
@@ -101,6 +92,19 @@ public class EnemyNear : BehaviourNode
     public override void SetChildState(BaseBehaviour.State state, BehaviourNode childNode)
     {
         //has no children
+    }
+
+    public override string GetBehaviourType()
+    {
+        return "EnemyNear";
+    }
+
+    public override void Init()
+    {
+        Debug.Log("EnemyNear init");
+
+        ownFaction = npc.GetComponent<FactionComponent>().GetFaction();
+        blackboard.distances.TryGetValue(distanceCompoundKey, out distance);
     }
 
     public override void Initialize(GameObject npc)

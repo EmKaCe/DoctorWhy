@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using static BaseBehaviour;
 
@@ -20,14 +22,14 @@ public abstract class BehaviourNode : ScriptableObject
     public bool isDragged;
     [HideInInspector]
     public bool isSelected;
-
+#if UNITY_EDITOR
     [HideInInspector]
     public GUIStyle style;
     [HideInInspector]
     public GUIStyle defaultNodeStyle;
     [HideInInspector]
     public GUIStyle selectedNodeStyle;
-
+#endif 
     [HideInInspector]
     public BehaviourConnectionPoint[] inPoint;
     [HideInInspector]
@@ -35,10 +37,10 @@ public abstract class BehaviourNode : ScriptableObject
 
     public Action<BehaviourConnectionPoint> OnClickInPoint;
     public Action<BehaviourConnectionPoint> OnClickOutPoint;
-
+#if UNITY_EDITOR
     public GUIStyle inPointStyle;
     public GUIStyle outPointStyle;
-
+#endif
 
     //New part
     public BehaviourNode[] children;
@@ -75,7 +77,7 @@ public abstract class BehaviourNode : ScriptableObject
 
     public int inPoints;
     public int outPoints;
-
+#if UNITY_EDITOR
     public void CreateBehaviourNode(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<BehaviourConnectionPoint> OnClickInPoint, Action<BehaviourConnectionPoint> OnClickOutPoint, Action<BehaviourNode> OnClickRemoveNode, int inPoints, int outPoints, string nodeName)
     {
         this.nodeName = nodeName;
@@ -98,8 +100,10 @@ public abstract class BehaviourNode : ScriptableObject
         }
         //inPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.In, inPointStyle, OnClickInPoint);
         //outPoint = new BehaviourConnectionPoint(this, BehaviourConnectionPointType.Out, outPointStyle, OnClickOutPoint);
+
         defaultNodeStyle = nodeStyle;
         selectedNodeStyle = selectedStyle;
+
         OnRemoveNode = OnClickRemoveNode;
         this.OnClickInPoint = OnClickInPoint;
         this.OnClickOutPoint = OnClickOutPoint;
@@ -189,7 +193,7 @@ public abstract class BehaviourNode : ScriptableObject
     {
         OnRemoveNode?.Invoke(this);
     }
-
+#endif
 
     public abstract string GetBehaviourType();
 

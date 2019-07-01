@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class EmptyNode : BehaviourNode
 {
+#if UNITY_EDITOR
     public override void Draw()
     {
         throw new System.NotImplementedException();
     }
-
+#endif
     public override string GetBehaviourType()
     {
         throw new NotImplementedException();
