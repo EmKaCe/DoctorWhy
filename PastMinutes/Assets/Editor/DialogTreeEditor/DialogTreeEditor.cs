@@ -256,24 +256,26 @@ namespace DialogTree
        
         private void OnEnable()
         {
-
-            nodeStyle = new GUIStyle();
+            GUISkin nodeSkin = AssetDatabase.LoadAssetAtPath("Assets/Materials/EditorGUIStyles/StandardEditorStyle.guiskin", typeof(GUISkin)) as GUISkin;
+            nodeStyle = nodeSkin.GetStyle("StandardNode");
+            Debug.Log(nodeStyle.name);
+            //nodeStyle = GUI.skin.GetStyle()
            // nodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
-            nodeStyle.border = new RectOffset(12, 12, 12, 12);
+            //nodeStyle.border = new RectOffset(12, 12, 12, 12);
 
-            selectedNodeStyle = new GUIStyle();
-          //  selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
-            selectedNodeStyle.border = new RectOffset(12, 12, 12, 12);
+            selectedNodeStyle = nodeSkin.GetStyle("StandardNode");
+            //  selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
+            //selectedNodeStyle.border = new RectOffset(12, 12, 12, 12);
 
-            inPointStyle = new GUIStyle();
-           // inPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left.png") as Texture2D;
-           // inPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left on.png") as Texture2D;
-            inPointStyle.border = new RectOffset(4, 4, 12, 12);
+            inPointStyle = nodeSkin.GetStyle("StandardInPoint");
+            // inPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left.png") as Texture2D;
+            // inPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left on.png") as Texture2D;
+            //inPointStyle.border = new RectOffset(4, 4, 12, 12);
 
-            outPointStyle = new GUIStyle();
-           // outPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right.png") as Texture2D;
-           // outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
-            outPointStyle.border = new RectOffset(4, 4, 12, 12);
+            outPointStyle = nodeSkin.GetStyle("StandardOutPoint");
+            // outPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right.png") as Texture2D;
+            // outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
+           // outPointStyle.border = new RectOffset(4, 4, 12, 12);
 
             saveNameBoxStyle = new GUIStyle();
 
