@@ -36,13 +36,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -50,13 +46,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -132,15 +124,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -148,13 +134,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -180,87 +162,6 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-<<<<<<< HEAD
-=======
-    m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 0
-    m_RichText: 1
-    m_TextClipping: 0
-    m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 1
-    m_StretchHeight: 0
-  index: 1
-  count: 2
---- !u!114 &-8688937555669233668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 523
-    y: 316
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Active:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Border:
-      m_Left: 4
-      m_Right: 4
-      m_Top: 12
-      m_Bottom: 12
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
     m_Margin:
       m_Left: 0
       m_Right: 0
@@ -331,13 +232,9 @@ MonoBehaviour:
   isDragged: 0
   isSelected: 0
   style:
-    m_Name: StandardNode
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -345,9 +242,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -402,13 +299,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   defaultNodeStyle:
-    m_Name: StandardNode
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -416,9 +309,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -473,13 +366,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   selectedNodeStyle:
-    m_Name: StandardNode
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -487,9 +376,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -544,13 +433,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   inPointStyle:
-    m_Name: StandardInPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -558,13 +443,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -619,13 +500,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   outPointStyle:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -633,13 +510,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -717,15 +590,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -733,13 +600,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -815,15 +678,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -831,13 +688,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -933,13 +786,9 @@ MonoBehaviour:
   isDragged: 0
   isSelected: 1
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -947,13 +796,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1007,38 +852,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   defaultNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 2
---- !u!114 &-7660282276431182499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 402
-    y: 214
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -1046,13 +863,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1106,38 +919,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   selectedNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 2
---- !u!114 &-7611208958959164929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 360
-    y: 296
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -1145,13 +930,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1205,126 +986,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   inPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 2
-  count: 3
---- !u!114 &-7552104378815029870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: 0}
-  inPoint: []
-  outPoint:
-  - {fileID: -3280343457231241148}
-  - {fileID: -8075834584450732655}
-  - {fileID: -2744656408548843141}
---- !u!114 &-7550254103596085179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: -3196604046950528483}
-  inPoint:
-  - {fileID: -1971368449272946746}
-  - {fileID: 7445442929723467880}
-  - {fileID: 7901034921593251803}
-  outPoint:
-  - {fileID: -5424857585516521829}
-  - {fileID: -295640977413852006}
---- !u!114 &-7416710287086785602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe809e89acdcf84193aae7648968232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startNode: {fileID: 629802209580360898}
-  endNode: {fileID: -3196604046950528483}
-  inIndex: 0
-  outIndex: 0
---- !u!114 &-7389076243127694708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: 0}
-  inPoint: []
-  outPoint:
-  - {fileID: 3312082651919262113}
-  - {fileID: -477171671061691480}
-  - {fileID: 8384524385327685960}
---- !u!114 &-7388090862385135197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe809e89acdcf84193aae7648968232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startNode: {fileID: -3196604046950528483}
-  endNode: {fileID: -1975878610892288352}
-  inIndex: 0
-  outIndex: 0
---- !u!114 &-7196176746978837443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 523
-    y: 348
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -1332,13 +997,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1392,54 +1053,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   outPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 2
-  count: 3
---- !u!114 &-7131721738288591176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: 0}
-  inPoint:
-  - {fileID: -6751557886793983297}
-  outPoint: []
---- !u!114 &-7125749637793735146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: -12
-    y: 151
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -1447,13 +1064,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1550,15 +1163,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -1566,13 +1173,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1664,15 +1267,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -1680,13 +1277,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1794,15 +1387,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -1810,13 +1397,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1892,15 +1475,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -1908,13 +1485,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -1990,15 +1563,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -2006,13 +1573,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -2080,7 +1643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   node: {fileID: 0}
   inPoint: []
   outPoint:
@@ -2158,85 +1720,6 @@ MonoBehaviour:
   inIndex: 0
   outIndex: 0
 --- !u!114 &-7196176746978837443
-=======
-  rect:
-    serializedVersion: 2
-    x: 158
-    y: 248
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Active:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Border:
-      m_Left: 4
-      m_Right: 4
-      m_Top: 12
-      m_Bottom: 12
-    m_Margin:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 0
-    m_RichText: 1
-    m_TextClipping: 0
-    m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 1
-    m_StretchHeight: 0
-  index: 2
-  count: 3
---- !u!114 &-6405628875104212693
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2256,15 +1739,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -2272,13 +1749,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -2370,15 +1843,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -2386,13 +1853,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -2484,15 +1947,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -2500,13 +1957,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -2582,15 +2035,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -2598,13 +2045,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -2680,15 +2123,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -2696,13 +2133,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -2778,15 +2211,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -2794,13 +2221,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -2981,15 +2404,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -2997,9 +2414,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -3053,7 +2470,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 2
   count: 3
 --- !u!114 &-6405628875104212693
@@ -3079,12 +2495,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  defaultNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -3092,9 +2502,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -3148,7 +2558,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 2
 --- !u!114 &-5970938168114602242
@@ -4297,12 +3706,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  selectedNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -4310,9 +3713,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -4366,7 +3769,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 2
 --- !u!114 &-4701688815001420328
@@ -4392,12 +3794,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  inPointStyle:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -4405,13 +3801,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -4465,7 +3857,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 3
 --- !u!114 &-4357446519959548090
@@ -4491,12 +3882,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  outPointStyle:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -4504,13 +3889,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -4586,15 +3967,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -4602,13 +3977,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -4684,15 +4055,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -4700,13 +4065,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -4800,15 +4161,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -4816,13 +4171,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -4898,13 +4249,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -4912,13 +4259,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -4994,15 +4337,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5010,13 +4347,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -5092,15 +4425,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5108,13 +4435,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -5223,15 +4546,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5239,13 +4556,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -5321,15 +4634,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5337,13 +4644,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -5453,15 +4756,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5469,13 +4766,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -5551,15 +4844,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5567,13 +4854,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -5649,15 +4932,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5665,9 +4942,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -5721,7 +4998,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 3
 --- !u!114 &-2574961333676976580
@@ -5747,12 +5023,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  defaultNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5760,9 +5030,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -5816,7 +5086,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 2
   count: 3
 --- !u!114 &-2535924696680818495
@@ -5858,12 +5127,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  selectedNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5871,9 +5134,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -5927,7 +5190,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 1
 --- !u!114 &-2430146653272623472
@@ -5986,12 +5248,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  inPointStyle:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -5999,13 +5255,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -6059,7 +5311,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 3
 --- !u!114 &-2099969255821221596
@@ -6085,12 +5336,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  outPointStyle:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -6098,13 +5343,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -6300,15 +5541,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -6316,13 +5551,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -6436,15 +5667,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -6452,13 +5677,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -6534,15 +5755,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -6550,13 +5765,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -6650,13 +5861,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-    m_Name: StandardInPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -6664,13 +5871,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -6746,15 +5949,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -6762,13 +5959,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -6844,15 +6037,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -6860,13 +6047,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -6942,15 +6125,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -6958,13 +6135,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7060,13 +6233,9 @@ MonoBehaviour:
   isDragged: 0
   isSelected: 0
   style:
-    m_Name: StandardNode
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7074,9 +6243,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7131,13 +6300,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   defaultNodeStyle:
-    m_Name: StandardNode
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7145,9 +6310,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7202,13 +6367,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   selectedNodeStyle:
-    m_Name: StandardNode
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7216,9 +6377,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7273,13 +6434,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   inPointStyle:
-    m_Name: StandardInPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7287,13 +6444,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7348,13 +6501,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   outPointStyle:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7362,13 +6511,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7448,15 +6593,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7464,13 +6603,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7566,13 +6701,9 @@ MonoBehaviour:
   isDragged: 0
   isSelected: 0
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7580,13 +6711,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7640,76 +6767,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   defaultNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 3
---- !u!114 &-1792887152586886587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: 0}
-  inPoint:
-  - {fileID: -2266083709997260916}
-  - {fileID: 958077406370521036}
-  - {fileID: 6861872567244282897}
-  outPoint:
-  - {fileID: -7660282276431182499}
-  - {fileID: -8171289861313407738}
---- !u!114 &-1785562975519635050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: 0}
-  inPoint: []
-  outPoint:
-  - {fileID: 8154194829654660388}
-  - {fileID: 1283311594787967128}
-  - {fileID: 432818729371562424}
---- !u!114 &-1774553770343472352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: -12
-    y: 215
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7717,13 +6778,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7777,38 +6834,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   selectedNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 2
-  count: 3
---- !u!114 &-1630448302029147559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 598
-    y: 390
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7816,13 +6845,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7876,56 +6901,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   inPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 1
---- !u!114 &-1597573437059688502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: 0}
-  inPoint:
-  - {fileID: -5704348692853726968}
-  - {fileID: 8501230299147468388}
-  outPoint:
-  - {fileID: -4352654862847615331}
---- !u!114 &-1506176656929609785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 443
-    y: 314
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -7933,13 +6912,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -7993,38 +6968,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   outPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 3
---- !u!114 &-1471499619680390977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 975
-    y: 266
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8032,13 +6979,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -8117,15 +7060,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8133,13 +7070,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -8231,15 +7164,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8247,13 +7174,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -8345,15 +7268,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8361,9 +7278,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -8417,7 +7334,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 1
 --- !u!114 &-1123725747217007923
@@ -8443,12 +7359,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  defaultNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8456,9 +7366,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -8512,7 +7422,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 1
 --- !u!114 &-1101295290669661319
@@ -8538,12 +7447,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  selectedNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8551,9 +7454,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -8607,7 +7510,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 2
 --- !u!114 &-1094686878819729221
@@ -8687,12 +7589,6 @@ MonoBehaviour:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  inPointStyle:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8700,13 +7596,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -8760,17 +7652,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   defaultNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  outPointStyle:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8778,13 +7663,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -8838,41 +7719,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   selectedNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  parents: []
-  inPoints: 0
-  outPoints: 1
-  nodeName: PrerequisiteNode
-  prerequisite: {fileID: 11400000, guid: c9071d6e868eae348897dd130eb700a1, type: 2}
---- !u!114 &-1331521694034596992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 206
-    y: 325
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8880,13 +7730,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -8940,54 +7786,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   inPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 2
-  count: 3
---- !u!114 &-1284797483490502907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe809e89acdcf84193aae7648968232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startNode: {fileID: 0}
-  endNode: {fileID: 0}
-  inIndex: 0
-  outIndex: 1
---- !u!114 &-1220059617948021806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 687
-    y: 370
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -8995,13 +7797,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -9055,54 +7853,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   outPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 2
---- !u!114 &-1194590702578417541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe809e89acdcf84193aae7648968232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startNode: {fileID: 6742968076253752608}
-  endNode: {fileID: 6625421034165400756}
-  inIndex: 0
-  outIndex: 1
---- !u!114 &-1161000780494634520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 499
-    y: 426
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -9110,13 +7864,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -9214,15 +7964,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -9230,13 +7974,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -9312,15 +8052,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -9328,13 +8062,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -9410,15 +8140,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -9426,9 +8150,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -9482,7 +8206,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 3
 --- !u!114 &-433754357231489394
@@ -9508,12 +8231,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  defaultNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -9521,9 +8238,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -9577,7 +8294,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 1
 --- !u!114 &-306493071835803684
@@ -9619,12 +8335,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  selectedNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -9632,9 +8342,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -9688,7 +8398,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 2
 --- !u!114 &-266528165548663926
@@ -9748,12 +8457,6 @@ MonoBehaviour:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  inPointStyle:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -9761,13 +8464,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -9821,7 +8520,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 3
 --- !u!114 &-113264899364321765
@@ -9847,12 +8545,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  outPointStyle:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -9860,13 +8552,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -10029,15 +8717,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -10045,13 +8727,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -10127,15 +8805,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -10143,13 +8815,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -10275,13 +8943,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -10289,13 +8953,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -10371,13 +9031,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -10385,13 +9041,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -10467,15 +9119,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -10483,13 +9129,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -10565,15 +9207,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -10581,13 +9217,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -10642,51 +9274,8 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   index: 0
-<<<<<<< HEAD
   count: 3
 --- !u!114 &1136680066423757540
-=======
-  count: 2
---- !u!114 &-14612302404742975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe809e89acdcf84193aae7648968232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startNode: {fileID: 0}
-  endNode: {fileID: 0}
-  inIndex: 0
-  outIndex: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec1350ccf6efb943bf13068d72a89f7, type: 3}
-  m_Name: BuildladderDialog
-  m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: -3862730716906280374}
-  - {fileID: -7550254103596085179}
-  - {fileID: 6086010784964645773}
-  - {fileID: 4113305080227406218}
-  connections:
-  - {fileID: -3175901784060401269}
-  - {fileID: -5558733607340944359}
-  - {fileID: -7964295071023742899}
-  path: a
---- !u!114 &255648192320975443
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10722,15 +9311,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -10738,13 +9321,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -10820,15 +9399,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -10836,13 +9409,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -10938,15 +9507,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -10954,9 +9517,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11010,7 +9573,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 3
 --- !u!114 &1540651779222054706
@@ -11036,12 +9598,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  defaultNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -11049,9 +9605,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11105,7 +9661,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 3
 --- !u!114 &1657395225852599492
@@ -11149,12 +9704,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  selectedNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -11162,9 +9711,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11218,7 +9767,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 3
 --- !u!114 &1856928533874392741
@@ -11264,12 +9812,6 @@ MonoBehaviour:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  inPointStyle:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -11277,13 +9819,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11337,17 +9875,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   defaultNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  outPointStyle:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -11355,13 +9886,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11415,42 +9942,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   selectedNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  parents:
-  - {fileID: -3196604046950528483}
-  inPoints: 1
-  outPoints: 1
-  nodeName: NPC-Action
-  action: {fileID: 11400000, guid: ecfe2fab605e5654abc5e4fb4be18b32, type: 2}
---- !u!114 &958077406370521036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 158
-    y: 216
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -11458,13 +9953,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11518,38 +10009,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   inPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 1
-  count: 3
---- !u!114 &1024119872454042630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 474
-    y: 204
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -11557,13 +10020,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11594,7 +10053,6 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-<<<<<<< HEAD
     m_Padding:
       m_Left: 0
       m_Right: 0
@@ -11605,8 +10063,6 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-=======
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
     m_Font: {fileID: 0}
     m_FontSize: 0
     m_FontStyle: 0
@@ -11620,54 +10076,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   outPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 3
---- !u!114 &1136680066423757540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: -1334325575225667547}
-  inPoint: []
-  outPoint:
-  - {fileID: -6616264250926823119}
---- !u!114 &1244616055830285798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 262
-    y: 640
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -11675,13 +10087,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11780,13 +10188,9 @@ MonoBehaviour:
   isDragged: 0
   isSelected: 1
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -11794,13 +10198,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11854,58 +10254,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   defaultNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 1
-  count: 3
---- !u!114 &1401388428385632908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: -3196604046950528483}
-  inPoint:
-  - {fileID: 1024119872454042630}
-  - {fileID: 6431089410283633050}
-  - {fileID: 6723501377002118670}
-  outPoint:
-  - {fileID: -7884134798649398259}
-  - {fileID: 2701160535265254218}
---- !u!114 &1479102936376725171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 443
-    y: 372
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -11913,13 +10265,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -11973,38 +10321,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   selectedNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 1
-  count: 3
---- !u!114 &1540651779222054706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 206
-    y: 235
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -12012,13 +10332,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -12072,76 +10388,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   inPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 3
---- !u!114 &1657395225852599492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: -975143320512638091}
-  inPoint: []
-  outPoint:
-  - {fileID: -7125749637793735146}
-  - {fileID: -3834068178107514384}
-  - {fileID: -1774553770343472352}
---- !u!114 &1723178728622472381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 864c2119483a6514abb6f3cb0cd65836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 80
-    y: 554
-    width: 250
-    height: 150
-  rectStandardTitle:
-    serializedVersion: 2
-    x: 90
-    y: 564
-    width: 115
-    height: 20
-  rectTitle:
-    serializedVersion: 2
-    x: 205
-    y: 564
-    width: 115
-    height: 20
-  rectContent:
-    serializedVersion: 2
-    x: 90
-    y: 574
-    width: 230
-    height: 130
-  title: 
-  isDragged: 0
-  isSelected: 0
-  style:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -12149,9 +10399,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -12205,17 +10455,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   outPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  defaultNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -12223,9 +10466,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -12279,7 +10522,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   parents:
   - {fileID: 0}
   - {fileID: 0}
@@ -12325,12 +10567,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  selectedNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -12338,9 +10574,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -12394,7 +10630,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 1
 --- !u!114 &2165727920166517096
@@ -12420,12 +10655,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  inPointStyle:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -12433,13 +10662,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -12493,7 +10718,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 2
 --- !u!114 &2195067291597019286
@@ -12535,12 +10759,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  outPointStyle:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -12548,13 +10766,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -12630,15 +10844,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -12646,13 +10854,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -12764,15 +10968,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -12780,9 +10978,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -12836,7 +11034,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 2
 --- !u!114 &3031270278510928361
@@ -12926,12 +11123,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  defaultNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -12939,9 +11130,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -12995,7 +11186,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 3
 --- !u!114 &3436125032750620382
@@ -13021,12 +11211,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  selectedNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -13034,9 +11218,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -13090,7 +11274,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 3
 --- !u!114 &3442980029827636643
@@ -13116,12 +11299,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  inPointStyle:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -13129,13 +11306,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -13189,7 +11362,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 1
 --- !u!114 &3557821012514953334
@@ -13231,12 +11403,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  outPointStyle:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -13244,13 +11410,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -13363,15 +11525,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -13379,13 +11535,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -13525,15 +11677,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -13541,13 +11687,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -13623,13 +11765,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -13637,13 +11775,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -13719,15 +11853,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -13735,13 +11863,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -13850,15 +11974,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -13866,13 +11984,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -13948,15 +12062,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -13964,13 +12072,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -14046,13 +12150,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -14060,13 +12160,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -14142,15 +12238,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -14158,13 +12248,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -14256,15 +12342,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -14272,13 +12352,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -14390,13 +12466,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -14404,13 +12476,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -14502,15 +12570,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -14518,13 +12580,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -14600,15 +12658,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -14616,13 +12668,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -14718,9 +12766,8 @@ MonoBehaviour:
   isDragged: 0
   isSelected: 0
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -14789,9 +12836,6 @@ MonoBehaviour:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -14799,13 +12843,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -14859,38 +12899,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   selectedNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 3
---- !u!114 &5427810223635409073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 36
-    y: 292
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -14898,13 +12910,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -14958,38 +12966,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   inPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 2
-  count: 3
---- !u!114 &5463935577240159620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 360
-    y: 296
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -14997,13 +12977,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15057,54 +13033,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   outPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 2
-  count: 3
---- !u!114 &5550642767752453900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe809e89acdcf84193aae7648968232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startNode: {fileID: -8623280605053406677}
-  endNode: {fileID: 0}
-  inIndex: 0
-  outIndex: 1
---- !u!114 &5559954036331124521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 36
-    y: 260
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15112,13 +13044,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15214,15 +13142,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15230,13 +13152,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15329,15 +13247,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15345,13 +13257,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15447,13 +13355,9 @@ MonoBehaviour:
   isDragged: 0
   isSelected: 0
   style:
-    m_Name: StandardNode
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15461,9 +13365,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15518,13 +13422,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   defaultNodeStyle:
-    m_Name: StandardNode
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15532,9 +13432,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15589,13 +13489,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   selectedNodeStyle:
-    m_Name: StandardNode
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15603,9 +13499,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15660,13 +13556,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   inPointStyle:
-    m_Name: StandardInPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15674,13 +13566,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15735,13 +13623,9 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   outPointStyle:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15749,13 +13633,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15835,15 +13715,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15851,13 +13725,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -15949,15 +13819,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -15965,13 +13829,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -16047,15 +13907,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -16063,9 +13917,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -16091,61 +13945,6 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-<<<<<<< HEAD
-=======
-    m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 0
-    m_RichText: 1
-    m_TextClipping: 0
-    m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 1
-    m_StretchHeight: 0
-  defaultNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Border:
-      m_Left: 12
-      m_Right: 12
-      m_Top: 12
-      m_Bottom: 12
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
     m_Margin:
       m_Left: 0
       m_Right: 0
@@ -16174,7 +13973,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 1
 --- !u!114 &7445442929723467880
@@ -16200,12 +13998,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  selectedNodeStyle:
-    m_Name: StandardNode
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -16213,9 +14005,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: b2a608984104ed344927507ab03de07f, type: 3}
+      m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -16269,7 +14061,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 1
   count: 3
 --- !u!114 &7603704311680647360
@@ -16295,12 +14086,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  inPointStyle:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -16308,13 +14093,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -16368,7 +14149,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   index: 0
   count: 3
 --- !u!114 &7720447140485606738
@@ -16446,12 +14226,6 @@ MonoBehaviour:
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  outPointStyle:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -16459,13 +14233,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -16541,15 +14311,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -16557,13 +14321,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -16659,13 +14419,9 @@ MonoBehaviour:
   isDragged: 0
   isSelected: 0
   style:
-    m_Name: StandardInPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -16673,13 +14429,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -16733,38 +14485,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   defaultNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 1
---- !u!114 &7348683932953147492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 856
-    y: 114
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -16772,13 +14496,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -16832,38 +14552,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   selectedNodeStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 1
---- !u!114 &7445442929723467880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 474
-    y: 262
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -16871,13 +14563,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -16931,38 +14619,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   inPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 1
-  count: 3
---- !u!114 &7603704311680647360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: -12
-    y: 151
-    width: 10
-    height: 20
-  type: 1
-  style:
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -16970,13 +14630,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -17030,90 +14686,10 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-<<<<<<< HEAD
   outPointStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-=======
-  index: 0
-  count: 3
---- !u!114 &7720447140485606738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe809e89acdcf84193aae7648968232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startNode: {fileID: -5092940471330051481}
-  endNode: {fileID: 6742968076253752608}
-  inIndex: 0
-  outIndex: 0
---- !u!114 &7899106818171923888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe809e89acdcf84193aae7648968232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startNode: {fileID: -5092940471330051481}
-  endNode: {fileID: 6625421034165400756}
-  inIndex: 0
-  outIndex: 0
---- !u!114 &7899833703890866087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea54a97c56cf82498ac092925d957ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: 6625421034165400756}
-  inPoint:
-  - {fileID: -1506176656929609785}
-  - {fileID: 1479102936376725171}
-  - {fileID: -2574961333676976580}
-  outPoint:
-  - {fileID: -1220059617948021806}
-  - {fileID: -1101295290669661319}
---- !u!114 &7901034921593251803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd7e5eb50a7ba943aa10933940baecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 474
-    y: 294
-    width: 10
-    height: 20
-  type: 0
-  style:
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -17121,13 +14697,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -17223,15 +14795,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -17239,13 +14805,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -17337,13 +14899,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-    m_Name: StandardOutPoint
+    m_Name: 
     m_Normal:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -17351,13 +14909,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -17481,15 +15035,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -17497,13 +15045,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -17595,15 +15139,9 @@ MonoBehaviour:
     height: 20
   type: 0
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardInPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -17611,13 +15149,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -17709,15 +15243,9 @@ MonoBehaviour:
     height: 20
   type: 1
   style:
-<<<<<<< HEAD
     m_Name: Test
     m_Normal:
       m_Background: {fileID: 0}
-=======
-    m_Name: StandardOutPoint
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
@@ -17725,13 +15253,9 @@ MonoBehaviour:
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-<<<<<<< HEAD
       m_Background: {fileID: 0}
-=======
-      m_Background: {fileID: 2800000, guid: 4c7eb653a53046d4e9ca4ecb5d38e10b, type: 3}
->>>>>>> 9e0ceed8834e3f5539397533376b2e1776d34e8a
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.8207547, g: 0.127759, b: 0.127759, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
